@@ -1,0 +1,3 @@
+Hóa đơn xuất khẩu
+Hóa đơn của giao dịch xuất khẩu.
+Metadata được quản lý ở metadata/documents.jsonl tại thư mục gốc dự án.

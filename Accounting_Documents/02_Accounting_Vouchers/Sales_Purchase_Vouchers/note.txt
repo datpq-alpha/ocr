@@ -1,0 +1,7 @@
+Chứng từ mua bán
+Chứng từ giao nhận, nhập mua, xuất bán; hóa đơn thuộc 03_Invoices, hợp đồng thuộc 06_Contracts.
+Metadata được quản lý ở metadata/documents.jsonl tại thư mục gốc dự án.
+
+Chuẩn hóa phiên bản 2.1.0: AV033–AV040 (8 loại).
+Các loại: Phiếu giao hàng; Biên bản giao nhận hàng hóa; Đơn đặt hàng; Đơn đặt hàng bán; Biên bản nghiệm thu mua hàng; Biên bản nghiệm thu dịch vụ; Biên bản đối chiếu công nợ phải thu; Biên bản đối chiếu công nợ phải trả.
+Chi tiết: metadata/ACCOUNTING_VOUCHER_MAPPING.md và metadata/accounting_voucher_mappings.json tại gốc dự án.

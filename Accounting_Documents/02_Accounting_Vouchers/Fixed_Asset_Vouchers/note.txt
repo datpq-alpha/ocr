@@ -1,0 +1,7 @@
+Chứng từ tài sản cố định
+Biên bản giao nhận, thanh lý, kiểm kê và bảng khấu hao. Hóa đơn mua tài sản thuộc 03_Invoices.
+Metadata được quản lý ở metadata/documents.jsonl tại thư mục gốc dự án.
+
+Chuẩn hóa phiên bản 2.1.0: AV027–AV032 (6 loại).
+Các loại: Biên bản giao nhận TSCĐ; Biên bản thanh lý TSCĐ; Biên bản đánh giá lại TSCĐ; Bảng tính khấu hao TSCĐ; Biên bản điều chuyển TSCĐ; Biên bản kiểm kê TSCĐ.
+Chi tiết: metadata/ACCOUNTING_VOUCHER_MAPPING.md và metadata/accounting_voucher_mappings.json tại gốc dự án.

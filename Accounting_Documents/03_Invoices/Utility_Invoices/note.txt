@@ -1,0 +1,3 @@
+Hóa đơn tiện ích
+Hóa đơn điện, nước, viễn thông và dịch vụ tiện ích tương tự.
+Metadata được quản lý ở metadata/documents.jsonl tại thư mục gốc dự án.

@@ -1,0 +1,7 @@
+Chứng từ tiền lương
+Bảng lương, bảng chấm công và chứng từ thanh toán lương.
+Metadata được quản lý ở metadata/documents.jsonl tại thư mục gốc dự án.
+
+Chuẩn hóa phiên bản 2.1.0: AV021–AV026 (6 loại).
+Các loại: Bảng chấm công; Bảng thanh toán tiền lương; Bảng thanh toán tiền thưởng; Bảng phân bổ tiền lương; Chứng từ thanh toán bảo hiểm; Xác nhận thanh toán cho nhân viên.
+Chi tiết: metadata/ACCOUNTING_VOUCHER_MAPPING.md và metadata/accounting_voucher_mappings.json tại gốc dự án.

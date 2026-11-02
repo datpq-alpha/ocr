@@ -1,0 +1,3 @@
+Hóa đơn bán hàng
+Nhánh lưu hóa đơn bán ra theo góc nhìn đơn vị kế toán. Loại Sales_Invoice phải xác nhận riêng theo nội dung; VAT_Invoice cũng có thể nằm ở đây.
+Metadata được quản lý ở metadata/documents.jsonl tại thư mục gốc dự án.

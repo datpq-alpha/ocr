@@ -1,0 +1,3 @@
+Hóa đơn điều chỉnh
+Tài liệu ghi rõ là hóa đơn điều chỉnh; liên kết chứng từ gốc trong related_document_ids nếu có.
+Metadata được quản lý ở metadata/documents.jsonl tại thư mục gốc dự án.

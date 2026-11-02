@@ -1,0 +1,3 @@
+Biên bản hủy hóa đơn
+Biên bản hoặc hồ sơ hủy hóa đơn; document_type=Invoice_Cancellation_Record.
+Metadata được quản lý ở metadata/documents.jsonl tại thư mục gốc dự án.

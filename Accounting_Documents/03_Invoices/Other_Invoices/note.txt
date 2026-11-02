@@ -1,0 +1,3 @@
+Hóa đơn khác
+Tài liệu đã xác nhận thuộc nhóm hóa đơn nhưng chưa phù hợp các nhánh cụ thể.
+Metadata được quản lý ở metadata/documents.jsonl tại thư mục gốc dự án.

@@ -1,0 +1,8 @@
+Chứng từ tiền mặt
+Phiếu thu, phiếu chi và chứng từ quỹ tiền mặt.
+Metadata được quản lý ở metadata/documents.jsonl tại thư mục gốc dự án.
+
+Chuẩn hóa phiên bản 2.1.0: AV001–AV007 (7 loại).
+Các loại: Phiếu thu; Phiếu chi; Biên lai thu tiền; Giấy đề nghị tạm ứng; Giấy thanh toán tiền tạm ứng; Biên bản kiểm kê quỹ; Biên bản bàn giao tiền mặt.
+AV003 dùng lại Cash_Receipt/INV018 và lưu chính ở 03_Invoices/Payment_Receipts; phiếu thu kế toán là AV001.
+Chi tiết: metadata/ACCOUNTING_VOUCHER_MAPPING.md và metadata/accounting_voucher_mappings.json tại gốc dự án.

@@ -1,0 +1,3 @@
+Hóa đơn mua hàng
+Hóa đơn của giao dịch mua vào. Xác minh chủ thể kế toán trước khi gán direction=Incoming.
+Metadata được quản lý ở metadata/documents.jsonl tại thư mục gốc dự án.

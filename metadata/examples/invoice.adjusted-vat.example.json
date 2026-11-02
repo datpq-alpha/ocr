@@ -1,0 +1,38 @@
+{
+  "schema_version": "2.1.0",
+  "document_id": "DOC999997",
+  "document_type": "Adjusted_Invoice",
+  "document_category": "Invoices",
+  "document_subcategory": "Adjusted_Invoices",
+  "relative_path": null,
+  "sha256": null,
+  "format": "PDF",
+  "source": "Electronic",
+  "direction": "Incoming",
+  "language": [
+    "Vietnamese"
+  ],
+  "company": "DEMO_COMPANY",
+  "industry": "General_Business",
+  "invoice_number": "0000123",
+  "invoice_date": "2026-06-30",
+  "tax_code": "0100000000",
+  "total_amount": 11000000,
+  "currency": "VND",
+  "reporting_period_end": null,
+  "business_tags": [
+    "Purchase",
+    "Equipment_Purchase",
+    "Fixed_Asset_Purchase"
+  ],
+  "contained_document_types": [],
+  "related_document_ids": [],
+  "ocr_status": "Pending",
+  "classification_status": "Confirmed",
+  "metadata_origin": "Illustrative_Example",
+  "is_example": true,
+  "notes": "DỮ LIỆU MINH HỌA. Hóa đơn điều chỉnh có loại nền VAT_Invoice. Tham chiếu chứng từ gốc chưa có nên related_document_ids để trống.",
+  "issuance_form": "Electronic",
+  "invoice_kind": "VAT_Invoice",
+  "invoice_role": "Adjusted"
+}

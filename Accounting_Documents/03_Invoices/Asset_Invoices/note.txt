@@ -1,0 +1,3 @@
+Hóa đơn tài sản
+Hóa đơn mua hoặc bán tài sản. Ghi thêm business_tags thay vì sao chép vào nhiều thư mục.
+Metadata được quản lý ở metadata/documents.jsonl tại thư mục gốc dự án.

@@ -1,0 +1,1596 @@
+{
+  "mapping_version": "2.1.0",
+  "taxonomy_version": "2.1.0",
+  "description": "Ánh xạ 34 nhu cầu phân loại do người dùng cung cấp; đây là mã tra cứu nội bộ, không phải mã pháp lý.",
+  "groups": [
+    {
+      "code": "G01",
+      "name_vi": "Bán hàng và cung cấp dịch vụ"
+    },
+    {
+      "code": "G02",
+      "name_vi": "Mua hàng và chi phí"
+    },
+    {
+      "code": "G03",
+      "name_vi": "Điều chỉnh và thay thế"
+    },
+    {
+      "code": "G04",
+      "name_vi": "Thanh toán và biên lai"
+    },
+    {
+      "code": "G05",
+      "name_vi": "Tài sản và đầu tư"
+    },
+    {
+      "code": "G06",
+      "name_vi": "Hóa đơn đặc thù"
+    }
+  ],
+  "match_semantics": "match là một JSON Schema kiểm tra metadata đã xác minh. Một tài liệu có thể khớp nhiều mục. Không khớp khi dữ liệu còn null không có nghĩa là loại đó không tồn tại trong tập dữ liệu.",
+  "suggestion_semantics": "suggested_metadata và suggested_subcategory chỉ hỗ trợ gán nhãn khi có bằng chứng; giữ loại cụ thể đã biết và kết hợp thuộc tính, không dùng làm kết quả OCR tự động.",
+  "items": [
+    {
+      "code": "INV001",
+      "group_code": "G01",
+      "name_en": "VAT Invoice",
+      "name_vi": "Hóa đơn giá trị gia tăng",
+      "representation": "Invoice_Kind",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "invoice_kind": {
+            "const": "VAT_Invoice"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "invoice_kind"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "VAT_Invoice",
+        "invoice_kind": "VAT_Invoice",
+        "business_tags": []
+      },
+      "suggested_subcategory": null,
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV002",
+      "group_code": "G01",
+      "name_en": "Sales Invoice",
+      "name_vi": "Hóa đơn bán hàng",
+      "representation": "Invoice_Kind",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "invoice_kind": {
+            "const": "Sales_Invoice"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "invoice_kind"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Sales_Invoice",
+        "invoice_kind": "Sales_Invoice",
+        "business_tags": []
+      },
+      "suggested_subcategory": null,
+      "classification_rule": "Loại hóa đơn theo nội dung; độc lập với direction, không tự gán Outgoing."
+    },
+    {
+      "code": "INV003",
+      "group_code": "G01",
+      "name_en": "Service Invoice",
+      "name_vi": "Hóa đơn cung cấp dịch vụ",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Service"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Service_Invoice",
+        "business_tags": [
+          "Service"
+        ]
+      },
+      "suggested_subcategory": "Service_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV004",
+      "group_code": "G01",
+      "name_en": "Export Invoice",
+      "name_vi": "Hóa đơn xuất khẩu",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Export"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Export_Invoice",
+        "business_tags": [
+          "Export"
+        ]
+      },
+      "suggested_subcategory": "Export_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV005",
+      "group_code": "G01",
+      "name_en": "Electronic Invoice",
+      "name_vi": "Hóa đơn điện tử",
+      "representation": "Issuance_Form",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "issuance_form": {
+            "const": "Electronic"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "issuance_form"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Other_Invoice",
+        "issuance_form": "Electronic",
+        "business_tags": []
+      },
+      "suggested_subcategory": null,
+      "classification_rule": "Hình thức phát hành. Không gán source=Electronic nếu đầu vào thực tế là ảnh chụp hoặc bản scan."
+    },
+    {
+      "code": "INV006",
+      "group_code": "G01",
+      "name_en": "Retail Invoice",
+      "name_vi": "Hóa đơn bán lẻ",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Retail"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Retail_Invoice",
+        "business_tags": [
+          "Retail"
+        ]
+      },
+      "suggested_subcategory": "Other_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV007",
+      "group_code": "G02",
+      "name_en": "Purchase Invoice",
+      "name_vi": "Hóa đơn mua hàng",
+      "representation": "Direction",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "direction": {
+            "const": "Incoming"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "direction"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Other_Invoice",
+        "direction": "Incoming",
+        "business_tags": [
+          "Purchase"
+        ]
+      },
+      "suggested_subcategory": "Purchase_Invoices",
+      "classification_rule": "Chiều mua vào theo đơn vị kế toán. Nếu biết là VAT_Invoice/Sales_Invoice thì giữ loại đó, không đổi sang Purchase_Invoice."
+    },
+    {
+      "code": "INV008",
+      "group_code": "G02",
+      "name_en": "Expense Invoice",
+      "name_vi": "Hóa đơn chi phí",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Operating_Expense"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Other_Invoice",
+        "business_tags": [
+          "Operating_Expense"
+        ]
+      },
+      "suggested_subcategory": null,
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV009",
+      "group_code": "G02",
+      "name_en": "Transportation Invoice",
+      "name_vi": "Hóa đơn vận tải",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Transportation"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Service_Invoice",
+        "business_tags": [
+          "Service",
+          "Transportation"
+        ]
+      },
+      "suggested_subcategory": "Service_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV010",
+      "group_code": "G02",
+      "name_en": "Accommodation Invoice",
+      "name_vi": "Hóa đơn lưu trú",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Accommodation"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Service_Invoice",
+        "business_tags": [
+          "Service",
+          "Accommodation"
+        ]
+      },
+      "suggested_subcategory": "Service_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV011",
+      "group_code": "G02",
+      "name_en": "Food and Beverage Invoice",
+      "name_vi": "Hóa đơn ăn uống",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Food_and_Beverage"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Service_Invoice",
+        "business_tags": [
+          "Service",
+          "Food_and_Beverage"
+        ]
+      },
+      "suggested_subcategory": "Service_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV012",
+      "group_code": "G02",
+      "name_en": "Utility Invoice",
+      "name_vi": "Hóa đơn điện, nước, viễn thông",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Utilities"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Utility_Invoice",
+        "business_tags": [
+          "Utilities"
+        ]
+      },
+      "suggested_subcategory": "Utility_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV013",
+      "group_code": "G03",
+      "name_en": "Adjusted Invoice",
+      "name_vi": "Hóa đơn điều chỉnh",
+      "representation": "Invoice_Role",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "invoice_role": {
+            "const": "Adjusted"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "invoice_role"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Adjusted_Invoice",
+        "invoice_role": "Adjusted",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Adjusted_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV014",
+      "group_code": "G03",
+      "name_en": "Replacement Invoice",
+      "name_vi": "Hóa đơn thay thế",
+      "representation": "Invoice_Role",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "invoice_role": {
+            "const": "Replacement"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "invoice_role"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Replacement_Invoice",
+        "invoice_role": "Replacement",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Replacement_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV015",
+      "group_code": "G03",
+      "name_en": "Invoice Cancellation Record",
+      "name_vi": "Tài liệu hủy hóa đơn",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "Invoice_Cancellation_Record"
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Invoice_Cancellation_Record",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Cancellation_Records",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV016",
+      "group_code": "G03",
+      "name_en": "Invoice Correction Document",
+      "name_vi": "Tài liệu xử lý sai sót hóa đơn",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "Invoice_Correction_Document"
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Invoice_Correction_Document",
+        "business_tags": []
+      },
+      "suggested_subcategory": null,
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV017",
+      "group_code": "G04",
+      "name_en": "Payment Receipt",
+      "name_vi": "Biên lai thanh toán",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "Payment_Receipt"
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Payment_Receipt",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Payment_Receipts",
+      "classification_rule": "Biên nhận hoặc xác nhận đã thanh toán. Phiếu thu kế toán thuộc Cash_Vouchers."
+    },
+    {
+      "code": "INV018",
+      "group_code": "G04",
+      "name_en": "Cash Receipt",
+      "name_vi": "Biên lai thu tiền",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "Cash_Receipt"
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Cash_Receipt",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Payment_Receipts",
+      "classification_rule": "Biên lai xác nhận thu tiền. Nếu là phiếu thu kế toán nội bộ thì dùng Cash_Voucher trong Accounting_Vouchers."
+    },
+    {
+      "code": "INV019",
+      "group_code": "G04",
+      "name_en": "Deposit Receipt",
+      "name_vi": "Biên lai đặt cọc",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "Deposit_Receipt"
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Deposit_Receipt",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Payment_Receipts",
+      "classification_rule": "Biên lai xác nhận nhận tiền đặt cọc, chưa tự suy ra là hóa đơn bán hàng."
+    },
+    {
+      "code": "INV020",
+      "group_code": "G04",
+      "name_en": "Refund Receipt",
+      "name_vi": "Biên lai hoàn tiền",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "Refund_Receipt"
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Refund_Receipt",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Payment_Receipts",
+      "classification_rule": "Biên lai xác nhận hoàn tiền; không suy ra dấu của total_amount chỉ từ tên loại."
+    },
+    {
+      "code": "INV021",
+      "group_code": "G04",
+      "name_en": "Credit Note",
+      "name_vi": "Chứng từ ghi giảm công nợ",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "Credit_Note"
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Credit_Note",
+        "business_tags": []
+      },
+      "suggested_subcategory": null,
+      "classification_rule": "Chứng từ thể hiện ghi giảm công nợ theo nội dung và ngữ cảnh giao dịch; không tự đồng nhất với hóa đơn điều chỉnh."
+    },
+    {
+      "code": "INV022",
+      "group_code": "G04",
+      "name_en": "Debit Note",
+      "name_vi": "Chứng từ ghi tăng công nợ",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "Debit_Note"
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Debit_Note",
+        "business_tags": []
+      },
+      "suggested_subcategory": null,
+      "classification_rule": "Chứng từ thể hiện ghi tăng công nợ theo nội dung và ngữ cảnh giao dịch; không tự đồng nhất với giấy báo Nợ ngân hàng."
+    },
+    {
+      "code": "INV023",
+      "group_code": "G05",
+      "name_en": "Fixed Asset Invoice",
+      "name_vi": "Hóa đơn mua tài sản cố định",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Fixed_Asset_Purchase"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Asset_Invoice",
+        "business_tags": [
+          "Fixed_Asset_Purchase"
+        ]
+      },
+      "suggested_subcategory": "Asset_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV024",
+      "group_code": "G05",
+      "name_en": "Equipment Invoice",
+      "name_vi": "Hóa đơn mua thiết bị",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Equipment_Purchase"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Asset_Invoice",
+        "business_tags": [
+          "Equipment_Purchase"
+        ]
+      },
+      "suggested_subcategory": "Asset_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV025",
+      "group_code": "G05",
+      "name_en": "Vehicle Invoice",
+      "name_vi": "Hóa đơn mua phương tiện",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Vehicle_Purchase"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Asset_Invoice",
+        "business_tags": [
+          "Vehicle_Purchase"
+        ]
+      },
+      "suggested_subcategory": "Asset_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV026",
+      "group_code": "G05",
+      "name_en": "Construction Invoice",
+      "name_vi": "Hóa đơn xây dựng",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Construction"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Asset_Invoice",
+        "business_tags": [
+          "Construction"
+        ]
+      },
+      "suggested_subcategory": "Asset_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV027",
+      "group_code": "G05",
+      "name_en": "Investment-related Invoice",
+      "name_vi": "Hóa đơn liên quan đến đầu tư",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Investment"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Asset_Invoice",
+        "business_tags": [
+          "Investment"
+        ]
+      },
+      "suggested_subcategory": "Asset_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV028",
+      "group_code": "G06",
+      "name_en": "Insurance Invoice",
+      "name_vi": "Hóa đơn bảo hiểm",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Insurance"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Service_Invoice",
+        "business_tags": [
+          "Service",
+          "Insurance"
+        ]
+      },
+      "suggested_subcategory": "Service_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV029",
+      "group_code": "G06",
+      "name_en": "Telecommunications Invoice",
+      "name_vi": "Hóa đơn viễn thông",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Telecommunications"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Utility_Invoice",
+        "business_tags": [
+          "Utilities",
+          "Telecommunications"
+        ]
+      },
+      "suggested_subcategory": "Utility_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV030",
+      "group_code": "G06",
+      "name_en": "Electricity Invoice",
+      "name_vi": "Hóa đơn tiền điện",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Electricity"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Utility_Invoice",
+        "business_tags": [
+          "Utilities",
+          "Electricity"
+        ]
+      },
+      "suggested_subcategory": "Utility_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV031",
+      "group_code": "G06",
+      "name_en": "Water Invoice",
+      "name_vi": "Hóa đơn tiền nước",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Water"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Utility_Invoice",
+        "business_tags": [
+          "Utilities",
+          "Water"
+        ]
+      },
+      "suggested_subcategory": "Utility_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV032",
+      "group_code": "G06",
+      "name_en": "Fuel Invoice",
+      "name_vi": "Hóa đơn xăng dầu",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Fuel"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Other_Invoice",
+        "business_tags": [
+          "Fuel"
+        ]
+      },
+      "suggested_subcategory": null,
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV033",
+      "group_code": "G06",
+      "name_en": "Advertising Invoice",
+      "name_vi": "Hóa đơn quảng cáo",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Advertising"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Service_Invoice",
+        "business_tags": [
+          "Service",
+          "Advertising"
+        ]
+      },
+      "suggested_subcategory": "Service_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    },
+    {
+      "code": "INV034",
+      "group_code": "G06",
+      "name_en": "Financial Service Invoice",
+      "name_vi": "Hóa đơn dịch vụ tài chính",
+      "representation": "Business_Tag",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice"
+            ]
+          },
+          "business_tags": {
+            "allOf": [
+              {
+                "contains": {
+                  "const": "Financial_Service"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type",
+          "business_tags"
+        ]
+      },
+      "suggested_metadata": {
+        "document_type": "Service_Invoice",
+        "business_tags": [
+          "Service",
+          "Financial_Service"
+        ]
+      },
+      "suggested_subcategory": "Service_Invoices",
+      "classification_rule": "Chỉ áp dụng khi nội dung hoặc ngữ cảnh đã được xác minh. Một tài liệu có thể khớp nhiều mã INV."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+Chứng từ kế toán tổng hợp
+Phiếu kế toán, phân bổ, kết chuyển và điều chỉnh sổ kế toán.
+Metadata được quản lý ở metadata/documents.jsonl tại thư mục gốc dự án.
+
+Chuẩn hóa phiên bản 2.1.0: AV041–AV047 (7 loại).
+Các loại: Phiếu kế toán; Chứng từ ghi sổ; Bảng phân bổ chi phí; Bảng tính giá thành; Chứng từ điều chỉnh kế toán; Chứng từ ghi nhận chi phí phải trả; Bảng phân bổ chi phí trả trước.
+Chi tiết: metadata/ACCOUNTING_VOUCHER_MAPPING.md và metadata/accounting_voucher_mappings.json tại gốc dự án.

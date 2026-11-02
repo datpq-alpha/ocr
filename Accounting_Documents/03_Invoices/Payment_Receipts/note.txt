@@ -1,0 +1,3 @@
+Biên nhận thanh toán
+Biên nhận thanh toán, thu tiền, đặt cọc hoặc hoàn tiền. Phiếu thu kế toán nội bộ thuộc Cash_Vouchers; Credit_Note/Debit_Note không mặc định là biên lai.
+Metadata được quản lý ở metadata/documents.jsonl tại thư mục gốc dự án.

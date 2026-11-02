@@ -1,0 +1,1219 @@
+{
+  "taxonomy_version": "2.1.0",
+  "description": "Taxonomy riêng của repository, không phải bộ mã pháp lý hay chuẩn nhãn có sẵn của PaddleOCR.",
+  "document_root": "Accounting_Documents",
+  "categories": [
+    {
+      "code": "Financial_Reports",
+      "folder": "01_Financial_Reports",
+      "name_en": "Financial Reports",
+      "name_vi": "Báo cáo tài chính",
+      "parent_code": null,
+      "classification_rule": "Báo cáo tài chính, báo cáo thường niên, báo cáo kiểm toán và soát xét. Lưu kèm báo cáo an toàn tài chính và công văn công bố/giải trình liên quan; dùng document_type để phân biệt.",
+      "subcategories": []
+    },
+    {
+      "code": "Accounting_Vouchers",
+      "folder": "02_Accounting_Vouchers",
+      "name_en": "Accounting Vouchers",
+      "name_vi": "Chứng từ kế toán",
+      "parent_code": null,
+      "classification_rule": "Chứng từ kế toán theo nghiệp vụ. Phân biệt với hóa đơn, hợp đồng và sao kê.",
+      "subcategories": [
+        {
+          "code": "Cash_Vouchers",
+          "folder": "02_Accounting_Vouchers/Cash_Vouchers",
+          "name_en": "Cash Vouchers",
+          "name_vi": "Chứng từ tiền mặt",
+          "parent_code": "Accounting_Vouchers",
+          "classification_rule": "Phiếu thu, phiếu chi và chứng từ quỹ tiền mặt."
+        },
+        {
+          "code": "Bank_Vouchers",
+          "folder": "02_Accounting_Vouchers/Bank_Vouchers",
+          "name_en": "Bank Vouchers",
+          "name_vi": "Chứng từ ngân hàng",
+          "parent_code": "Accounting_Vouchers",
+          "classification_rule": "Ủy nhiệm chi, ủy nhiệm thu, giấy báo Nợ/Có. Sao kê và xác nhận số dư thuộc 05_Bank_Statements."
+        },
+        {
+          "code": "Inventory_Vouchers",
+          "folder": "02_Accounting_Vouchers/Inventory_Vouchers",
+          "name_en": "Inventory Vouchers",
+          "name_vi": "Chứng từ hàng tồn kho",
+          "parent_code": "Accounting_Vouchers",
+          "classification_rule": "Phiếu nhập kho, xuất kho, kiểm kê và điều chuyển kho."
+        },
+        {
+          "code": "Payroll_Vouchers",
+          "folder": "02_Accounting_Vouchers/Payroll_Vouchers",
+          "name_en": "Payroll Vouchers",
+          "name_vi": "Chứng từ tiền lương",
+          "parent_code": "Accounting_Vouchers",
+          "classification_rule": "Bảng lương, bảng chấm công và chứng từ thanh toán lương."
+        },
+        {
+          "code": "Fixed_Asset_Vouchers",
+          "folder": "02_Accounting_Vouchers/Fixed_Asset_Vouchers",
+          "name_en": "Fixed Asset Vouchers",
+          "name_vi": "Chứng từ tài sản cố định",
+          "parent_code": "Accounting_Vouchers",
+          "classification_rule": "Biên bản giao nhận, thanh lý, kiểm kê và bảng khấu hao. Hóa đơn mua tài sản thuộc 03_Invoices."
+        },
+        {
+          "code": "Sales_Purchase_Vouchers",
+          "folder": "02_Accounting_Vouchers/Sales_Purchase_Vouchers",
+          "name_en": "Sales Purchase Vouchers",
+          "name_vi": "Chứng từ mua bán",
+          "parent_code": "Accounting_Vouchers",
+          "classification_rule": "Chứng từ giao nhận, nhập mua, xuất bán; hóa đơn thuộc 03_Invoices, hợp đồng thuộc 06_Contracts."
+        },
+        {
+          "code": "General_Accounting_Vouchers",
+          "folder": "02_Accounting_Vouchers/General_Accounting_Vouchers",
+          "name_en": "General Accounting Vouchers",
+          "name_vi": "Chứng từ kế toán tổng hợp",
+          "parent_code": "Accounting_Vouchers",
+          "classification_rule": "Phiếu kế toán, phân bổ, kết chuyển và điều chỉnh sổ kế toán."
+        }
+      ]
+    },
+    {
+      "code": "Invoices",
+      "folder": "03_Invoices",
+      "name_en": "Invoices",
+      "name_vi": "Hóa đơn và tài liệu liên quan",
+      "parent_code": null,
+      "classification_rule": "Hóa đơn, biên lai, tài liệu xử lý sai sót và chứng từ công nợ liên quan. Các mục đích giao nhau lưu trong business_tags; không suy ra tính chất pháp lý từ nhóm lưu trữ.",
+      "subcategories": [
+        {
+          "code": "Sales_Invoices",
+          "folder": "03_Invoices/Sales_Invoices",
+          "name_en": "Sales Invoices",
+          "name_vi": "Hóa đơn bán hàng",
+          "parent_code": "Invoices",
+          "classification_rule": "Nhánh lưu hóa đơn bán ra theo góc nhìn đơn vị kế toán. Loại Sales_Invoice phải xác nhận riêng theo nội dung; VAT_Invoice cũng có thể nằm ở đây."
+        },
+        {
+          "code": "Purchase_Invoices",
+          "folder": "03_Invoices/Purchase_Invoices",
+          "name_en": "Purchase Invoices",
+          "name_vi": "Hóa đơn mua hàng",
+          "parent_code": "Invoices",
+          "classification_rule": "Hóa đơn của giao dịch mua vào. Xác minh chủ thể kế toán trước khi gán direction=Incoming."
+        },
+        {
+          "code": "Service_Invoices",
+          "folder": "03_Invoices/Service_Invoices",
+          "name_en": "Service Invoices",
+          "name_vi": "Hóa đơn dịch vụ",
+          "parent_code": "Invoices",
+          "classification_rule": "Hóa đơn có nội dung chính là cung cấp hoặc sử dụng dịch vụ."
+        },
+        {
+          "code": "Export_Invoices",
+          "folder": "03_Invoices/Export_Invoices",
+          "name_en": "Export Invoices",
+          "name_vi": "Hóa đơn xuất khẩu",
+          "parent_code": "Invoices",
+          "classification_rule": "Hóa đơn của giao dịch xuất khẩu."
+        },
+        {
+          "code": "Adjusted_Invoices",
+          "folder": "03_Invoices/Adjusted_Invoices",
+          "name_en": "Adjusted Invoices",
+          "name_vi": "Hóa đơn điều chỉnh",
+          "parent_code": "Invoices",
+          "classification_rule": "Tài liệu ghi rõ là hóa đơn điều chỉnh; liên kết chứng từ gốc trong related_document_ids nếu có."
+        },
+        {
+          "code": "Replacement_Invoices",
+          "folder": "03_Invoices/Replacement_Invoices",
+          "name_en": "Replacement Invoices",
+          "name_vi": "Hóa đơn thay thế",
+          "parent_code": "Invoices",
+          "classification_rule": "Tài liệu ghi rõ là hóa đơn thay thế; liên kết chứng từ gốc trong related_document_ids nếu có."
+        },
+        {
+          "code": "Cancellation_Records",
+          "folder": "03_Invoices/Cancellation_Records",
+          "name_en": "Cancellation Records",
+          "name_vi": "Biên bản hủy hóa đơn",
+          "parent_code": "Invoices",
+          "classification_rule": "Biên bản hoặc hồ sơ hủy hóa đơn; document_type=Invoice_Cancellation_Record."
+        },
+        {
+          "code": "Payment_Receipts",
+          "folder": "03_Invoices/Payment_Receipts",
+          "name_en": "Payment Receipts",
+          "name_vi": "Biên nhận thanh toán",
+          "parent_code": "Invoices",
+          "classification_rule": "Biên nhận thanh toán, thu tiền, đặt cọc hoặc hoàn tiền. Phiếu thu kế toán nội bộ thuộc Cash_Vouchers; Credit_Note/Debit_Note không mặc định là biên lai."
+        },
+        {
+          "code": "Asset_Invoices",
+          "folder": "03_Invoices/Asset_Invoices",
+          "name_en": "Asset Invoices",
+          "name_vi": "Hóa đơn tài sản",
+          "parent_code": "Invoices",
+          "classification_rule": "Hóa đơn mua hoặc bán tài sản. Ghi thêm business_tags thay vì sao chép vào nhiều thư mục."
+        },
+        {
+          "code": "Utility_Invoices",
+          "folder": "03_Invoices/Utility_Invoices",
+          "name_en": "Utility Invoices",
+          "name_vi": "Hóa đơn tiện ích",
+          "parent_code": "Invoices",
+          "classification_rule": "Hóa đơn điện, nước, viễn thông và dịch vụ tiện ích tương tự."
+        },
+        {
+          "code": "Other_Invoices",
+          "folder": "03_Invoices/Other_Invoices",
+          "name_en": "Other Invoices",
+          "name_vi": "Hóa đơn khác",
+          "parent_code": "Invoices",
+          "classification_rule": "Tài liệu đã xác nhận thuộc nhóm hóa đơn nhưng chưa phù hợp các nhánh cụ thể."
+        }
+      ]
+    },
+    {
+      "code": "Tax_Documents",
+      "folder": "04_Tax_Documents",
+      "name_en": "Tax Documents",
+      "name_vi": "Tài liệu thuế",
+      "parent_code": null,
+      "classification_rule": "Tờ khai thuế, quyết toán thuế và thông báo thuế.",
+      "subcategories": []
+    },
+    {
+      "code": "Bank_Statements",
+      "folder": "05_Bank_Statements",
+      "name_en": "Bank Statements",
+      "name_vi": "Sao kê ngân hàng",
+      "parent_code": null,
+      "classification_rule": "Sao kê ngân hàng và xác nhận số dư. Chứng từ lệnh chuyển tiền hoặc báo Nợ/Có thuộc Bank_Vouchers.",
+      "subcategories": []
+    },
+    {
+      "code": "Contracts",
+      "folder": "06_Contracts",
+      "name_en": "Contracts",
+      "name_vi": "Hợp đồng",
+      "parent_code": null,
+      "classification_rule": "Hợp đồng mua bán, vay, dịch vụ và hợp đồng kinh tế khác.",
+      "subcategories": []
+    },
+    {
+      "code": "Other_Documents",
+      "folder": "07_Other_Documents",
+      "name_en": "Other Documents",
+      "name_vi": "Tài liệu khác",
+      "parent_code": null,
+      "classification_rule": "Các tài liệu khác; đánh dấu Needs_Review nếu chưa đủ bằng chứng phân loại.",
+      "subcategories": []
+    }
+  ],
+  "document_types": [
+    {
+      "code": "Financial_Report",
+      "name_en": "Financial Report",
+      "name_vi": "Báo cáo tài chính",
+      "parent_code": "Financial_Reports",
+      "default_subcategory": null,
+      "classification_rule": "Nội dung chính là một bộ hoặc một báo cáo tài chính; phần kiểm toán đi kèm ghi trong contained_document_types."
+    },
+    {
+      "code": "Annual_Report",
+      "name_en": "Annual Report",
+      "name_vi": "Báo cáo thường niên",
+      "parent_code": "Financial_Reports",
+      "default_subcategory": null,
+      "classification_rule": "Tài liệu xác định là báo cáo thường niên."
+    },
+    {
+      "code": "Audit_Report",
+      "name_en": "Audit Report",
+      "name_vi": "Báo cáo kiểm toán",
+      "parent_code": "Financial_Reports",
+      "default_subcategory": null,
+      "classification_rule": "Báo cáo kiểm toán độc lập là nội dung chính, không phải chỉ có chữ ký hoặc dấu mộc."
+    },
+    {
+      "code": "Review_Report",
+      "name_en": "Review Report",
+      "name_vi": "Báo cáo soát xét",
+      "parent_code": "Financial_Reports",
+      "default_subcategory": null,
+      "classification_rule": "Báo cáo soát xét là nội dung chính của tài liệu."
+    },
+    {
+      "code": "Capital_Adequacy_Report",
+      "name_en": "Capital Adequacy Report",
+      "name_vi": "Báo cáo an toàn tài chính",
+      "parent_code": "Financial_Reports",
+      "default_subcategory": null,
+      "classification_rule": "Báo cáo tỷ lệ an toàn tài chính hoặc an toàn vốn."
+    },
+    {
+      "code": "Financial_Disclosure",
+      "name_en": "Financial Disclosure",
+      "name_vi": "Công bố báo cáo tài chính",
+      "parent_code": "Financial_Reports",
+      "default_subcategory": null,
+      "classification_rule": "Công văn hoặc thông báo công bố báo cáo tài chính là nội dung chính."
+    },
+    {
+      "code": "Financial_Explanation",
+      "name_en": "Financial Explanation",
+      "name_vi": "Giải trình tài chính",
+      "parent_code": "Financial_Reports",
+      "default_subcategory": null,
+      "classification_rule": "Công văn giải trình tài chính là nội dung chính."
+    },
+    {
+      "code": "Cash_Voucher",
+      "name_en": "Cash Voucher",
+      "name_vi": "Chứng từ tiền mặt",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Cash_Vouchers",
+      "classification_rule": "Phiếu thu, phiếu chi và chứng từ quỹ tiền mặt.",
+      "granularity": "Group"
+    },
+    {
+      "code": "Bank_Voucher",
+      "name_en": "Bank Voucher",
+      "name_vi": "Chứng từ ngân hàng",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Bank_Vouchers",
+      "classification_rule": "Ủy nhiệm chi, ủy nhiệm thu, giấy báo Nợ/Có. Sao kê và xác nhận số dư thuộc 05_Bank_Statements.",
+      "granularity": "Group"
+    },
+    {
+      "code": "Inventory_Voucher",
+      "name_en": "Inventory Voucher",
+      "name_vi": "Chứng từ hàng tồn kho",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Inventory_Vouchers",
+      "classification_rule": "Phiếu nhập kho, xuất kho, kiểm kê và điều chuyển kho.",
+      "granularity": "Group"
+    },
+    {
+      "code": "Payroll_Voucher",
+      "name_en": "Payroll Voucher",
+      "name_vi": "Chứng từ tiền lương",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Payroll_Vouchers",
+      "classification_rule": "Bảng lương, bảng chấm công và chứng từ thanh toán lương.",
+      "granularity": "Group"
+    },
+    {
+      "code": "Fixed_Asset_Voucher",
+      "name_en": "Fixed Asset Voucher",
+      "name_vi": "Chứng từ tài sản cố định",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Fixed_Asset_Vouchers",
+      "classification_rule": "Biên bản giao nhận, thanh lý, kiểm kê và bảng khấu hao. Hóa đơn mua tài sản thuộc 03_Invoices.",
+      "granularity": "Group"
+    },
+    {
+      "code": "Sales_Purchase_Voucher",
+      "name_en": "Sales Purchase Voucher",
+      "name_vi": "Chứng từ mua bán",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Sales_Purchase_Vouchers",
+      "classification_rule": "Chứng từ giao nhận, nhập mua, xuất bán; hóa đơn thuộc 03_Invoices, hợp đồng thuộc 06_Contracts.",
+      "granularity": "Group"
+    },
+    {
+      "code": "General_Accounting_Voucher",
+      "name_en": "General Accounting Voucher",
+      "name_vi": "Chứng từ kế toán tổng hợp",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "General_Accounting_Vouchers",
+      "classification_rule": "Phiếu kế toán, phân bổ, kết chuyển và điều chỉnh sổ kế toán.",
+      "granularity": "Group"
+    },
+    {
+      "code": "VAT_Invoice",
+      "name_en": "VAT Invoice",
+      "name_vi": "Hóa đơn giá trị gia tăng",
+      "parent_code": "Invoices",
+      "default_subcategory": null,
+      "classification_rule": "Tài liệu thể hiện rõ là hóa đơn GTGT. Chọn thư mục chính theo mục đích; direction và business_tags lưu độc lập."
+    },
+    {
+      "code": "Sales_Invoice",
+      "name_en": "Sales Invoice",
+      "name_vi": "Hóa đơn bán hàng",
+      "parent_code": "Invoices",
+      "default_subcategory": null,
+      "classification_rule": "Loại hóa đơn bán hàng xác nhận theo tiêu đề và nội dung. Không gán chỉ vì giao dịch bán ra; direction lưu riêng theo góc nhìn đơn vị kế toán."
+    },
+    {
+      "code": "Purchase_Invoice",
+      "name_en": "Purchase Invoice",
+      "name_vi": "Hóa đơn mua hàng",
+      "parent_code": "Invoices",
+      "default_subcategory": "Purchase_Invoices",
+      "classification_rule": "Hóa đơn của giao dịch mua vào. Xác minh chủ thể kế toán trước khi gán direction=Incoming."
+    },
+    {
+      "code": "Service_Invoice",
+      "name_en": "Service Invoice",
+      "name_vi": "Hóa đơn dịch vụ",
+      "parent_code": "Invoices",
+      "default_subcategory": "Service_Invoices",
+      "classification_rule": "Hóa đơn có nội dung chính là cung cấp hoặc sử dụng dịch vụ."
+    },
+    {
+      "code": "Export_Invoice",
+      "name_en": "Export Invoice",
+      "name_vi": "Hóa đơn xuất khẩu",
+      "parent_code": "Invoices",
+      "default_subcategory": "Export_Invoices",
+      "classification_rule": "Hóa đơn của giao dịch xuất khẩu."
+    },
+    {
+      "code": "Adjusted_Invoice",
+      "name_en": "Adjusted Invoice",
+      "name_vi": "Hóa đơn điều chỉnh",
+      "parent_code": "Invoices",
+      "default_subcategory": "Adjusted_Invoices",
+      "classification_rule": "Tài liệu ghi rõ là hóa đơn điều chỉnh; liên kết chứng từ gốc trong related_document_ids nếu có."
+    },
+    {
+      "code": "Replacement_Invoice",
+      "name_en": "Replacement Invoice",
+      "name_vi": "Hóa đơn thay thế",
+      "parent_code": "Invoices",
+      "default_subcategory": "Replacement_Invoices",
+      "classification_rule": "Tài liệu ghi rõ là hóa đơn thay thế; liên kết chứng từ gốc trong related_document_ids nếu có."
+    },
+    {
+      "code": "Invoice_Cancellation_Record",
+      "name_en": "Invoice Cancellation Record",
+      "name_vi": "Biên bản hủy hóa đơn",
+      "parent_code": "Invoices",
+      "default_subcategory": "Cancellation_Records",
+      "classification_rule": "Biên bản hoặc hồ sơ hủy hóa đơn; document_type=Invoice_Cancellation_Record."
+    },
+    {
+      "code": "Payment_Receipt",
+      "name_en": "Payment Receipt",
+      "name_vi": "Biên nhận thanh toán",
+      "parent_code": "Invoices",
+      "default_subcategory": "Payment_Receipts",
+      "classification_rule": "Biên nhận hoặc xác nhận đã thanh toán. Phiếu thu kế toán thuộc Cash_Vouchers."
+    },
+    {
+      "code": "Asset_Invoice",
+      "name_en": "Asset Invoice",
+      "name_vi": "Hóa đơn tài sản",
+      "parent_code": "Invoices",
+      "default_subcategory": "Asset_Invoices",
+      "classification_rule": "Hóa đơn mua hoặc bán tài sản. Ghi thêm business_tags thay vì sao chép vào nhiều thư mục."
+    },
+    {
+      "code": "Utility_Invoice",
+      "name_en": "Utility Invoice",
+      "name_vi": "Hóa đơn tiện ích",
+      "parent_code": "Invoices",
+      "default_subcategory": "Utility_Invoices",
+      "classification_rule": "Hóa đơn điện, nước, viễn thông và dịch vụ tiện ích tương tự."
+    },
+    {
+      "code": "Other_Invoice",
+      "name_en": "Other Invoice",
+      "name_vi": "Hóa đơn khác",
+      "parent_code": "Invoices",
+      "default_subcategory": "Other_Invoices",
+      "classification_rule": "Tài liệu đã xác nhận thuộc nhóm hóa đơn nhưng chưa phù hợp các nhánh cụ thể."
+    },
+    {
+      "code": "Tax_Return",
+      "name_en": "Tax Return",
+      "name_vi": "Tờ khai thuế",
+      "parent_code": "Tax_Documents",
+      "default_subcategory": null,
+      "classification_rule": "Biểu mẫu kê khai thuế."
+    },
+    {
+      "code": "Tax_Finalization",
+      "name_en": "Tax Finalization",
+      "name_vi": "Quyết toán thuế",
+      "parent_code": "Tax_Documents",
+      "default_subcategory": null,
+      "classification_rule": "Hồ sơ hoặc tờ khai quyết toán thuế."
+    },
+    {
+      "code": "Tax_Notice",
+      "name_en": "Tax Notice",
+      "name_vi": "Thông báo thuế",
+      "parent_code": "Tax_Documents",
+      "default_subcategory": null,
+      "classification_rule": "Thông báo của cơ quan thuế."
+    },
+    {
+      "code": "Bank_Statement",
+      "name_en": "Bank Statement",
+      "name_vi": "Sao kê ngân hàng",
+      "parent_code": "Bank_Statements",
+      "default_subcategory": null,
+      "classification_rule": "Liệt kê giao dịch tài khoản theo kỳ."
+    },
+    {
+      "code": "Balance_Confirmation",
+      "name_en": "Balance Confirmation",
+      "name_vi": "Xác nhận số dư",
+      "parent_code": "Bank_Statements",
+      "default_subcategory": null,
+      "classification_rule": "Xác nhận số dư tài khoản tại một thời điểm."
+    },
+    {
+      "code": "Sales_Purchase_Contract",
+      "name_en": "Sales Purchase Contract",
+      "name_vi": "Hợp đồng mua bán",
+      "parent_code": "Contracts",
+      "default_subcategory": null,
+      "classification_rule": "Thỏa thuận mua bán hàng hóa hoặc tài sản."
+    },
+    {
+      "code": "Loan_Contract",
+      "name_en": "Loan Contract",
+      "name_vi": "Hợp đồng vay",
+      "parent_code": "Contracts",
+      "default_subcategory": null,
+      "classification_rule": "Thỏa thuận vay hoặc cấp tín dụng."
+    },
+    {
+      "code": "Service_Contract",
+      "name_en": "Service Contract",
+      "name_vi": "Hợp đồng dịch vụ",
+      "parent_code": "Contracts",
+      "default_subcategory": null,
+      "classification_rule": "Thỏa thuận cung cấp hoặc sử dụng dịch vụ."
+    },
+    {
+      "code": "Other_Contract",
+      "name_en": "Other Contract",
+      "name_vi": "Hợp đồng khác",
+      "parent_code": "Contracts",
+      "default_subcategory": null,
+      "classification_rule": "Hợp đồng đã xác nhận nhưng chưa thuộc nhóm cụ thể."
+    },
+    {
+      "code": "Other_Document",
+      "name_en": "Other Document",
+      "name_vi": "Tài liệu khác",
+      "parent_code": "Other_Documents",
+      "default_subcategory": null,
+      "classification_rule": "Nội dung đã kiểm tra và nằm ngoài các loại hiện có; nếu chưa kiểm tra thì document_type=null."
+    },
+    {
+      "code": "Retail_Invoice",
+      "name_en": "Retail Invoice",
+      "name_vi": "Hóa đơn bán lẻ",
+      "parent_code": "Invoices",
+      "default_subcategory": "Other_Invoices",
+      "classification_rule": "Chứng từ được xác nhận là hóa đơn bán lẻ; nếu xác định được loại GTGT/bán hàng thì dùng loại đó và tag Retail."
+    },
+    {
+      "code": "Invoice_Correction_Document",
+      "name_en": "Invoice Correction Document",
+      "name_vi": "Tài liệu xử lý sai sót hóa đơn",
+      "parent_code": "Invoices",
+      "default_subcategory": null,
+      "classification_rule": "Thông báo, biên bản hoặc tài liệu xử lý sai sót. Phân biệt với chính hóa đơn điều chỉnh hoặc thay thế."
+    },
+    {
+      "code": "Cash_Receipt",
+      "name_en": "Cash Receipt",
+      "name_vi": "Biên lai thu tiền",
+      "parent_code": "Invoices",
+      "default_subcategory": "Payment_Receipts",
+      "classification_rule": "Biên lai xác nhận thu tiền. Nếu là phiếu thu kế toán nội bộ thì dùng Cash_Voucher trong Accounting_Vouchers."
+    },
+    {
+      "code": "Deposit_Receipt",
+      "name_en": "Deposit Receipt",
+      "name_vi": "Biên lai đặt cọc",
+      "parent_code": "Invoices",
+      "default_subcategory": "Payment_Receipts",
+      "classification_rule": "Biên lai xác nhận nhận tiền đặt cọc, chưa tự suy ra là hóa đơn bán hàng."
+    },
+    {
+      "code": "Refund_Receipt",
+      "name_en": "Refund Receipt",
+      "name_vi": "Biên lai hoàn tiền",
+      "parent_code": "Invoices",
+      "default_subcategory": "Payment_Receipts",
+      "classification_rule": "Biên lai xác nhận hoàn tiền; không suy ra dấu của total_amount chỉ từ tên loại."
+    },
+    {
+      "code": "Credit_Note",
+      "name_en": "Credit Note",
+      "name_vi": "Chứng từ ghi giảm công nợ",
+      "parent_code": "Invoices",
+      "default_subcategory": null,
+      "classification_rule": "Chứng từ thể hiện ghi giảm công nợ theo nội dung và ngữ cảnh giao dịch; không tự đồng nhất với hóa đơn điều chỉnh."
+    },
+    {
+      "code": "Debit_Note",
+      "name_en": "Debit Note",
+      "name_vi": "Chứng từ ghi tăng công nợ",
+      "parent_code": "Invoices",
+      "default_subcategory": null,
+      "classification_rule": "Chứng từ thể hiện ghi tăng công nợ theo nội dung và ngữ cảnh giao dịch; không tự đồng nhất với giấy báo Nợ ngân hàng."
+    },
+    {
+      "code": "Cash_Receipt_Voucher",
+      "name_en": "Cash Receipt Voucher",
+      "name_vi": "Phiếu thu",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Cash_Vouchers",
+      "classification_rule": "Phiếu thu tiền mặt của đơn vị kế toán; phân biệt biên lai thu tiền Cash_Receipt.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Cash_Payment_Voucher",
+      "name_en": "Cash Payment Voucher",
+      "name_vi": "Phiếu chi",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Cash_Vouchers",
+      "classification_rule": "Phiếu chi tiền mặt; không gán chỉ từ một hóa đơn hoặc biên nhận thanh toán.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Cash_Advance_Request",
+      "name_en": "Cash Advance Request",
+      "name_vi": "Giấy đề nghị tạm ứng",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Cash_Vouchers",
+      "classification_rule": "Đề nghị cấp tiền tạm ứng; phân biệt hồ sơ thanh toán hoặc quyết toán tạm ứng.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Cash_Advance_Settlement",
+      "name_en": "Cash Advance Settlement",
+      "name_vi": "Giấy thanh toán tiền tạm ứng",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Cash_Vouchers",
+      "classification_rule": "Hồ sơ thanh toán hoặc quyết toán khoản đã tạm ứng; phân biệt giấy đề nghị tạm ứng.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Cash_Count_Record",
+      "name_en": "Cash Count Record",
+      "name_vi": "Biên bản kiểm kê quỹ",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Cash_Vouchers",
+      "classification_rule": "Biên bản kiểm đếm và đối chiếu quỹ tiền mặt.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Cash_Handover_Record",
+      "name_en": "Cash Handover Record",
+      "name_vi": "Biên bản bàn giao tiền mặt",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Cash_Vouchers",
+      "classification_rule": "Biên bản giao nhận hoặc bàn giao tiền mặt giữa các bên.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Bank_Debit_Advice",
+      "name_en": "Bank Debit Advice",
+      "name_vi": "Giấy báo Nợ",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Bank_Vouchers",
+      "classification_rule": "Giấy báo Nợ do ngân hàng phát hành về tài khoản; phân biệt Debit_Note ghi tăng công nợ giao dịch.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Bank_Credit_Advice",
+      "name_en": "Bank Credit Advice",
+      "name_vi": "Giấy báo Có",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Bank_Vouchers",
+      "classification_rule": "Giấy báo Có do ngân hàng phát hành về tài khoản; phân biệt Credit_Note ghi giảm công nợ giao dịch.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Payment_Order",
+      "name_en": "Payment Order",
+      "name_vi": "Ủy nhiệm chi",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Bank_Vouchers",
+      "classification_rule": "Lệnh hoặc ủy nhiệm chi qua ngân hàng; không tự xác nhận giao dịch đã hoàn thành nếu chỉ có lệnh.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Collection_Order",
+      "name_en": "Collection Order",
+      "name_vi": "Ủy nhiệm thu",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Bank_Vouchers",
+      "classification_rule": "Lệnh hoặc ủy nhiệm thu qua ngân hàng.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Bank_Transfer_Voucher",
+      "name_en": "Bank Transfer Voucher",
+      "name_vi": "Chứng từ chuyển tiền",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Bank_Vouchers",
+      "classification_rule": "Chứng từ xác nhận hoặc ghi nhận chuyển tiền; phân biệt lệnh chi, giấy báo và sao kê theo nội dung chính.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Bank_Reconciliation_Statement",
+      "name_en": "Bank Reconciliation Statement",
+      "name_vi": "Biên bản đối chiếu ngân hàng",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Bank_Vouchers",
+      "classification_rule": "Tài liệu đối chiếu số liệu giữa đơn vị và ngân hàng; phân biệt sao kê liệt kê giao dịch Bank_Statement.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Goods_Receipt_Note",
+      "name_en": "Goods Receipt Note",
+      "name_vi": "Phiếu nhập kho",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Inventory_Vouchers",
+      "classification_rule": "Phiếu ghi nhận nhập hàng hoặc vật tư vào kho.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Goods_Issue_Note",
+      "name_en": "Goods Issue Note",
+      "name_vi": "Phiếu xuất kho",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Inventory_Vouchers",
+      "classification_rule": "Phiếu ghi nhận xuất hàng hoặc vật tư khỏi kho.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Internal_Stock_Transfer_Note",
+      "name_en": "Internal Stock Transfer Note",
+      "name_vi": "Phiếu điều chuyển kho nội bộ",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Inventory_Vouchers",
+      "classification_rule": "Phiếu điều chuyển hàng tồn kho giữa các kho hoặc bộ phận nội bộ.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Material_Inspection_Record",
+      "name_en": "Material Inspection Record",
+      "name_vi": "Biên bản kiểm nhận vật tư",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Inventory_Vouchers",
+      "classification_rule": "Biên bản kiểm nhận số lượng, chất lượng hoặc quy cách vật tư.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Inventory_Count_Record",
+      "name_en": "Inventory Count Record",
+      "name_vi": "Biên bản kiểm kê hàng tồn kho",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Inventory_Vouchers",
+      "classification_rule": "Biên bản kiểm đếm hàng tồn kho; phân biệt kiểm kê quỹ và kiểm kê tài sản cố định.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Internal_Transportation_Note",
+      "name_en": "Internal Transportation Note",
+      "name_vi": "Phiếu xuất kho kiêm vận chuyển nội bộ",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Inventory_Vouchers",
+      "classification_rule": "Tài liệu thể hiện cả xuất kho và vận chuyển nội bộ; không tự gán từ phiếu xuất kho thông thường.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Timesheet",
+      "name_en": "Timesheet",
+      "name_vi": "Bảng chấm công",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Payroll_Vouchers",
+      "classification_rule": "Bảng ghi nhận ngày công, giờ công hoặc thời gian làm việc.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Payroll_Statement",
+      "name_en": "Payroll Statement",
+      "name_vi": "Bảng thanh toán tiền lương",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Payroll_Vouchers",
+      "classification_rule": "Bảng tính hoặc thanh toán tiền lương cho người lao động.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Bonus_Payment_Statement",
+      "name_en": "Bonus Payment Statement",
+      "name_vi": "Bảng thanh toán tiền thưởng",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Payroll_Vouchers",
+      "classification_rule": "Bảng tính hoặc thanh toán tiền thưởng.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Payroll_Allocation_Statement",
+      "name_en": "Payroll Allocation Statement",
+      "name_vi": "Bảng phân bổ tiền lương",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Payroll_Vouchers",
+      "classification_rule": "Bảng phân bổ tiền lương theo bộ phận, đối tượng hoặc khoản mục chi phí.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Social_Insurance_Payment_Record",
+      "name_en": "Social Insurance Payment Record",
+      "name_vi": "Chứng từ thanh toán bảo hiểm",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Payroll_Vouchers",
+      "classification_rule": "Chứng từ thanh toán bảo hiểm liên quan người lao động; phân biệt hóa đơn dịch vụ bảo hiểm thương mại.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Employee_Payment_Confirmation",
+      "name_en": "Employee Payment Confirmation",
+      "name_vi": "Xác nhận thanh toán cho nhân viên",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Payroll_Vouchers",
+      "classification_rule": "Xác nhận đã thanh toán cho người lao động; phân biệt bảng lương hoặc lệnh chuyển tiền khi chưa có xác nhận.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Fixed_Asset_Handover_Record",
+      "name_en": "Fixed Asset Handover Record",
+      "name_vi": "Biên bản giao nhận TSCĐ",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Fixed_Asset_Vouchers",
+      "classification_rule": "Biên bản giao nhận tài sản cố định; phân biệt hóa đơn mua tài sản.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Fixed_Asset_Disposal_Record",
+      "name_en": "Fixed Asset Disposal Record",
+      "name_vi": "Biên bản thanh lý TSCĐ",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Fixed_Asset_Vouchers",
+      "classification_rule": "Biên bản ghi nhận thanh lý tài sản cố định.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Fixed_Asset_Revaluation_Record",
+      "name_en": "Fixed Asset Revaluation Record",
+      "name_vi": "Biên bản đánh giá lại TSCĐ",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Fixed_Asset_Vouchers",
+      "classification_rule": "Biên bản ghi nhận đánh giá lại tài sản cố định.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Depreciation_Calculation_Sheet",
+      "name_en": "Depreciation Calculation Sheet",
+      "name_vi": "Bảng tính khấu hao TSCĐ",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Fixed_Asset_Vouchers",
+      "classification_rule": "Bảng tính hoặc phân bổ khấu hao tài sản cố định; không đồng nhất với bảng phân bổ chi phí trả trước.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Fixed_Asset_Transfer_Record",
+      "name_en": "Fixed Asset Transfer Record",
+      "name_vi": "Biên bản điều chuyển TSCĐ",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Fixed_Asset_Vouchers",
+      "classification_rule": "Biên bản điều chuyển tài sản cố định giữa đơn vị hoặc bộ phận.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Fixed_Asset_Inventory_Record",
+      "name_en": "Fixed Asset Inventory Record",
+      "name_vi": "Biên bản kiểm kê TSCĐ",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Fixed_Asset_Vouchers",
+      "classification_rule": "Biên bản kiểm kê tài sản cố định; phân biệt kiểm kê hàng tồn kho.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Goods_Delivery_Note",
+      "name_en": "Goods Delivery Note",
+      "name_vi": "Phiếu giao hàng",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Sales_Purchase_Vouchers",
+      "classification_rule": "Phiếu giao hàng cho bên nhận; phân biệt hóa đơn hoặc phiếu xuất kho.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Goods_Receipt_Confirmation",
+      "name_en": "Goods Receipt Confirmation",
+      "name_vi": "Biên bản giao nhận hàng hóa",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Sales_Purchase_Vouchers",
+      "classification_rule": "Biên bản xác nhận giao nhận hàng hóa giữa các bên; phân biệt phiếu nhập kho nội bộ.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Purchase_Order",
+      "name_en": "Purchase Order",
+      "name_vi": "Đơn đặt hàng",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Sales_Purchase_Vouchers",
+      "classification_rule": "Đơn đặt mua hàng từ góc nhìn đơn vị kế toán; cần xác minh vai trò bên mua.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Sales_Order",
+      "name_en": "Sales Order",
+      "name_vi": "Đơn đặt hàng bán",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Sales_Purchase_Vouchers",
+      "classification_rule": "Đơn đặt hàng bán từ góc nhìn đơn vị kế toán; cần xác minh vai trò bên bán, không suy ra từ cùng mẫu đơn đặt hàng.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Purchase_Acceptance_Record",
+      "name_en": "Purchase Acceptance Record",
+      "name_vi": "Biên bản nghiệm thu mua hàng",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Sales_Purchase_Vouchers",
+      "classification_rule": "Biên bản nghiệm thu hàng hóa hoặc đối tượng mua vào.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Service_Acceptance_Record",
+      "name_en": "Service Acceptance Record",
+      "name_vi": "Biên bản nghiệm thu dịch vụ",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Sales_Purchase_Vouchers",
+      "classification_rule": "Biên bản nghiệm thu kết quả cung cấp dịch vụ; phân biệt hóa đơn dịch vụ.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Accounts_Receivable_Reconciliation",
+      "name_en": "Accounts Receivable Reconciliation",
+      "name_vi": "Biên bản đối chiếu công nợ phải thu",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Sales_Purchase_Vouchers",
+      "classification_rule": "Đối chiếu công nợ phải thu từ góc nhìn đơn vị kế toán; không tự phân biệt phải thu/phải trả nếu chưa rõ chủ thể.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Accounts_Payable_Reconciliation",
+      "name_en": "Accounts Payable Reconciliation",
+      "name_vi": "Biên bản đối chiếu công nợ phải trả",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "Sales_Purchase_Vouchers",
+      "classification_rule": "Đối chiếu công nợ phải trả từ góc nhìn đơn vị kế toán; không tự phân biệt phải thu/phải trả nếu chưa rõ chủ thể.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "General_Journal_Voucher",
+      "name_en": "General Journal Voucher",
+      "name_vi": "Phiếu kế toán",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "General_Accounting_Vouchers",
+      "classification_rule": "Phiếu kế toán tổng hợp dùng ghi nhận nghiệp vụ; phân biệt chứng từ ghi sổ theo tiêu đề và nội dung.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Accounting_Entry_Voucher",
+      "name_en": "Accounting Entry Voucher",
+      "name_vi": "Chứng từ ghi sổ",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "General_Accounting_Vouchers",
+      "classification_rule": "Chứng từ ghi sổ đã xác định theo tiêu đề và nội dung.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Cost_Allocation_Statement",
+      "name_en": "Cost Allocation Statement",
+      "name_vi": "Bảng phân bổ chi phí",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "General_Accounting_Vouchers",
+      "classification_rule": "Bảng phân bổ chi phí chung; nếu rõ là tiền lương, khấu hao hoặc trả trước thì dùng loại cụ thể tương ứng.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Cost_Calculation_Sheet",
+      "name_en": "Cost Calculation Sheet",
+      "name_vi": "Bảng tính giá thành",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "General_Accounting_Vouchers",
+      "classification_rule": "Bảng tập hợp hoặc tính giá thành sản phẩm, dịch vụ hoặc đối tượng tính giá thành.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Accounting_Adjustment_Voucher",
+      "name_en": "Accounting Adjustment Voucher",
+      "name_vi": "Chứng từ điều chỉnh kế toán",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "General_Accounting_Vouchers",
+      "classification_rule": "Chứng từ điều chỉnh sổ hoặc bút toán kế toán; phân biệt Adjusted_Invoice điều chỉnh hóa đơn.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Accrual_Voucher",
+      "name_en": "Accrual Voucher",
+      "name_vi": "Chứng từ ghi nhận chi phí phải trả",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "General_Accounting_Vouchers",
+      "classification_rule": "Chứng từ ghi nhận chi phí phải trả theo nội dung nghiệp vụ.",
+      "granularity": "Specific"
+    },
+    {
+      "code": "Prepayment_Allocation_Statement",
+      "name_en": "Prepayment Allocation Statement",
+      "name_vi": "Bảng phân bổ chi phí trả trước",
+      "parent_code": "Accounting_Vouchers",
+      "default_subcategory": "General_Accounting_Vouchers",
+      "classification_rule": "Bảng phân bổ chi phí trả trước; phân biệt phân bổ tiền lương và khấu hao tài sản cố định.",
+      "granularity": "Specific"
+    }
+  ],
+  "attribute_vocabularies": {
+    "format": [
+      "PDF",
+      "JPG",
+      "PNG"
+    ],
+    "source": [
+      "Scanned",
+      "Camera",
+      "Electronic",
+      "Mixed"
+    ],
+    "direction": [
+      "Incoming",
+      "Outgoing",
+      "Internal"
+    ],
+    "language": [
+      "Vietnamese",
+      "English",
+      "Chinese",
+      "Other"
+    ],
+    "industry": [
+      "Securities",
+      "Banking",
+      "General_Business",
+      "Other"
+    ],
+    "ocr_status": [
+      "Pending",
+      "Processing",
+      "Completed",
+      "Failed",
+      "Skipped"
+    ],
+    "classification_status": [
+      "Needs_Review",
+      "Confirmed"
+    ],
+    "metadata_origin": [
+      "Migrated_From_Directory",
+      "Manually_Reviewed",
+      "Model_Prediction",
+      "Illustrative_Example"
+    ],
+    "business_tags": [
+      "Equipment_Purchase",
+      "Service",
+      "Operating_Expense",
+      "Fixed_Asset_Purchase",
+      "Sales",
+      "Purchase",
+      "Utilities",
+      "Export",
+      "Retail",
+      "Transportation",
+      "Accommodation",
+      "Food_and_Beverage",
+      "Vehicle_Purchase",
+      "Construction",
+      "Investment",
+      "Insurance",
+      "Telecommunications",
+      "Electricity",
+      "Water",
+      "Fuel",
+      "Advertising",
+      "Financial_Service"
+    ],
+    "issuance_form": [
+      "Electronic",
+      "Paper"
+    ],
+    "invoice_kind": [
+      "VAT_Invoice",
+      "Sales_Invoice",
+      "Other_Invoice"
+    ],
+    "invoice_role": [
+      "Original",
+      "Adjusted",
+      "Replacement"
+    ]
+  },
+  "rules": [
+    "Mỗi file có một vị trí lưu chính và một document_id ổn định; không sao chép để biểu diễn các thuộc tính giao nhau.",
+    "Thư mục là nhóm lưu trữ. document_type mô tả loại thực tế; không suy ra nhãn chuẩn từ thư mục hoặc tên file.",
+    "Thuộc tính chưa xác minh dùng null. language là mảng để hỗ trợ tài liệu song ngữ.",
+    "direction được xác định từ góc nhìn đơn vị kế toán đang xử lý hồ sơ.",
+    "Một hóa đơn GTGT có thể đồng thời gắn Equipment_Purchase, Fixed_Asset_Purchase và Purchase trong business_tags.",
+    "Tài liệu nhiều thành phần dùng một loại chính và contained_document_types, không nhân bản PDF.",
+    "Đặc thù ngành lưu trong industry; bổ sung mã loại khi có dữ liệu thực và tăng taxonomy_version.",
+    "issuance_form là hình thức phát hành Electronic/Paper; source là nguồn file hoặc ảnh đầu vào. Hóa đơn điện tử in rồi scan có thể có issuance_form=Electronic và source=Scanned.",
+    "invoice_kind giữ loại hóa đơn nền; invoice_role giữ vai trò Original/Adjusted/Replacement. Một hóa đơn điều chỉnh GTGT dùng invoice_kind=VAT_Invoice và invoice_role=Adjusted.",
+    "Sales_Invoice không đồng nghĩa direction=Outgoing. Nhánh Sales_Invoices là vị trí lưu theo chiều giao dịch, không quyết định loại thực tế.",
+    "business_tags dùng bộ từ vựng kiểm soát; bổ sung tag vào taxonomy và schema cùng phiên bản trước khi sử dụng.",
+    "INV001–INV034 là mã tra cứu nhu cầu và có thể đồng thời khớp nhiều mục; chúng không phải 34 lớp loại trừ nhau.",
+    "Không tự suy ra nguồn ảnh, hình thức phát hành, loại nền hoặc vai trò từ thuộc tính khác khi chưa xác minh.",
+    "AV001–AV047 là bộ mã tra cứu 47 loại chứng từ theo 7 nhóm nghiệp vụ. Mã AV không lưu thay cho document_type.",
+    "AV003 dùng canonical Cash_Receipt và cùng loại với INV018; AV014 dùng canonical Balance_Confirmation. Nhóm nghiệp vụ AV và vị trí lưu chính được phân biệt trong bảng ánh xạ.",
+    "Cash_Receipt_Slip và Bank_Balance_Confirmation là tên thay thế; chuẩn hóa qua document_type_aliases trước khi kiểm tra schema.",
+    "Các nhãn Cash_Voucher, Bank_Voucher, Inventory_Voucher, Payroll_Voucher, Fixed_Asset_Voucher, Sales_Purchase_Voucher, General_Accounting_Voucher có granularity=Group; chưa gán mã AV cụ thể nếu chưa xác định được loại.",
+    "Không tự suy ra direction từ chiều tiền, nội dung báo Nợ/Có hoặc tên nhóm chứng từ; direction vẫn là chiều hồ sơ theo đơn vị kế toán."
+  ],
+  "business_tag_definitions": [
+    {
+      "code": "Equipment_Purchase",
+      "name_en": "Equipment Purchase",
+      "name_vi": "Mua thiết bị",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: mua thiết bị. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Service",
+      "name_en": "Service",
+      "name_vi": "Dịch vụ",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: dịch vụ. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Operating_Expense",
+      "name_en": "Operating Expense",
+      "name_vi": "Chi phí hoạt động",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: chi phí hoạt động. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Fixed_Asset_Purchase",
+      "name_en": "Fixed Asset Purchase",
+      "name_vi": "Mua tài sản cố định",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: mua tài sản cố định. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Sales",
+      "name_en": "Sales",
+      "name_vi": "Bán hàng",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: bán hàng. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Purchase",
+      "name_en": "Purchase",
+      "name_vi": "Mua hàng",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: mua hàng. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Utilities",
+      "name_en": "Utilities",
+      "name_vi": "Tiện ích",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: tiện ích. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Export",
+      "name_en": "Export",
+      "name_vi": "Xuất khẩu",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: xuất khẩu. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Retail",
+      "name_en": "Retail",
+      "name_vi": "Bán lẻ",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: bán lẻ. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Transportation",
+      "name_en": "Transportation",
+      "name_vi": "Vận tải",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: vận tải. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Accommodation",
+      "name_en": "Accommodation",
+      "name_vi": "Lưu trú",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: lưu trú. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Food_and_Beverage",
+      "name_en": "Food and Beverage",
+      "name_vi": "Ăn uống",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: ăn uống. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Vehicle_Purchase",
+      "name_en": "Vehicle Purchase",
+      "name_vi": "Mua phương tiện",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: mua phương tiện. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Construction",
+      "name_en": "Construction",
+      "name_vi": "Xây dựng",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: xây dựng. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Investment",
+      "name_en": "Investment",
+      "name_vi": "Đầu tư",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: đầu tư. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Insurance",
+      "name_en": "Insurance",
+      "name_vi": "Bảo hiểm",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: bảo hiểm. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Telecommunications",
+      "name_en": "Telecommunications",
+      "name_vi": "Viễn thông",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: viễn thông. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Electricity",
+      "name_en": "Electricity",
+      "name_vi": "Điện",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: điện. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Water",
+      "name_en": "Water",
+      "name_vi": "Nước",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: nước. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Fuel",
+      "name_en": "Fuel",
+      "name_vi": "Nhiên liệu",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: nhiên liệu. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Advertising",
+      "name_en": "Advertising",
+      "name_vi": "Quảng cáo",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: quảng cáo. Không tự gán từ thư mục hoặc tên file."
+    },
+    {
+      "code": "Financial_Service",
+      "name_en": "Financial Service",
+      "name_vi": "Dịch vụ tài chính",
+      "classification_rule": "Gán khi nội dung tài liệu có bằng chứng về nghiệp vụ: dịch vụ tài chính. Không tự gán từ thư mục hoặc tên file."
+    }
+  ],
+  "invoice_mapping_file": "invoice_mappings.json",
+  "document_type_aliases": {
+    "Cash_Receipt_Slip": "Cash_Receipt",
+    "Bank_Balance_Confirmation": "Balance_Confirmation"
+  },
+  "accounting_voucher_mapping_file": "accounting_voucher_mappings.json"
+}

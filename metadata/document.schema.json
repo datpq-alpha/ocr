@@ -1,0 +1,2269 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Accounting document metadata",
+  "description": "Một bản ghi metadata. Đường dẫn tương đối tính từ Accounting_Documents. null nghĩa là chưa xác minh hoặc không áp dụng.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "document_id",
+    "document_type",
+    "document_category",
+    "document_subcategory",
+    "relative_path",
+    "sha256",
+    "format",
+    "source",
+    "direction",
+    "language",
+    "company",
+    "industry",
+    "invoice_number",
+    "invoice_date",
+    "tax_code",
+    "total_amount",
+    "currency",
+    "reporting_period_end",
+    "business_tags",
+    "contained_document_types",
+    "related_document_ids",
+    "ocr_status",
+    "classification_status",
+    "metadata_origin",
+    "is_example",
+    "notes",
+    "issuance_form",
+    "invoice_kind",
+    "invoice_role"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.1.0"
+    },
+    "document_id": {
+      "type": "string",
+      "pattern": "^DOC[0-9]{6,}$"
+    },
+    "document_type": {
+      "enum": [
+        "Financial_Report",
+        "Annual_Report",
+        "Audit_Report",
+        "Review_Report",
+        "Capital_Adequacy_Report",
+        "Financial_Disclosure",
+        "Financial_Explanation",
+        "Cash_Voucher",
+        "Bank_Voucher",
+        "Inventory_Voucher",
+        "Payroll_Voucher",
+        "Fixed_Asset_Voucher",
+        "Sales_Purchase_Voucher",
+        "General_Accounting_Voucher",
+        "VAT_Invoice",
+        "Sales_Invoice",
+        "Purchase_Invoice",
+        "Service_Invoice",
+        "Export_Invoice",
+        "Adjusted_Invoice",
+        "Replacement_Invoice",
+        "Invoice_Cancellation_Record",
+        "Payment_Receipt",
+        "Asset_Invoice",
+        "Utility_Invoice",
+        "Other_Invoice",
+        "Tax_Return",
+        "Tax_Finalization",
+        "Tax_Notice",
+        "Bank_Statement",
+        "Balance_Confirmation",
+        "Sales_Purchase_Contract",
+        "Loan_Contract",
+        "Service_Contract",
+        "Other_Contract",
+        "Other_Document",
+        "Retail_Invoice",
+        "Invoice_Correction_Document",
+        "Cash_Receipt",
+        "Deposit_Receipt",
+        "Refund_Receipt",
+        "Credit_Note",
+        "Debit_Note",
+        "Cash_Receipt_Voucher",
+        "Cash_Payment_Voucher",
+        "Cash_Advance_Request",
+        "Cash_Advance_Settlement",
+        "Cash_Count_Record",
+        "Cash_Handover_Record",
+        "Bank_Debit_Advice",
+        "Bank_Credit_Advice",
+        "Payment_Order",
+        "Collection_Order",
+        "Bank_Transfer_Voucher",
+        "Bank_Reconciliation_Statement",
+        "Goods_Receipt_Note",
+        "Goods_Issue_Note",
+        "Internal_Stock_Transfer_Note",
+        "Material_Inspection_Record",
+        "Inventory_Count_Record",
+        "Internal_Transportation_Note",
+        "Timesheet",
+        "Payroll_Statement",
+        "Bonus_Payment_Statement",
+        "Payroll_Allocation_Statement",
+        "Social_Insurance_Payment_Record",
+        "Employee_Payment_Confirmation",
+        "Fixed_Asset_Handover_Record",
+        "Fixed_Asset_Disposal_Record",
+        "Fixed_Asset_Revaluation_Record",
+        "Depreciation_Calculation_Sheet",
+        "Fixed_Asset_Transfer_Record",
+        "Fixed_Asset_Inventory_Record",
+        "Goods_Delivery_Note",
+        "Goods_Receipt_Confirmation",
+        "Purchase_Order",
+        "Sales_Order",
+        "Purchase_Acceptance_Record",
+        "Service_Acceptance_Record",
+        "Accounts_Receivable_Reconciliation",
+        "Accounts_Payable_Reconciliation",
+        "General_Journal_Voucher",
+        "Accounting_Entry_Voucher",
+        "Cost_Allocation_Statement",
+        "Cost_Calculation_Sheet",
+        "Accounting_Adjustment_Voucher",
+        "Accrual_Voucher",
+        "Prepayment_Allocation_Statement",
+        null
+      ]
+    },
+    "document_category": {
+      "enum": [
+        "Financial_Reports",
+        "Accounting_Vouchers",
+        "Invoices",
+        "Tax_Documents",
+        "Bank_Statements",
+        "Contracts",
+        "Other_Documents"
+      ]
+    },
+    "document_subcategory": {
+      "enum": [
+        "Cash_Vouchers",
+        "Bank_Vouchers",
+        "Inventory_Vouchers",
+        "Payroll_Vouchers",
+        "Fixed_Asset_Vouchers",
+        "Sales_Purchase_Vouchers",
+        "General_Accounting_Vouchers",
+        "Sales_Invoices",
+        "Purchase_Invoices",
+        "Service_Invoices",
+        "Export_Invoices",
+        "Adjusted_Invoices",
+        "Replacement_Invoices",
+        "Cancellation_Records",
+        "Payment_Receipts",
+        "Asset_Invoices",
+        "Utility_Invoices",
+        "Other_Invoices",
+        null
+      ]
+    },
+    "relative_path": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "pattern": "^(?!/)(?![A-Za-z]:)(?!.*\\\\)(?!.*(?:^|/)\\.\\.(?:/|$)).+$"
+    },
+    "sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "format": {
+      "enum": [
+        "PDF",
+        "JPG",
+        "PNG"
+      ]
+    },
+    "source": {
+      "enum": [
+        "Scanned",
+        "Camera",
+        "Electronic",
+        "Mixed",
+        null
+      ]
+    },
+    "direction": {
+      "enum": [
+        "Incoming",
+        "Outgoing",
+        "Internal",
+        null
+      ]
+    },
+    "language": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "enum": [
+          "Vietnamese",
+          "English",
+          "Chinese",
+          "Other"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "company": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "industry": {
+      "enum": [
+        "Securities",
+        "Banking",
+        "General_Business",
+        "Other",
+        null
+      ]
+    },
+    "invoice_number": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "invoice_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "tax_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "total_amount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "currency": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[A-Z]{3}$"
+    },
+    "reporting_period_end": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "business_tags": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "Equipment_Purchase",
+          "Service",
+          "Operating_Expense",
+          "Fixed_Asset_Purchase",
+          "Sales",
+          "Purchase",
+          "Utilities",
+          "Export",
+          "Retail",
+          "Transportation",
+          "Accommodation",
+          "Food_and_Beverage",
+          "Vehicle_Purchase",
+          "Construction",
+          "Investment",
+          "Insurance",
+          "Telecommunications",
+          "Electricity",
+          "Water",
+          "Fuel",
+          "Advertising",
+          "Financial_Service"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "contained_document_types": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "Financial_Report",
+          "Annual_Report",
+          "Audit_Report",
+          "Review_Report",
+          "Capital_Adequacy_Report",
+          "Financial_Disclosure",
+          "Financial_Explanation",
+          "Cash_Voucher",
+          "Bank_Voucher",
+          "Inventory_Voucher",
+          "Payroll_Voucher",
+          "Fixed_Asset_Voucher",
+          "Sales_Purchase_Voucher",
+          "General_Accounting_Voucher",
+          "VAT_Invoice",
+          "Sales_Invoice",
+          "Purchase_Invoice",
+          "Service_Invoice",
+          "Export_Invoice",
+          "Adjusted_Invoice",
+          "Replacement_Invoice",
+          "Invoice_Cancellation_Record",
+          "Payment_Receipt",
+          "Asset_Invoice",
+          "Utility_Invoice",
+          "Other_Invoice",
+          "Tax_Return",
+          "Tax_Finalization",
+          "Tax_Notice",
+          "Bank_Statement",
+          "Balance_Confirmation",
+          "Sales_Purchase_Contract",
+          "Loan_Contract",
+          "Service_Contract",
+          "Other_Contract",
+          "Other_Document",
+          "Retail_Invoice",
+          "Invoice_Correction_Document",
+          "Cash_Receipt",
+          "Deposit_Receipt",
+          "Refund_Receipt",
+          "Credit_Note",
+          "Debit_Note",
+          "Cash_Receipt_Voucher",
+          "Cash_Payment_Voucher",
+          "Cash_Advance_Request",
+          "Cash_Advance_Settlement",
+          "Cash_Count_Record",
+          "Cash_Handover_Record",
+          "Bank_Debit_Advice",
+          "Bank_Credit_Advice",
+          "Payment_Order",
+          "Collection_Order",
+          "Bank_Transfer_Voucher",
+          "Bank_Reconciliation_Statement",
+          "Goods_Receipt_Note",
+          "Goods_Issue_Note",
+          "Internal_Stock_Transfer_Note",
+          "Material_Inspection_Record",
+          "Inventory_Count_Record",
+          "Internal_Transportation_Note",
+          "Timesheet",
+          "Payroll_Statement",
+          "Bonus_Payment_Statement",
+          "Payroll_Allocation_Statement",
+          "Social_Insurance_Payment_Record",
+          "Employee_Payment_Confirmation",
+          "Fixed_Asset_Handover_Record",
+          "Fixed_Asset_Disposal_Record",
+          "Fixed_Asset_Revaluation_Record",
+          "Depreciation_Calculation_Sheet",
+          "Fixed_Asset_Transfer_Record",
+          "Fixed_Asset_Inventory_Record",
+          "Goods_Delivery_Note",
+          "Goods_Receipt_Confirmation",
+          "Purchase_Order",
+          "Sales_Order",
+          "Purchase_Acceptance_Record",
+          "Service_Acceptance_Record",
+          "Accounts_Receivable_Reconciliation",
+          "Accounts_Payable_Reconciliation",
+          "General_Journal_Voucher",
+          "Accounting_Entry_Voucher",
+          "Cost_Allocation_Statement",
+          "Cost_Calculation_Sheet",
+          "Accounting_Adjustment_Voucher",
+          "Accrual_Voucher",
+          "Prepayment_Allocation_Statement"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "related_document_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^DOC[0-9]{6,}$"
+      },
+      "uniqueItems": true
+    },
+    "ocr_status": {
+      "enum": [
+        "Pending",
+        "Processing",
+        "Completed",
+        "Failed",
+        "Skipped"
+      ]
+    },
+    "classification_status": {
+      "enum": [
+        "Needs_Review",
+        "Confirmed"
+      ]
+    },
+    "metadata_origin": {
+      "enum": [
+        "Migrated_From_Directory",
+        "Manually_Reviewed",
+        "Model_Prediction",
+        "Illustrative_Example"
+      ]
+    },
+    "is_example": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "issuance_form": {
+      "enum": [
+        "Electronic",
+        "Paper",
+        null
+      ],
+      "description": "Hình thức phát hành của hóa đơn hoặc tài liệu liên quan, độc lập với nguồn ảnh/file đầu vào."
+    },
+    "invoice_kind": {
+      "enum": [
+        "VAT_Invoice",
+        "Sales_Invoice",
+        "Other_Invoice",
+        null
+      ],
+      "description": "Loại hóa đơn nền. null nếu chưa xác minh hoặc không áp dụng."
+    },
+    "invoice_role": {
+      "enum": [
+        "Original",
+        "Adjusted",
+        "Replacement",
+        null
+      ],
+      "description": "Vai trò Original/Adjusted/Replacement; không tự suy ra Original chỉ vì thiếu tham chiếu."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "document_category": {
+            "const": "Financial_Reports"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_type": {
+            "enum": [
+              "Financial_Report",
+              "Annual_Report",
+              "Audit_Report",
+              "Review_Report",
+              "Capital_Adequacy_Report",
+              "Financial_Disclosure",
+              "Financial_Explanation",
+              null
+            ]
+          },
+          "document_subcategory": {
+            "enum": [
+              null
+            ]
+          },
+          "relative_path": {
+            "pattern": "^01_Financial_Reports/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_type": {
+            "enum": [
+              "Cash_Voucher",
+              "Bank_Voucher",
+              "Inventory_Voucher",
+              "Payroll_Voucher",
+              "Fixed_Asset_Voucher",
+              "Sales_Purchase_Voucher",
+              "General_Accounting_Voucher",
+              "Cash_Receipt_Voucher",
+              "Cash_Payment_Voucher",
+              "Cash_Advance_Request",
+              "Cash_Advance_Settlement",
+              "Cash_Count_Record",
+              "Cash_Handover_Record",
+              "Bank_Debit_Advice",
+              "Bank_Credit_Advice",
+              "Payment_Order",
+              "Collection_Order",
+              "Bank_Transfer_Voucher",
+              "Bank_Reconciliation_Statement",
+              "Goods_Receipt_Note",
+              "Goods_Issue_Note",
+              "Internal_Stock_Transfer_Note",
+              "Material_Inspection_Record",
+              "Inventory_Count_Record",
+              "Internal_Transportation_Note",
+              "Timesheet",
+              "Payroll_Statement",
+              "Bonus_Payment_Statement",
+              "Payroll_Allocation_Statement",
+              "Social_Insurance_Payment_Record",
+              "Employee_Payment_Confirmation",
+              "Fixed_Asset_Handover_Record",
+              "Fixed_Asset_Disposal_Record",
+              "Fixed_Asset_Revaluation_Record",
+              "Depreciation_Calculation_Sheet",
+              "Fixed_Asset_Transfer_Record",
+              "Fixed_Asset_Inventory_Record",
+              "Goods_Delivery_Note",
+              "Goods_Receipt_Confirmation",
+              "Purchase_Order",
+              "Sales_Order",
+              "Purchase_Acceptance_Record",
+              "Service_Acceptance_Record",
+              "Accounts_Receivable_Reconciliation",
+              "Accounts_Payable_Reconciliation",
+              "General_Journal_Voucher",
+              "Accounting_Entry_Voucher",
+              "Cost_Allocation_Statement",
+              "Cost_Calculation_Sheet",
+              "Accounting_Adjustment_Voucher",
+              "Accrual_Voucher",
+              "Prepayment_Allocation_Statement",
+              null
+            ]
+          },
+          "document_subcategory": {
+            "enum": [
+              "Cash_Vouchers",
+              "Bank_Vouchers",
+              "Inventory_Vouchers",
+              "Payroll_Vouchers",
+              "Fixed_Asset_Vouchers",
+              "Sales_Purchase_Vouchers",
+              "General_Accounting_Vouchers",
+              null
+            ]
+          },
+          "relative_path": {
+            "pattern": "^02_Accounting_Vouchers/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Cash_Vouchers"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^02_Accounting_Vouchers/Cash_Vouchers/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Bank_Vouchers"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^02_Accounting_Vouchers/Bank_Vouchers/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Inventory_Vouchers"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^02_Accounting_Vouchers/Inventory_Vouchers/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Payroll_Vouchers"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^02_Accounting_Vouchers/Payroll_Vouchers/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Fixed_Asset_Vouchers"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^02_Accounting_Vouchers/Fixed_Asset_Vouchers/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Sales_Purchase_Vouchers"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^02_Accounting_Vouchers/Sales_Purchase_Vouchers/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "General_Accounting_Vouchers"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^02_Accounting_Vouchers/General_Accounting_Vouchers/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_type": {
+            "enum": [
+              "VAT_Invoice",
+              "Sales_Invoice",
+              "Purchase_Invoice",
+              "Service_Invoice",
+              "Export_Invoice",
+              "Adjusted_Invoice",
+              "Replacement_Invoice",
+              "Invoice_Cancellation_Record",
+              "Payment_Receipt",
+              "Asset_Invoice",
+              "Utility_Invoice",
+              "Other_Invoice",
+              "Retail_Invoice",
+              "Invoice_Correction_Document",
+              "Cash_Receipt",
+              "Deposit_Receipt",
+              "Refund_Receipt",
+              "Credit_Note",
+              "Debit_Note",
+              null
+            ]
+          },
+          "document_subcategory": {
+            "enum": [
+              "Sales_Invoices",
+              "Purchase_Invoices",
+              "Service_Invoices",
+              "Export_Invoices",
+              "Adjusted_Invoices",
+              "Replacement_Invoices",
+              "Cancellation_Records",
+              "Payment_Receipts",
+              "Asset_Invoices",
+              "Utility_Invoices",
+              "Other_Invoices",
+              null
+            ]
+          },
+          "relative_path": {
+            "pattern": "^03_Invoices/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Sales_Invoices"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^03_Invoices/Sales_Invoices/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Purchase_Invoices"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^03_Invoices/Purchase_Invoices/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Service_Invoices"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^03_Invoices/Service_Invoices/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Export_Invoices"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^03_Invoices/Export_Invoices/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Adjusted_Invoices"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^03_Invoices/Adjusted_Invoices/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Replacement_Invoices"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^03_Invoices/Replacement_Invoices/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Cancellation_Records"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^03_Invoices/Cancellation_Records/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Payment_Receipts"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^03_Invoices/Payment_Receipts/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Asset_Invoices"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^03_Invoices/Asset_Invoices/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Utility_Invoices"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^03_Invoices/Utility_Invoices/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_subcategory": {
+            "const": "Other_Invoices"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "pattern": "^03_Invoices/Other_Invoices/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_category": {
+            "const": "Tax_Documents"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_type": {
+            "enum": [
+              "Tax_Return",
+              "Tax_Finalization",
+              "Tax_Notice",
+              null
+            ]
+          },
+          "document_subcategory": {
+            "enum": [
+              null
+            ]
+          },
+          "relative_path": {
+            "pattern": "^04_Tax_Documents/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_category": {
+            "const": "Bank_Statements"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_type": {
+            "enum": [
+              "Bank_Statement",
+              "Balance_Confirmation",
+              null
+            ]
+          },
+          "document_subcategory": {
+            "enum": [
+              null
+            ]
+          },
+          "relative_path": {
+            "pattern": "^05_Bank_Statements/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_category": {
+            "const": "Contracts"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_type": {
+            "enum": [
+              "Sales_Purchase_Contract",
+              "Loan_Contract",
+              "Service_Contract",
+              "Other_Contract",
+              null
+            ]
+          },
+          "document_subcategory": {
+            "enum": [
+              null
+            ]
+          },
+          "relative_path": {
+            "pattern": "^06_Contracts/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_category": {
+            "const": "Other_Documents"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_type": {
+            "enum": [
+              "Other_Document",
+              null
+            ]
+          },
+          "document_subcategory": {
+            "enum": [
+              null
+            ]
+          },
+          "relative_path": {
+            "pattern": "^07_Other_Documents/"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "classification_status": {
+            "const": "Confirmed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_type": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "is_example": {
+            "const": false
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "relative_path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_category": {
+            "not": {
+              "const": "Invoices"
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "issuance_form": {
+            "type": "null"
+          },
+          "invoice_kind": {
+            "type": "null"
+          },
+          "invoice_role": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "enum": [
+              "Invoice_Cancellation_Record",
+              "Payment_Receipt",
+              "Invoice_Correction_Document",
+              "Cash_Receipt",
+              "Deposit_Receipt",
+              "Refund_Receipt",
+              "Credit_Note",
+              "Debit_Note"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "invoice_kind": {
+            "type": "null"
+          },
+          "invoice_role": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "VAT_Invoice"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "invoice_kind": {
+            "const": "VAT_Invoice"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Sales_Invoice"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "invoice_kind": {
+            "const": "Sales_Invoice"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Adjusted_Invoice"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "invoice_role": {
+            "const": "Adjusted"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Replacement_Invoice"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "invoice_role": {
+            "const": "Replacement"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Service_Invoice"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "business_tags": {
+            "contains": {
+              "const": "Service"
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Export_Invoice"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "business_tags": {
+            "contains": {
+              "const": "Export"
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Utility_Invoice"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "business_tags": {
+            "contains": {
+              "const": "Utilities"
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Retail_Invoice"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "business_tags": {
+            "contains": {
+              "const": "Retail"
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Cash_Voucher"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Cash_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Bank_Voucher"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Bank_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Inventory_Voucher"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Inventory_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Payroll_Voucher"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Payroll_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Fixed_Asset_Voucher"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Fixed_Asset_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Sales_Purchase_Voucher"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Sales_Purchase_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "General_Accounting_Voucher"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "General_Accounting_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Cash_Receipt_Voucher"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Cash_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Cash_Payment_Voucher"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Cash_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Cash_Advance_Request"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Cash_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Cash_Advance_Settlement"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Cash_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Cash_Count_Record"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Cash_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Cash_Handover_Record"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Cash_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Bank_Debit_Advice"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Bank_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Bank_Credit_Advice"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Bank_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Payment_Order"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Bank_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Collection_Order"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Bank_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Bank_Transfer_Voucher"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Bank_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Bank_Reconciliation_Statement"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Bank_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Goods_Receipt_Note"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Inventory_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Goods_Issue_Note"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Inventory_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Internal_Stock_Transfer_Note"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Inventory_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Material_Inspection_Record"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Inventory_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Inventory_Count_Record"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Inventory_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Internal_Transportation_Note"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Inventory_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Timesheet"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Payroll_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Payroll_Statement"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Payroll_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Bonus_Payment_Statement"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Payroll_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Payroll_Allocation_Statement"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Payroll_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Social_Insurance_Payment_Record"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Payroll_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Employee_Payment_Confirmation"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Payroll_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Fixed_Asset_Handover_Record"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Fixed_Asset_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Fixed_Asset_Disposal_Record"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Fixed_Asset_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Fixed_Asset_Revaluation_Record"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Fixed_Asset_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Depreciation_Calculation_Sheet"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Fixed_Asset_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Fixed_Asset_Transfer_Record"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Fixed_Asset_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Fixed_Asset_Inventory_Record"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Fixed_Asset_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Goods_Delivery_Note"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Sales_Purchase_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Goods_Receipt_Confirmation"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Sales_Purchase_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Purchase_Order"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Sales_Purchase_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Sales_Order"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Sales_Purchase_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Purchase_Acceptance_Record"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Sales_Purchase_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Service_Acceptance_Record"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Sales_Purchase_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Accounts_Receivable_Reconciliation"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Sales_Purchase_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Accounts_Payable_Reconciliation"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "Sales_Purchase_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "General_Journal_Voucher"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "General_Accounting_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Accounting_Entry_Voucher"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "General_Accounting_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Cost_Allocation_Statement"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "General_Accounting_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Cost_Calculation_Sheet"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "General_Accounting_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Accounting_Adjustment_Voucher"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "General_Accounting_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Accrual_Voucher"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "General_Accounting_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_type": {
+            "const": "Prepayment_Allocation_Statement"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document_subcategory": {
+            "enum": [
+              "General_Accounting_Vouchers",
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

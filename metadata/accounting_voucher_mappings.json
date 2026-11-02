@@ -1,0 +1,1604 @@
+{
+  "mapping_version": "2.1.0",
+  "taxonomy_version": "2.1.0",
+  "description": "47 mã AV theo danh mục người dùng. Đây là bộ nhãn dự án, không phải tuyên bố về mẫu biểu hoặc điều kiện pháp lý.",
+  "groups": [
+    {
+      "code": "Cash_Vouchers",
+      "name_en": "Cash Vouchers",
+      "name_vi": "Chứng từ tiền mặt",
+      "expected_count": 7
+    },
+    {
+      "code": "Bank_Vouchers",
+      "name_en": "Bank Vouchers",
+      "name_vi": "Chứng từ ngân hàng",
+      "expected_count": 7
+    },
+    {
+      "code": "Inventory_Vouchers",
+      "name_en": "Inventory Vouchers",
+      "name_vi": "Chứng từ kho",
+      "expected_count": 6
+    },
+    {
+      "code": "Payroll_Vouchers",
+      "name_en": "Payroll Vouchers",
+      "name_vi": "Chứng từ tiền lương và nhân sự",
+      "expected_count": 6
+    },
+    {
+      "code": "Fixed_Asset_Vouchers",
+      "name_en": "Fixed Asset Vouchers",
+      "name_vi": "Chứng từ tài sản cố định",
+      "expected_count": 6
+    },
+    {
+      "code": "Sales_Purchase_Vouchers",
+      "name_en": "Sales Purchase Vouchers",
+      "name_vi": "Chứng từ mua bán hàng hóa, dịch vụ",
+      "expected_count": 8
+    },
+    {
+      "code": "General_Accounting_Vouchers",
+      "name_en": "General Accounting Vouchers",
+      "name_vi": "Chứng từ kế toán tổng hợp",
+      "expected_count": 7
+    }
+  ],
+  "match_semantics": "match kiểm tra document_type canonical và nhóm lưu trữ. Nhóm nghiệp vụ group_code độc lập với vị trí file đối với AV003 và AV014.",
+  "suggestion_semantics": "Chỉ gán khi xác minh nội dung. Hai tên thay thế dùng lại loại đã có; giữ một ID và một file cho mỗi tài liệu.",
+  "items": [
+    {
+      "code": "AV001",
+      "group_code": "Cash_Vouchers",
+      "name_en": "Cash Receipt Voucher",
+      "name_vi": "Phiếu thu",
+      "requested_document_type": "Cash_Receipt_Voucher",
+      "canonical_document_type": "Cash_Receipt_Voucher",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Cash_Receipt_Voucher"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Cash_Receipt_Voucher",
+        "document_subcategory": "Cash_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Cash_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Cash_Vouchers",
+      "classification_rule": "Phiếu thu tiền mặt của đơn vị kế toán; phân biệt biên lai thu tiền Cash_Receipt."
+    },
+    {
+      "code": "AV002",
+      "group_code": "Cash_Vouchers",
+      "name_en": "Cash Payment Voucher",
+      "name_vi": "Phiếu chi",
+      "requested_document_type": "Cash_Payment_Voucher",
+      "canonical_document_type": "Cash_Payment_Voucher",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Cash_Payment_Voucher"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Cash_Payment_Voucher",
+        "document_subcategory": "Cash_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Cash_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Cash_Vouchers",
+      "classification_rule": "Phiếu chi tiền mặt; không gán chỉ từ một hóa đơn hoặc biên nhận thanh toán."
+    },
+    {
+      "code": "AV003",
+      "group_code": "Cash_Vouchers",
+      "name_en": "Cash Receipt Slip",
+      "name_vi": "Biên lai thu tiền",
+      "requested_document_type": "Cash_Receipt_Slip",
+      "canonical_document_type": "Cash_Receipt",
+      "representation": "Canonical_Alias",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Invoices"
+          },
+          "document_type": {
+            "const": "Cash_Receipt"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Invoices",
+        "document_type": "Cash_Receipt",
+        "document_subcategory": "Payment_Receipts",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Payment_Receipts",
+      "storage_folder": "03_Invoices/Payment_Receipts",
+      "classification_rule": "Dùng lại Cash_Receipt của INV018; không tạo lớp trùng. Vị trí lưu chính là Invoices/Payment_Receipts."
+    },
+    {
+      "code": "AV004",
+      "group_code": "Cash_Vouchers",
+      "name_en": "Cash Advance Request",
+      "name_vi": "Giấy đề nghị tạm ứng",
+      "requested_document_type": "Cash_Advance_Request",
+      "canonical_document_type": "Cash_Advance_Request",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Cash_Advance_Request"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Cash_Advance_Request",
+        "document_subcategory": "Cash_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Cash_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Cash_Vouchers",
+      "classification_rule": "Đề nghị cấp tiền tạm ứng; phân biệt hồ sơ thanh toán hoặc quyết toán tạm ứng."
+    },
+    {
+      "code": "AV005",
+      "group_code": "Cash_Vouchers",
+      "name_en": "Cash Advance Settlement",
+      "name_vi": "Giấy thanh toán tiền tạm ứng",
+      "requested_document_type": "Cash_Advance_Settlement",
+      "canonical_document_type": "Cash_Advance_Settlement",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Cash_Advance_Settlement"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Cash_Advance_Settlement",
+        "document_subcategory": "Cash_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Cash_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Cash_Vouchers",
+      "classification_rule": "Hồ sơ thanh toán hoặc quyết toán khoản đã tạm ứng; phân biệt giấy đề nghị tạm ứng."
+    },
+    {
+      "code": "AV006",
+      "group_code": "Cash_Vouchers",
+      "name_en": "Cash Count Record",
+      "name_vi": "Biên bản kiểm kê quỹ",
+      "requested_document_type": "Cash_Count_Record",
+      "canonical_document_type": "Cash_Count_Record",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Cash_Count_Record"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Cash_Count_Record",
+        "document_subcategory": "Cash_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Cash_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Cash_Vouchers",
+      "classification_rule": "Biên bản kiểm đếm và đối chiếu quỹ tiền mặt."
+    },
+    {
+      "code": "AV007",
+      "group_code": "Cash_Vouchers",
+      "name_en": "Cash Handover Record",
+      "name_vi": "Biên bản bàn giao tiền mặt",
+      "requested_document_type": "Cash_Handover_Record",
+      "canonical_document_type": "Cash_Handover_Record",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Cash_Handover_Record"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Cash_Handover_Record",
+        "document_subcategory": "Cash_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Cash_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Cash_Vouchers",
+      "classification_rule": "Biên bản giao nhận hoặc bàn giao tiền mặt giữa các bên."
+    },
+    {
+      "code": "AV008",
+      "group_code": "Bank_Vouchers",
+      "name_en": "Bank Debit Advice",
+      "name_vi": "Giấy báo Nợ",
+      "requested_document_type": "Bank_Debit_Advice",
+      "canonical_document_type": "Bank_Debit_Advice",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Bank_Debit_Advice"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Bank_Debit_Advice",
+        "document_subcategory": "Bank_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Bank_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Bank_Vouchers",
+      "classification_rule": "Giấy báo Nợ do ngân hàng phát hành về tài khoản; phân biệt Debit_Note ghi tăng công nợ giao dịch."
+    },
+    {
+      "code": "AV009",
+      "group_code": "Bank_Vouchers",
+      "name_en": "Bank Credit Advice",
+      "name_vi": "Giấy báo Có",
+      "requested_document_type": "Bank_Credit_Advice",
+      "canonical_document_type": "Bank_Credit_Advice",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Bank_Credit_Advice"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Bank_Credit_Advice",
+        "document_subcategory": "Bank_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Bank_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Bank_Vouchers",
+      "classification_rule": "Giấy báo Có do ngân hàng phát hành về tài khoản; phân biệt Credit_Note ghi giảm công nợ giao dịch."
+    },
+    {
+      "code": "AV010",
+      "group_code": "Bank_Vouchers",
+      "name_en": "Payment Order",
+      "name_vi": "Ủy nhiệm chi",
+      "requested_document_type": "Payment_Order",
+      "canonical_document_type": "Payment_Order",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Payment_Order"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Payment_Order",
+        "document_subcategory": "Bank_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Bank_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Bank_Vouchers",
+      "classification_rule": "Lệnh hoặc ủy nhiệm chi qua ngân hàng; không tự xác nhận giao dịch đã hoàn thành nếu chỉ có lệnh."
+    },
+    {
+      "code": "AV011",
+      "group_code": "Bank_Vouchers",
+      "name_en": "Collection Order",
+      "name_vi": "Ủy nhiệm thu",
+      "requested_document_type": "Collection_Order",
+      "canonical_document_type": "Collection_Order",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Collection_Order"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Collection_Order",
+        "document_subcategory": "Bank_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Bank_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Bank_Vouchers",
+      "classification_rule": "Lệnh hoặc ủy nhiệm thu qua ngân hàng."
+    },
+    {
+      "code": "AV012",
+      "group_code": "Bank_Vouchers",
+      "name_en": "Bank Transfer Voucher",
+      "name_vi": "Chứng từ chuyển tiền",
+      "requested_document_type": "Bank_Transfer_Voucher",
+      "canonical_document_type": "Bank_Transfer_Voucher",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Bank_Transfer_Voucher"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Bank_Transfer_Voucher",
+        "document_subcategory": "Bank_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Bank_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Bank_Vouchers",
+      "classification_rule": "Chứng từ xác nhận hoặc ghi nhận chuyển tiền; phân biệt lệnh chi, giấy báo và sao kê theo nội dung chính."
+    },
+    {
+      "code": "AV013",
+      "group_code": "Bank_Vouchers",
+      "name_en": "Bank Reconciliation Statement",
+      "name_vi": "Biên bản đối chiếu ngân hàng",
+      "requested_document_type": "Bank_Reconciliation_Statement",
+      "canonical_document_type": "Bank_Reconciliation_Statement",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Bank_Reconciliation_Statement"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Bank_Reconciliation_Statement",
+        "document_subcategory": "Bank_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Bank_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Bank_Vouchers",
+      "classification_rule": "Tài liệu đối chiếu số liệu giữa đơn vị và ngân hàng; phân biệt sao kê liệt kê giao dịch Bank_Statement."
+    },
+    {
+      "code": "AV014",
+      "group_code": "Bank_Vouchers",
+      "name_en": "Bank Balance Confirmation",
+      "name_vi": "Giấy xác nhận số dư ngân hàng",
+      "requested_document_type": "Bank_Balance_Confirmation",
+      "canonical_document_type": "Balance_Confirmation",
+      "representation": "Canonical_Alias",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Bank_Statements"
+          },
+          "document_type": {
+            "const": "Balance_Confirmation"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Bank_Statements",
+        "document_type": "Balance_Confirmation",
+        "document_subcategory": null,
+        "business_tags": []
+      },
+      "suggested_subcategory": null,
+      "storage_folder": "05_Bank_Statements",
+      "classification_rule": "Dùng lại Balance_Confirmation. Vị trí lưu chính là 05_Bank_Statements, không nhân bản vào Bank_Vouchers."
+    },
+    {
+      "code": "AV015",
+      "group_code": "Inventory_Vouchers",
+      "name_en": "Goods Receipt Note",
+      "name_vi": "Phiếu nhập kho",
+      "requested_document_type": "Goods_Receipt_Note",
+      "canonical_document_type": "Goods_Receipt_Note",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Goods_Receipt_Note"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Goods_Receipt_Note",
+        "document_subcategory": "Inventory_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Inventory_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Inventory_Vouchers",
+      "classification_rule": "Phiếu ghi nhận nhập hàng hoặc vật tư vào kho."
+    },
+    {
+      "code": "AV016",
+      "group_code": "Inventory_Vouchers",
+      "name_en": "Goods Issue Note",
+      "name_vi": "Phiếu xuất kho",
+      "requested_document_type": "Goods_Issue_Note",
+      "canonical_document_type": "Goods_Issue_Note",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Goods_Issue_Note"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Goods_Issue_Note",
+        "document_subcategory": "Inventory_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Inventory_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Inventory_Vouchers",
+      "classification_rule": "Phiếu ghi nhận xuất hàng hoặc vật tư khỏi kho."
+    },
+    {
+      "code": "AV017",
+      "group_code": "Inventory_Vouchers",
+      "name_en": "Internal Stock Transfer Note",
+      "name_vi": "Phiếu điều chuyển kho nội bộ",
+      "requested_document_type": "Internal_Stock_Transfer_Note",
+      "canonical_document_type": "Internal_Stock_Transfer_Note",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Internal_Stock_Transfer_Note"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Internal_Stock_Transfer_Note",
+        "document_subcategory": "Inventory_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Inventory_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Inventory_Vouchers",
+      "classification_rule": "Phiếu điều chuyển hàng tồn kho giữa các kho hoặc bộ phận nội bộ."
+    },
+    {
+      "code": "AV018",
+      "group_code": "Inventory_Vouchers",
+      "name_en": "Material Inspection Record",
+      "name_vi": "Biên bản kiểm nhận vật tư",
+      "requested_document_type": "Material_Inspection_Record",
+      "canonical_document_type": "Material_Inspection_Record",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Material_Inspection_Record"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Material_Inspection_Record",
+        "document_subcategory": "Inventory_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Inventory_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Inventory_Vouchers",
+      "classification_rule": "Biên bản kiểm nhận số lượng, chất lượng hoặc quy cách vật tư."
+    },
+    {
+      "code": "AV019",
+      "group_code": "Inventory_Vouchers",
+      "name_en": "Inventory Count Record",
+      "name_vi": "Biên bản kiểm kê hàng tồn kho",
+      "requested_document_type": "Inventory_Count_Record",
+      "canonical_document_type": "Inventory_Count_Record",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Inventory_Count_Record"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Inventory_Count_Record",
+        "document_subcategory": "Inventory_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Inventory_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Inventory_Vouchers",
+      "classification_rule": "Biên bản kiểm đếm hàng tồn kho; phân biệt kiểm kê quỹ và kiểm kê tài sản cố định."
+    },
+    {
+      "code": "AV020",
+      "group_code": "Inventory_Vouchers",
+      "name_en": "Internal Transportation Note",
+      "name_vi": "Phiếu xuất kho kiêm vận chuyển nội bộ",
+      "requested_document_type": "Internal_Transportation_Note",
+      "canonical_document_type": "Internal_Transportation_Note",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Internal_Transportation_Note"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Internal_Transportation_Note",
+        "document_subcategory": "Inventory_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Inventory_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Inventory_Vouchers",
+      "classification_rule": "Tài liệu thể hiện cả xuất kho và vận chuyển nội bộ; không tự gán từ phiếu xuất kho thông thường."
+    },
+    {
+      "code": "AV021",
+      "group_code": "Payroll_Vouchers",
+      "name_en": "Timesheet",
+      "name_vi": "Bảng chấm công",
+      "requested_document_type": "Timesheet",
+      "canonical_document_type": "Timesheet",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Timesheet"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Timesheet",
+        "document_subcategory": "Payroll_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Payroll_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Payroll_Vouchers",
+      "classification_rule": "Bảng ghi nhận ngày công, giờ công hoặc thời gian làm việc."
+    },
+    {
+      "code": "AV022",
+      "group_code": "Payroll_Vouchers",
+      "name_en": "Payroll Statement",
+      "name_vi": "Bảng thanh toán tiền lương",
+      "requested_document_type": "Payroll_Statement",
+      "canonical_document_type": "Payroll_Statement",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Payroll_Statement"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Payroll_Statement",
+        "document_subcategory": "Payroll_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Payroll_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Payroll_Vouchers",
+      "classification_rule": "Bảng tính hoặc thanh toán tiền lương cho người lao động."
+    },
+    {
+      "code": "AV023",
+      "group_code": "Payroll_Vouchers",
+      "name_en": "Bonus Payment Statement",
+      "name_vi": "Bảng thanh toán tiền thưởng",
+      "requested_document_type": "Bonus_Payment_Statement",
+      "canonical_document_type": "Bonus_Payment_Statement",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Bonus_Payment_Statement"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Bonus_Payment_Statement",
+        "document_subcategory": "Payroll_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Payroll_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Payroll_Vouchers",
+      "classification_rule": "Bảng tính hoặc thanh toán tiền thưởng."
+    },
+    {
+      "code": "AV024",
+      "group_code": "Payroll_Vouchers",
+      "name_en": "Payroll Allocation Statement",
+      "name_vi": "Bảng phân bổ tiền lương",
+      "requested_document_type": "Payroll_Allocation_Statement",
+      "canonical_document_type": "Payroll_Allocation_Statement",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Payroll_Allocation_Statement"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Payroll_Allocation_Statement",
+        "document_subcategory": "Payroll_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Payroll_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Payroll_Vouchers",
+      "classification_rule": "Bảng phân bổ tiền lương theo bộ phận, đối tượng hoặc khoản mục chi phí."
+    },
+    {
+      "code": "AV025",
+      "group_code": "Payroll_Vouchers",
+      "name_en": "Social Insurance Payment Record",
+      "name_vi": "Chứng từ thanh toán bảo hiểm",
+      "requested_document_type": "Social_Insurance_Payment_Record",
+      "canonical_document_type": "Social_Insurance_Payment_Record",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Social_Insurance_Payment_Record"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Social_Insurance_Payment_Record",
+        "document_subcategory": "Payroll_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Payroll_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Payroll_Vouchers",
+      "classification_rule": "Chứng từ thanh toán bảo hiểm liên quan người lao động; phân biệt hóa đơn dịch vụ bảo hiểm thương mại."
+    },
+    {
+      "code": "AV026",
+      "group_code": "Payroll_Vouchers",
+      "name_en": "Employee Payment Confirmation",
+      "name_vi": "Xác nhận thanh toán cho nhân viên",
+      "requested_document_type": "Employee_Payment_Confirmation",
+      "canonical_document_type": "Employee_Payment_Confirmation",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Employee_Payment_Confirmation"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Employee_Payment_Confirmation",
+        "document_subcategory": "Payroll_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Payroll_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Payroll_Vouchers",
+      "classification_rule": "Xác nhận đã thanh toán cho người lao động; phân biệt bảng lương hoặc lệnh chuyển tiền khi chưa có xác nhận."
+    },
+    {
+      "code": "AV027",
+      "group_code": "Fixed_Asset_Vouchers",
+      "name_en": "Fixed Asset Handover Record",
+      "name_vi": "Biên bản giao nhận TSCĐ",
+      "requested_document_type": "Fixed_Asset_Handover_Record",
+      "canonical_document_type": "Fixed_Asset_Handover_Record",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Fixed_Asset_Handover_Record"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Fixed_Asset_Handover_Record",
+        "document_subcategory": "Fixed_Asset_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Fixed_Asset_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Fixed_Asset_Vouchers",
+      "classification_rule": "Biên bản giao nhận tài sản cố định; phân biệt hóa đơn mua tài sản."
+    },
+    {
+      "code": "AV028",
+      "group_code": "Fixed_Asset_Vouchers",
+      "name_en": "Fixed Asset Disposal Record",
+      "name_vi": "Biên bản thanh lý TSCĐ",
+      "requested_document_type": "Fixed_Asset_Disposal_Record",
+      "canonical_document_type": "Fixed_Asset_Disposal_Record",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Fixed_Asset_Disposal_Record"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Fixed_Asset_Disposal_Record",
+        "document_subcategory": "Fixed_Asset_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Fixed_Asset_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Fixed_Asset_Vouchers",
+      "classification_rule": "Biên bản ghi nhận thanh lý tài sản cố định."
+    },
+    {
+      "code": "AV029",
+      "group_code": "Fixed_Asset_Vouchers",
+      "name_en": "Fixed Asset Revaluation Record",
+      "name_vi": "Biên bản đánh giá lại TSCĐ",
+      "requested_document_type": "Fixed_Asset_Revaluation_Record",
+      "canonical_document_type": "Fixed_Asset_Revaluation_Record",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Fixed_Asset_Revaluation_Record"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Fixed_Asset_Revaluation_Record",
+        "document_subcategory": "Fixed_Asset_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Fixed_Asset_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Fixed_Asset_Vouchers",
+      "classification_rule": "Biên bản ghi nhận đánh giá lại tài sản cố định."
+    },
+    {
+      "code": "AV030",
+      "group_code": "Fixed_Asset_Vouchers",
+      "name_en": "Depreciation Calculation Sheet",
+      "name_vi": "Bảng tính khấu hao TSCĐ",
+      "requested_document_type": "Depreciation_Calculation_Sheet",
+      "canonical_document_type": "Depreciation_Calculation_Sheet",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Depreciation_Calculation_Sheet"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Depreciation_Calculation_Sheet",
+        "document_subcategory": "Fixed_Asset_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Fixed_Asset_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Fixed_Asset_Vouchers",
+      "classification_rule": "Bảng tính hoặc phân bổ khấu hao tài sản cố định; không đồng nhất với bảng phân bổ chi phí trả trước."
+    },
+    {
+      "code": "AV031",
+      "group_code": "Fixed_Asset_Vouchers",
+      "name_en": "Fixed Asset Transfer Record",
+      "name_vi": "Biên bản điều chuyển TSCĐ",
+      "requested_document_type": "Fixed_Asset_Transfer_Record",
+      "canonical_document_type": "Fixed_Asset_Transfer_Record",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Fixed_Asset_Transfer_Record"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Fixed_Asset_Transfer_Record",
+        "document_subcategory": "Fixed_Asset_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Fixed_Asset_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Fixed_Asset_Vouchers",
+      "classification_rule": "Biên bản điều chuyển tài sản cố định giữa đơn vị hoặc bộ phận."
+    },
+    {
+      "code": "AV032",
+      "group_code": "Fixed_Asset_Vouchers",
+      "name_en": "Fixed Asset Inventory Record",
+      "name_vi": "Biên bản kiểm kê TSCĐ",
+      "requested_document_type": "Fixed_Asset_Inventory_Record",
+      "canonical_document_type": "Fixed_Asset_Inventory_Record",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Fixed_Asset_Inventory_Record"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Fixed_Asset_Inventory_Record",
+        "document_subcategory": "Fixed_Asset_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Fixed_Asset_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Fixed_Asset_Vouchers",
+      "classification_rule": "Biên bản kiểm kê tài sản cố định; phân biệt kiểm kê hàng tồn kho."
+    },
+    {
+      "code": "AV033",
+      "group_code": "Sales_Purchase_Vouchers",
+      "name_en": "Goods Delivery Note",
+      "name_vi": "Phiếu giao hàng",
+      "requested_document_type": "Goods_Delivery_Note",
+      "canonical_document_type": "Goods_Delivery_Note",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Goods_Delivery_Note"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Goods_Delivery_Note",
+        "document_subcategory": "Sales_Purchase_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Sales_Purchase_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Sales_Purchase_Vouchers",
+      "classification_rule": "Phiếu giao hàng cho bên nhận; phân biệt hóa đơn hoặc phiếu xuất kho."
+    },
+    {
+      "code": "AV034",
+      "group_code": "Sales_Purchase_Vouchers",
+      "name_en": "Goods Receipt Confirmation",
+      "name_vi": "Biên bản giao nhận hàng hóa",
+      "requested_document_type": "Goods_Receipt_Confirmation",
+      "canonical_document_type": "Goods_Receipt_Confirmation",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Goods_Receipt_Confirmation"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Goods_Receipt_Confirmation",
+        "document_subcategory": "Sales_Purchase_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Sales_Purchase_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Sales_Purchase_Vouchers",
+      "classification_rule": "Biên bản xác nhận giao nhận hàng hóa giữa các bên; phân biệt phiếu nhập kho nội bộ."
+    },
+    {
+      "code": "AV035",
+      "group_code": "Sales_Purchase_Vouchers",
+      "name_en": "Purchase Order",
+      "name_vi": "Đơn đặt hàng",
+      "requested_document_type": "Purchase_Order",
+      "canonical_document_type": "Purchase_Order",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Purchase_Order"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Purchase_Order",
+        "document_subcategory": "Sales_Purchase_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Sales_Purchase_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Sales_Purchase_Vouchers",
+      "classification_rule": "Đơn đặt mua hàng từ góc nhìn đơn vị kế toán; cần xác minh vai trò bên mua."
+    },
+    {
+      "code": "AV036",
+      "group_code": "Sales_Purchase_Vouchers",
+      "name_en": "Sales Order",
+      "name_vi": "Đơn đặt hàng bán",
+      "requested_document_type": "Sales_Order",
+      "canonical_document_type": "Sales_Order",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Sales_Order"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Sales_Order",
+        "document_subcategory": "Sales_Purchase_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Sales_Purchase_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Sales_Purchase_Vouchers",
+      "classification_rule": "Đơn đặt hàng bán từ góc nhìn đơn vị kế toán; cần xác minh vai trò bên bán, không suy ra từ cùng mẫu đơn đặt hàng."
+    },
+    {
+      "code": "AV037",
+      "group_code": "Sales_Purchase_Vouchers",
+      "name_en": "Purchase Acceptance Record",
+      "name_vi": "Biên bản nghiệm thu mua hàng",
+      "requested_document_type": "Purchase_Acceptance_Record",
+      "canonical_document_type": "Purchase_Acceptance_Record",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Purchase_Acceptance_Record"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Purchase_Acceptance_Record",
+        "document_subcategory": "Sales_Purchase_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Sales_Purchase_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Sales_Purchase_Vouchers",
+      "classification_rule": "Biên bản nghiệm thu hàng hóa hoặc đối tượng mua vào."
+    },
+    {
+      "code": "AV038",
+      "group_code": "Sales_Purchase_Vouchers",
+      "name_en": "Service Acceptance Record",
+      "name_vi": "Biên bản nghiệm thu dịch vụ",
+      "requested_document_type": "Service_Acceptance_Record",
+      "canonical_document_type": "Service_Acceptance_Record",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Service_Acceptance_Record"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Service_Acceptance_Record",
+        "document_subcategory": "Sales_Purchase_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Sales_Purchase_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Sales_Purchase_Vouchers",
+      "classification_rule": "Biên bản nghiệm thu kết quả cung cấp dịch vụ; phân biệt hóa đơn dịch vụ."
+    },
+    {
+      "code": "AV039",
+      "group_code": "Sales_Purchase_Vouchers",
+      "name_en": "Accounts Receivable Reconciliation",
+      "name_vi": "Biên bản đối chiếu công nợ phải thu",
+      "requested_document_type": "Accounts_Receivable_Reconciliation",
+      "canonical_document_type": "Accounts_Receivable_Reconciliation",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Accounts_Receivable_Reconciliation"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Accounts_Receivable_Reconciliation",
+        "document_subcategory": "Sales_Purchase_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Sales_Purchase_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Sales_Purchase_Vouchers",
+      "classification_rule": "Đối chiếu công nợ phải thu từ góc nhìn đơn vị kế toán; không tự phân biệt phải thu/phải trả nếu chưa rõ chủ thể."
+    },
+    {
+      "code": "AV040",
+      "group_code": "Sales_Purchase_Vouchers",
+      "name_en": "Accounts Payable Reconciliation",
+      "name_vi": "Biên bản đối chiếu công nợ phải trả",
+      "requested_document_type": "Accounts_Payable_Reconciliation",
+      "canonical_document_type": "Accounts_Payable_Reconciliation",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Accounts_Payable_Reconciliation"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Accounts_Payable_Reconciliation",
+        "document_subcategory": "Sales_Purchase_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "Sales_Purchase_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/Sales_Purchase_Vouchers",
+      "classification_rule": "Đối chiếu công nợ phải trả từ góc nhìn đơn vị kế toán; không tự phân biệt phải thu/phải trả nếu chưa rõ chủ thể."
+    },
+    {
+      "code": "AV041",
+      "group_code": "General_Accounting_Vouchers",
+      "name_en": "General Journal Voucher",
+      "name_vi": "Phiếu kế toán",
+      "requested_document_type": "General_Journal_Voucher",
+      "canonical_document_type": "General_Journal_Voucher",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "General_Journal_Voucher"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "General_Journal_Voucher",
+        "document_subcategory": "General_Accounting_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "General_Accounting_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/General_Accounting_Vouchers",
+      "classification_rule": "Phiếu kế toán tổng hợp dùng ghi nhận nghiệp vụ; phân biệt chứng từ ghi sổ theo tiêu đề và nội dung."
+    },
+    {
+      "code": "AV042",
+      "group_code": "General_Accounting_Vouchers",
+      "name_en": "Accounting Entry Voucher",
+      "name_vi": "Chứng từ ghi sổ",
+      "requested_document_type": "Accounting_Entry_Voucher",
+      "canonical_document_type": "Accounting_Entry_Voucher",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Accounting_Entry_Voucher"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Accounting_Entry_Voucher",
+        "document_subcategory": "General_Accounting_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "General_Accounting_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/General_Accounting_Vouchers",
+      "classification_rule": "Chứng từ ghi sổ đã xác định theo tiêu đề và nội dung."
+    },
+    {
+      "code": "AV043",
+      "group_code": "General_Accounting_Vouchers",
+      "name_en": "Cost Allocation Statement",
+      "name_vi": "Bảng phân bổ chi phí",
+      "requested_document_type": "Cost_Allocation_Statement",
+      "canonical_document_type": "Cost_Allocation_Statement",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Cost_Allocation_Statement"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Cost_Allocation_Statement",
+        "document_subcategory": "General_Accounting_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "General_Accounting_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/General_Accounting_Vouchers",
+      "classification_rule": "Bảng phân bổ chi phí chung; nếu rõ là tiền lương, khấu hao hoặc trả trước thì dùng loại cụ thể tương ứng."
+    },
+    {
+      "code": "AV044",
+      "group_code": "General_Accounting_Vouchers",
+      "name_en": "Cost Calculation Sheet",
+      "name_vi": "Bảng tính giá thành",
+      "requested_document_type": "Cost_Calculation_Sheet",
+      "canonical_document_type": "Cost_Calculation_Sheet",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Cost_Calculation_Sheet"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Cost_Calculation_Sheet",
+        "document_subcategory": "General_Accounting_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "General_Accounting_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/General_Accounting_Vouchers",
+      "classification_rule": "Bảng tập hợp hoặc tính giá thành sản phẩm, dịch vụ hoặc đối tượng tính giá thành."
+    },
+    {
+      "code": "AV045",
+      "group_code": "General_Accounting_Vouchers",
+      "name_en": "Accounting Adjustment Voucher",
+      "name_vi": "Chứng từ điều chỉnh kế toán",
+      "requested_document_type": "Accounting_Adjustment_Voucher",
+      "canonical_document_type": "Accounting_Adjustment_Voucher",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Accounting_Adjustment_Voucher"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Accounting_Adjustment_Voucher",
+        "document_subcategory": "General_Accounting_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "General_Accounting_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/General_Accounting_Vouchers",
+      "classification_rule": "Chứng từ điều chỉnh sổ hoặc bút toán kế toán; phân biệt Adjusted_Invoice điều chỉnh hóa đơn."
+    },
+    {
+      "code": "AV046",
+      "group_code": "General_Accounting_Vouchers",
+      "name_en": "Accrual Voucher",
+      "name_vi": "Chứng từ ghi nhận chi phí phải trả",
+      "requested_document_type": "Accrual_Voucher",
+      "canonical_document_type": "Accrual_Voucher",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Accrual_Voucher"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Accrual_Voucher",
+        "document_subcategory": "General_Accounting_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "General_Accounting_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/General_Accounting_Vouchers",
+      "classification_rule": "Chứng từ ghi nhận chi phí phải trả theo nội dung nghiệp vụ."
+    },
+    {
+      "code": "AV047",
+      "group_code": "General_Accounting_Vouchers",
+      "name_en": "Prepayment Allocation Statement",
+      "name_vi": "Bảng phân bổ chi phí trả trước",
+      "requested_document_type": "Prepayment_Allocation_Statement",
+      "canonical_document_type": "Prepayment_Allocation_Statement",
+      "representation": "Document_Type",
+      "match": {
+        "type": "object",
+        "properties": {
+          "document_category": {
+            "const": "Accounting_Vouchers"
+          },
+          "document_type": {
+            "const": "Prepayment_Allocation_Statement"
+          }
+        },
+        "required": [
+          "document_category",
+          "document_type"
+        ]
+      },
+      "suggested_metadata": {
+        "document_category": "Accounting_Vouchers",
+        "document_type": "Prepayment_Allocation_Statement",
+        "document_subcategory": "General_Accounting_Vouchers",
+        "business_tags": []
+      },
+      "suggested_subcategory": "General_Accounting_Vouchers",
+      "storage_folder": "02_Accounting_Vouchers/General_Accounting_Vouchers",
+      "classification_rule": "Bảng phân bổ chi phí trả trước; phân biệt phân bổ tiền lương và khấu hao tài sản cố định."
+    }
+  ]
+}

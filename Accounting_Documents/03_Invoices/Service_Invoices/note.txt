@@ -1,0 +1,3 @@
+Hóa đơn dịch vụ
+Hóa đơn có nội dung chính là cung cấp hoặc sử dụng dịch vụ.
+Metadata được quản lý ở metadata/documents.jsonl tại thư mục gốc dự án.

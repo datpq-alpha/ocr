@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000018",
+  "evaluation_image": "Accounting_Documents/02_Accounting_Vouchers/Cash_Vouchers/Bien_lai_thu_tien_bvCR.png",
+  "evaluation_sha256": "b905d85c941b19203393aecbe1d3a30cd28a426cdfc193fc26248e2413ef5876",
+  "reference_text_file": "ground_truth/texts/GT000018.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

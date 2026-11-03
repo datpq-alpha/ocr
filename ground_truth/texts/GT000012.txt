@@ -1,0 +1,36 @@
+Andisantingangerancessessessessessessessessessessessessessessesses
+HÓA ĐƠN GIÁ TRI GIA TĂNG
+Mẫu số: 01GTKTO/002
+(Bản thể hiện của hóa đơn điện tử)
+Ký hiệu:
+Ngày 16 tháng 07 năm 2019
+Số:
+Chưa cấp sốz
+CÔNG TY TNHH XYZ
+Mã số thuế: 0101243150-195
+Địa chỉ: 15 Duy Tân - Cầu Giấy Người
+Điện thoại:
+0243150625
+Số tài khoản:
+0123356641230 - Ngân hàng Thương
+Họ tên người mua hàng: nguyễn Thị Vân Anh
+Tên đơn vị: Công ty TNHH Ngọc Việt
+Mã số thuế: 0101243150-1119
+H
+Địa chỉ: Thanh Xuân, Hà Nội
+H
+Hình thức thanh toán:
+Số tài khoản:
+2131000410475
+Hóa đơn thay thế cho hóa đơn số 000007, mẫu số 01GTKT0/002, ký hiệu AP/19P, ngày 11/07/2019
+stt	Tên hàng hóa, dịch vụ	Đơn vị tính	Số lượng	Đơn giá	Thành tiền
+A	B	c	1	2	3-1x2
+1	Sơ mi nữ	Chiếc	1,00	500.000	500.000
+Cộng tiến hàng: 500.000					
+Thuế suất GTGT: 10 % Tiền thuế GTGT: 50.000					
+Tổng tiền thanh toán; 550.000					
+Số tiền viết bằng chữ: Năm trăm năm đồng chẫn chiến					
+Người mua hàng
+Người bán hàng
+(Ký, ghi rõ họ, tên)
+Kh, ghi rồ họ, tên)

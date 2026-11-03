@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000033",
+  "evaluation_image": "Accounting_Documents/03_Invoices/Payment_Receipts/bien_nhan_dat_coc.jpg",
+  "evaluation_sha256": "7966e0aca933a4e9a417bcdb023708f3d49d4d26b0b0686b0f1bd8c8c18e1f11",
+  "reference_text_file": "ground_truth/texts/GT000033.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

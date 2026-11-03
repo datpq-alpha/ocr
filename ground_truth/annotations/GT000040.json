@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000040",
+  "evaluation_image": "Accounting_Documents/03_Invoices/Utility_Invoices/hoa_don_dien_2012.jpg",
+  "evaluation_sha256": "5de57d5a47caddd5b800a3ca6d39dfd2511fa4f4c5b6a100146986b6cb133831",
+  "reference_text_file": "ground_truth/texts/GT000040.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

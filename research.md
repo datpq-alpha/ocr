@@ -2,7 +2,7 @@
 
 Mốc đối chiếu nguồn: 30/10/2026. Phạm vi báo cáo là baseline OCR trong hai tuần đầu theo [debai.md](debai.md), sử dụng mô hình có sẵn để so sánh tốc độ, tỷ lệ lỗi và độ chính xác trên ảnh chứng từ, hóa đơn và PDF.
 
-Các cấu hình dưới đây thuộc thiết kế thực nghiệm. Dự án chưa có kết quả đo OCR trên tập PDF hiện tại. Mô hình và benchmark phân tích tài liệu mở rộng được trình bày trong phụ lục.
+Các cấu hình dưới đây thuộc thiết kế thực nghiệm; kết quả chạy baseline được lưu tại `outputs/`. Nguồn dữ liệu được bổ sung ngày 03/11/2026 theo [repo_invoices.md](repo_invoices.md). Mô hình và benchmark phân tích tài liệu mở rộng được trình bày trong phụ lục.
 
 ## 1. Phạm vi theo đề bài
 
@@ -37,7 +37,11 @@ PP-OCR, PP-DocLayout và PP-Structure không phải tên các dự án OCR độ
 
 ### 3.1. PaddleOCR với PP-OCR
 
-PaddleOCR cung cấp pipeline phát hiện vùng chữ và nhận dạng văn bản. Tài liệu PP-OCRv6 liệt kê hỗ trợ tiếng Việt qua mã `vi` và các mức tiny/small/medium. Cấu hình khảo sát ban đầu sử dụng `PP-OCRv6_small_det` và `PP-OCRv6_small_rec`; việc thay đổi mức mô hình được thực hiện trên tập phát triển và cố định trước phép đo cuối. Toolkit sử dụng giấy phép Apache-2.0. [Tài liệu PP-OCR](https://www.paddleocr.ai/main/en/version3.x/pipeline_usage/OCR.html), [Repository PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR).
+PaddleOCR cung cấp pipeline phát hiện vùng chữ và nhận dạng văn bản, sử dụng giấy phép Apache-2.0. Cấu hình đã chạy tại repository là `PP-OCRv6_small_det` và `PP-OCRv6_small_rec`. Tài liệu liệt kê tiếng Việt qua mã `vi`, nhưng không thể suy ra khả năng xuất đủ dấu tiếng Việt chỉ từ bảng ngôn ngữ hỗ trợ. [Tài liệu PP-OCR](https://www.paddleocr.ai/main/en/version3.x/pipeline_usage/OCR.html), [Repository PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR).
+
+Kiểm tra artifact ngày 02/11/2026 cho thấy dictionary của `PP-OCRv6_small_rec` thiếu 88/90 ký tự trong dải `U+1EA0–U+1EF9`, không có dấu tổ hợp để biểu diễn thay thế. Dictionary của checkpoint `latin_PP-OCRv5_mobile_rec` tải trong lần đối chiếu cũng thiếu cả 90 ký tự của dải này. Các cấu hình này phải được ghi là baseline có giới hạn bảng ký tự, không dùng để kết luận chung về chất lượng OCR tiếng Việt của toàn bộ PaddleOCR. Issue chính thức xác nhận sự thiếu hụt của dictionary PP-OCRv6; việc thay dictionary mà không có trọng số được huấn luyện tương ứng không khắc phục được vấn đề. [PaddleOCR issue #18254](https://github.com/PaddlePaddle/PaddleOCR/issues/18254).
+
+Preset bổ sung `ppocrv6_vi` sử dụng checkpoint cộng đồng `tieubaoca/pp-ocrv6-medium-rec-vietnamese`, tinh chỉnh từ `PP-OCRv6_medium_rec`. Phiên bản cố định `edc19ca6890bedb7a68c055d21190b44fc1aaa00` có dictionary 242 phần tử, bao phủ bộ ký tự tiếng Việt được runner kiểm tra; bộ inference đã chạy được trên CPU trong môi trường dự án. Trọng số, dictionary và cấu hình được sử dụng cùng nhau, kèm hash để truy vết. Khả năng biểu diễn dấu không đảm bảo độ chính xác nhận dạng; kết quả phải được đánh giá trên cùng ground truth. Model card chưa công bố giấy phép riêng cho checkpoint này. [Model card và artifact](https://huggingface.co/tieubaoca/pp-ocrv6-medium-rec-vietnamese/tree/edc19ca6890bedb7a68c055d21190b44fc1aaa00).
 
 Đầu vào là ảnh trang hoặc ảnh render từ PDF. Kết quả gồm vùng chữ và văn bản nhận dạng, được chuyển về biểu diễn chung để chấm điểm. Các lỗi được phân tách thành phát hiện thiếu vùng, nhận dạng sai và sắp xếp sai thứ tự đọc.
 
@@ -105,7 +109,7 @@ Các ghi nhận trên áp dụng cho suy luận, không phải huấn luyện. D
 
 ## 5. Dữ liệu và phương pháp đánh giá
 
-Tập hiện tại có 15 PDF tại `Accounting_Documents/01_Financial_Reports/06_2026/`; ID và đường dẫn nằm trong [documents.jsonl](metadata/documents.jsonl). Pilot sử dụng khoảng 10–15 trang đại diện cho văn bản, số liệu và chữ nhỏ. Kết quả trên báo cáo tài chính không tự đại diện cho hóa đơn, chứng từ hoặc ảnh chụp chưa có trong tập kiểm thử.
+Baseline toàn trang hiện sử dụng 43 ảnh chứng từ và hóa đơn thuộc nhóm `02` và `03`; ID, đường dẫn và hash ảnh nằm trong [manifest.json](ground_truth/manifest.json). Dữ liệu báo cáo tài chính được trình bày riêng tại phụ lục C.
 
 Nhãn chuẩn được đối chiếu thủ công. Phép thử ảnh cắt dùng cùng các vùng chuẩn; phép thử toàn trang tính cả detection, recognition và thứ tự đọc. Dấu tiếng Việt, dấu âm, ngoặc và dấu phân cách số được giữ nguyên. Quy tắc chuẩn hóa Unicode và khoảng trắng được cố định.
 
@@ -120,6 +124,17 @@ Nhãn chuẩn được đối chiếu thủ công. Phép thử ảnh cắt dùng
 Thời gian khởi tạo, render PDF, inference và tổng thời gian được đo riêng. Phiên bản thư viện, checkpoint, backend, độ phân giải, batch size và tham số sinh được ghi nhận trong mỗi cấu hình. Các bản dịch, trang trùng và ảnh biến đổi từ cùng nguồn nằm trong cùng tập để hạn chế rò rỉ giữa tập phát triển và kiểm thử.
 
 Điểm CER/WER và thời gian từ các công bố khác không được so trực tiếp khi khác dữ liệu, phần cứng hoặc phương pháp chấm. Các bảng benchmark ở phụ lục chỉ cung cấp bối cảnh khảo sát. Phạm vi dữ liệu, kế hoạch và chỉ số chi tiết được trình bày trong [hd.md](hd.md).
+
+### 5.1. Nguồn dữ liệu hóa đơn và chứng từ
+
+| Nguồn | Quy mô | Dữ liệu và phạm vi nhãn |
+| --- | --- | --- |
+| [MC-OCR 2021](https://www.rivf2021-mc-ocr.vietnlp.com/dataset) | 2.436 ảnh; public train 1.155 ảnh | Biên nhận chụp bằng điện thoại; nhãn vùng và text cho người bán, địa chỉ, thời gian, tổng tiền. [Bài báo](https://people.cs.umu.se/sonvx/files/MCOCR_Preprint.pdf) |
+| [MC-OCR trên Kaggle, phiên bản 17](https://www.kaggle.com/datasets/domixi1989/vietnamese-receipts-mc-ocr-2021) | 6.585 crop có nhãn: 5.285 train, 1.300 validation | Bản đóng gói cộng đồng có ảnh trang, ảnh cắt và dữ liệu trung gian; nhãn crop khớp các giá trị trong CSV train gốc, không phải transcript toàn trang. |
+| [Vietnamese Bill Extraction VLM](https://huggingface.co/datasets/minhduc168/dataset-origin-vlm-extract-bill) | 982 mẫu, một split `train` | Ảnh và danh sách dòng hàng: tên dịch vụ, số lượng, đơn vị, đơn giá, thành tiền; nhãn `master_data` không chép toàn bộ chữ trong ảnh. |
+| [Information Extraction from Invoices — Vietnamese Stores](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002891221) | 731 ảnh hóa đơn | Nghiên cứu kết hợp VietOCR và GCN để trích xuất thông tin; chưa xác minh được đường tải bộ dữ liệu công khai. |
+
+Nhãn trường và dòng hàng được dùng cho KIE; transcript vùng hoặc trang dùng cho CER/WER theo phạm vi tương ứng. Kết quả trên biên nhận bán lẻ và hóa đơn VAT được phân nhóm theo nguồn. Chi tiết truy cập và kiểm tra artifact nằm trong [dataset_review.md](dataset_review.md).
 
 ## 6. Repository tham khảo cho xử lý hóa đơn
 
@@ -225,3 +240,33 @@ Trong công bố ngày 23/10/2026, Datalab đánh giá các mô hình trên 16.2
 Datalab đồng thời là đơn vị phát triển Chandra. Các giá trị phản ánh phép thử do đơn vị này công bố và không dùng chung thang đo với OmniDocBench. [Datalab, Open-source OCR models on OmniParseBench](https://api.datalab.to/blog/open-ocr-models-omniparsebench).
 
 Chandra-OCR-2 có mã nguồn và trọng số để tự triển khai qua Transformers hoặc server vLLM; đường phục vụ vLLM dùng GPU. Datalab cũng cung cấp API hosted, nhưng được liệt kê riêng với Chandra trong tài liệu đánh giá; không mặc định hai cấu hình là cùng checkpoint hoặc cho cùng kết quả. Chưa xác nhận cấu hình CPU-only của Chandra-OCR-2. [Repository Chandra](https://github.com/datalab-to/chandra).
+
+## Phụ lục C. Dữ liệu và tác vụ tài liệu tài chính
+
+### C.1. Dữ liệu tiếng Việt
+
+| Nguồn | Quy mô công bố | Dữ liệu và nhãn |
+| --- | --- | --- |
+| [TiniX Vietnam OCR Annual Financial Statements](https://huggingface.co/datasets/thuongdz/ocr_annual_financials) | 18.231 báo cáo, 1.491 mã chứng khoán, giai đoạn 2015–2025 | Văn bản OCR báo cáo tài chính; đầu ra OCR không mặc định là ground truth thủ công. Metadata công bố CC BY-NC 4.0. |
+| [VietFinTab](https://huggingface.co/datasets/VietFinTabGroup/VietFinTab) | 10.383 ảnh bảng và XML cấu trúc; 1.000 bảng có nhãn nội dung | Nhãn hàng, cột, ô gộp; tập nội dung có text và bounding box. Giấy phép CC BY-NC 4.0. |
+| [ViFinQA](https://huggingface.co/datasets/AIGuruTinix/ViFinQA) | 1.012 câu hỏi, 1.973 báo cáo OCR, 100 doanh nghiệp | Hỏi đáp và suy luận tài chính; bản HF công khai chứa câu hỏi và tài liệu OCR, chưa cung cấp nhãn đáp án và bằng chứng đầy đủ để chấm QA. [Mã nguồn](https://github.com/DSKT-NOWJ/ViFinQA) |
+
+### C.2. Nguồn dữ liệu quốc tế
+
+| Nguồn | Dữ liệu và tác vụ |
+| --- | --- |
+| [FinLongDocQA](https://huggingface.co/datasets/Amian/FinLongDocQA) | Hỏi đáp và suy luận số liệu trên nhiều trang/bảng của báo cáo thường niên tiếng Anh. |
+| [LEDGER](https://github.com/artefactory/LEDGER) | 4.999 báo cáo, trung vị 124 trang; truy hồi trang liên quan và trích xuất KPI tài chính. |
+| [FinTabNet](https://arxiv.org/abs/2005.00589) | Bảng từ báo cáo tài chính với nhãn cấu trúc và vị trí ô. |
+| [FinanceBench](https://github.com/patronus-ai/financebench) | Bản công khai gồm 150 mẫu hỏi đáp tài chính, kèm đáp án và bằng chứng. |
+
+### C.3. Phạm vi phép đo
+
+| Thành phần | Nội dung | Chỉ số |
+| --- | --- | --- |
+| OCR | Chữ, số, dấu âm, ngoặc và đơn vị tiền tệ | CER, WER, Numeric Exact Match |
+| Bảng | Hàng/cột, ô gộp, tiêu đề nhiều tầng và bảng qua trang | TEDS, Cell Accuracy, Row/Column Alignment |
+| Cấu trúc tài liệu | Trang, tiêu đề, mục, đoạn và vùng bảng | Precision, Recall, F1 |
+| Trích xuất và QA | KPI, kỳ báo cáo, truy hồi bằng chứng và câu trả lời | Field Exact Match/F1, Answer Exact Match/F1, Evidence Accuracy |
+
+Các lớp OCR, cấu trúc bảng, phân tích tài liệu và QA được báo cáo riêng. Văn bản OCR có sẵn phục vụ truy hồi hoặc QA; chỉ dữ liệu có nhãn đối chiếu tương ứng được dùng để chấm lỗi nhận dạng, cấu trúc hoặc đáp án.

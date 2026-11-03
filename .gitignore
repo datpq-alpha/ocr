@@ -10,5 +10,11 @@ venv/
 .env.*
 !.env.example
 /tmp/
+/.cache/
+/outputs/
+/datasets/external/
+/MC_OCR_2021/
+/data/MC_OCR_2021/
+.venv-data/
 .DS_Store
 Thumbs.db

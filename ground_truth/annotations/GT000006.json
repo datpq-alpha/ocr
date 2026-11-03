@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000006",
+  "evaluation_image": "Accounting_Documents/02_Accounting_Vouchers/General_Accounting_Vouchers/chung_tu_ghi_so.png",
+  "evaluation_sha256": "122ce200707bee7a301d39758fe953bebd9bb9857226af8235a1333a0f6b403f",
+  "reference_text_file": "ground_truth/texts/GT000006.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

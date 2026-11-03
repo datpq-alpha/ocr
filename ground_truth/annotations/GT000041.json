@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000041",
+  "evaluation_image": "Accounting_Documents/03_Invoices/Utility_Invoices/hoa_don_dien_2022.jpg",
+  "evaluation_sha256": "4b925f9b85703f9df0388459e9ec1bf8d6413d4292bfa053fc826b08b133571a",
+  "reference_text_file": "ground_truth/texts/GT000041.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

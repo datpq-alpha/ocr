@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000010",
+  "evaluation_image": "Accounting_Documents/03_Invoices/Asset_Invoices/hoa_don_ban_TS.jpg",
+  "evaluation_sha256": "5964c03621451f4f2e9d6f921548dfef8cf3e23d75eff1866ee3578244a03821",
+  "reference_text_file": "ground_truth/texts/GT000010.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000039",
+  "evaluation_image": "Accounting_Documents/03_Invoices/Utility_Invoices/hoa_don_dich_vu_vt.png",
+  "evaluation_sha256": "3b28f922d5e0b3986bf5967a391bfa541a7219fd49532ddce74b687817555b0e",
+  "reference_text_file": "ground_truth/texts/GT000039.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

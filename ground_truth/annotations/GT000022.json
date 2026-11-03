@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000022",
+  "evaluation_image": "Accounting_Documents/02_Accounting_Vouchers/General_Accounting_Vouchers/bang_phan_bo_chi_phi.png",
+  "evaluation_sha256": "ecdb52ceb29f8e4a6b1b07d1a41bf13fd2d81612f64120606a39ff45bbb084f2",
+  "reference_text_file": "ground_truth/texts/GT000022.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

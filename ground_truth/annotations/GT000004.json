@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000004",
+  "evaluation_image": "Accounting_Documents/02_Accounting_Vouchers/Cash_Vouchers/phieu_chi_np.jpg",
+  "evaluation_sha256": "ece9422833fae8a2b26523717ed7eef849596410edce0baf64267de5d5dcc372",
+  "reference_text_file": "ground_truth/texts/GT000004.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

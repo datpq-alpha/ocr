@@ -1,0 +1,12 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+numpy==1.26.4
+paddlepaddle==3.2.0
+paddleocr==3.7.0
+paddlex==3.7.2
+vietocr==0.3.13
+torch==2.5.1+cpu
+torchvision==0.20.1+cpu
+opencv-python==4.10.0.84
+opencv-python-headless==4.10.0.84
+jiwer==4.0.0
+jsonschema==4.26.0

@@ -1,0 +1,33 @@
+Tổng Công ty Điện lực TP Hà Nội - Công ty Điện lực Thanh Trì Thi Thu
+Mã số thuế (Tax Code): 0100101114-008
+Địa chỉ (Address): Số 155 đường Phan Trọng Tuệ TTVĐ H. Thanh Trì TP Hà Nội Việt Nam
+Điện thoai Phone Namber): 19001288
+EVN
+Thông tần thanh toán (Payment Information): Công ty Điện lực Thanh Trì - Số TK: 0151000474008 - Tại NH:
+NHTMCP AN Bình
+HÓA ĐƠN GIÁ TRỊ GIA TĂNG
+(VAT INVOICE)
+Kỷ hiệu (Scrial): 1K22TCA
+Bần thế hiện của hóa đơn điện tử
+Số (No): 590085
+(Elecironic imoice duplay)
+Ngày (Date) 07 tháng (month) 05 năm (ycar) 2022
+Họ tên người mua hàng (Buyer name): Nguyễn Văn A - PD0600008812 The The Nam
+Tên đơn vị (Company name): Nguyễn Văn A
+Mã số thuế (Tax code):
+Địa chỉ (Addresi): Đội 2 Xã Tả Thanh Oai Thanh Trí
+Số tài khoản A Counh No):
+Hình thức thanh toàn (Paymeni method): TM/CK
+Đồng tiền thanh toàn (Payment currency): VND
+SIT No.)	Tên hàng hóa, dịch vụ (Description)	ĐVT (Umit)	Số lượng (Quanty)	Đơn giá (Unit price)	Thành tiền (Amcunt)
+A	B	c	1	2	3-12
+M	Điện tiêu thụ - Kỷ háa đơn: Tháng 5/2022 từ 07/04/2022 đến 06 0s/2022	kWh	199		369.986
+	(kèm theo bảng kê số 1181886,, ngày 07 tháng 05 năm 1991 2022)				
+Cộng tiền hàng (Total amount)					369.986
+Thuế suất gig (VAT rate): 8%		Tiền thuế GIGT (VAT Amount):			29.599
+Tỷ giá (Exchanged rate)		Tổng cộng tiền thanh toán (Total payment)			399.585
+Số tiền bằng chữ (Amount in words): Ba trăm chín mươi chin nghìn năm trầm tầm mươi lăm đồng,					
+Người mua hàng (Buyer)
+Người bán hàng (Seller)
+Ngày lan cho nguyên 19 1981
+Khôi tạo nh (Conand byị Phần năm (MMS - Chuy ly (Clayong) Viên đảng điện hai đảng thi - (VN - MST (thu cong dong 1007% sill

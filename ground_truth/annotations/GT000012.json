@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000012",
+  "evaluation_image": "Accounting_Documents/03_Invoices/Replacement_Invoices/hoa_don_thay_the.png",
+  "evaluation_sha256": "e4c9406ef0be03b61d6f6db997a45bcf356440893e0b5618008b699c15e90fcf",
+  "reference_text_file": "ground_truth/texts/GT000012.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

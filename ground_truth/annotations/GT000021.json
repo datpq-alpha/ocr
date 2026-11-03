@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000021",
+  "evaluation_image": "Accounting_Documents/02_Accounting_Vouchers/Fixed_Asset_Vouchers/Bien_ban_thanh_ly_TSCD.png",
+  "evaluation_sha256": "99ee4e34e97d8c39ebbf9c29202ff8388fe065928af8f625e36f6205c7b1a91f",
+  "reference_text_file": "ground_truth/texts/GT000021.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000032",
+  "evaluation_image": "Accounting_Documents/03_Invoices/Payment_Receipts/bien_lai_thu_tien.jpg",
+  "evaluation_sha256": "0b3876c405ef29dd304ecfd081d9d87c08b2a06f8bea106bef901aa5858b65c6",
+  "reference_text_file": "ground_truth/texts/GT000032.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

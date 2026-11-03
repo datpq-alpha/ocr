@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000031",
+  "evaluation_image": "Accounting_Documents/03_Invoices/Export_Invoices/hoa-don-thuong-mai.png",
+  "evaluation_sha256": "664f7736d4e1bd008ed4f7082dcb09191198c4bb6db6015bdbcc908c9aefc892",
+  "reference_text_file": "ground_truth/texts/GT000031.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

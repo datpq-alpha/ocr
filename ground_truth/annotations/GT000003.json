@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000003",
+  "evaluation_image": "Accounting_Documents/02_Accounting_Vouchers/Bank_Vouchers/Giay_bao_no_vib.png",
+  "evaluation_sha256": "9f135745d2442dac380c0419f04b2701731a7e2b7e02770a5f64a949affbfea0",
+  "reference_text_file": "ground_truth/texts/GT000003.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

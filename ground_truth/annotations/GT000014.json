@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000014",
+  "evaluation_image": "Accounting_Documents/03_Invoices/Service_Invoices/hoa_don_dich_vu_tu_van_dn.jpg",
+  "evaluation_sha256": "db4585f94a1657f5f0ca04ca4d93b52c21b8dd2717679270c894ce5573d19e33",
+  "reference_text_file": "ground_truth/texts/GT000014.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

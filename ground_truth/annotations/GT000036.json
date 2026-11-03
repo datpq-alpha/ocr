@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000036",
+  "evaluation_image": "Accounting_Documents/03_Invoices/Replacement_Invoices/hoa_don_thay_the_MISA.jpg",
+  "evaluation_sha256": "daf131fbca1d28d2c7ac81a641cb33e9cb073fed7b4203b892a920ae67c141fb",
+  "reference_text_file": "ground_truth/texts/GT000036.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

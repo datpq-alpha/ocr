@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000028",
+  "evaluation_image": "Accounting_Documents/02_Accounting_Vouchers/Sales_Purchase_Vouchers/don_dat_hang.png",
+  "evaluation_sha256": "b053b5c3ad0a255ce3afb16b1ba623619e6df8f1c6301faf91f313d84b2b460f",
+  "reference_text_file": "ground_truth/texts/GT000028.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

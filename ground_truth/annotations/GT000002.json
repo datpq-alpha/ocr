@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000002",
+  "evaluation_image": "Accounting_Documents/02_Accounting_Vouchers/Bank_Vouchers/giay_bao_co_agri.png",
+  "evaluation_sha256": "68973e708a26717fed2becf24bb874aa5264a66669a0bed17cd3c1897b5b3a3c",
+  "reference_text_file": "ground_truth/texts/GT000002.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

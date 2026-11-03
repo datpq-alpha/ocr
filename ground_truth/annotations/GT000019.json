@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000019",
+  "evaluation_image": "Accounting_Documents/02_Accounting_Vouchers/Cash_Vouchers/phieu_thu_DVTU.png",
+  "evaluation_sha256": "2cac2c7661dbd7ea03b002eee5a09528fd5c1f5b37634db64d6d3e5bce2b1827",
+  "reference_text_file": "ground_truth/texts/GT000019.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

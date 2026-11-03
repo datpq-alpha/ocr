@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000007",
+  "evaluation_image": "Accounting_Documents/02_Accounting_Vouchers/Inventory_Vouchers/phieu_nhap_kho_TU.png",
+  "evaluation_sha256": "08250b01ba69c8a6ffb2e3b6048014f741d4df935bd8346a1b3bbfa2891ea778",
+  "reference_text_file": "ground_truth/texts/GT000007.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

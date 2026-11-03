@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000024",
+  "evaluation_image": "Accounting_Documents/02_Accounting_Vouchers/Inventory_Vouchers/dieu_chuyen_kho_noi_bo.png",
+  "evaluation_sha256": "e8cb31228e63247e3f95933c219a95d6785bcc8fafeb5a4cdf84496ddc13e826",
+  "reference_text_file": "ground_truth/texts/GT000024.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

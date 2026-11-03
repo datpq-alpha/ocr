@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000025",
+  "evaluation_image": "Accounting_Documents/02_Accounting_Vouchers/Inventory_Vouchers/phieu_xuat_kho_TU.png",
+  "evaluation_sha256": "c9dd41a1d28bd41517863d4e9c2c6344a978368d8bac957d11def4c32701a73b",
+  "reference_text_file": "ground_truth/texts/GT000025.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

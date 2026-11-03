@@ -1,0 +1,392 @@
+{
+  "manifest_version": "1.0",
+  "samples": [
+    {
+      "sample_id": "GT000001",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Sales_Purchase_Vouchers/bien_ban_giao_nhan.png",
+      "sha256": "ef1b52ba757397e26b2eca44d52e9c051e2a174af7ade27c959f1960bf2a3ddc",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Sales_Purchase_Vouchers",
+      "source_group": "CS_Bearing_Hoang_Thanh_Delivery_Record",
+      "split": "Test"
+    },
+    {
+      "sample_id": "GT000002",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Bank_Vouchers/giay_bao_co_agri.png",
+      "sha256": "68973e708a26717fed2becf24bb874aa5264a66669a0bed17cd3c1897b5b3a3c",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Bank_Vouchers",
+      "source_group": "Agribank_Advice_Example",
+      "split": "Test"
+    },
+    {
+      "sample_id": "GT000003",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Bank_Vouchers/Giay_bao_no_vib.png",
+      "sha256": "9f135745d2442dac380c0419f04b2701731a7e2b7e02770a5f64a949affbfea0",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Bank_Vouchers",
+      "source_group": "VIB_Advice_Example",
+      "split": "Test"
+    },
+    {
+      "sample_id": "GT000004",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Cash_Vouchers/phieu_chi_np.jpg",
+      "sha256": "ece9422833fae8a2b26523717ed7eef849596410edce0baf64267de5d5dcc372",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Cash_Vouchers",
+      "source_group": "Nguyen_Phong_Example",
+      "split": "Test"
+    },
+    {
+      "sample_id": "GT000005",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Fixed_Asset_Vouchers/Bien_ban_giao_nhan_TSCD.png",
+      "sha256": "a927bfacdecef51bebefb8ace877527c431351b9544f1c6af454245d9210ec73",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Fixed_Asset_Vouchers",
+      "source_group": "MISA_Fixed_Asset_Example",
+      "split": "Test"
+    },
+    {
+      "sample_id": "GT000006",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/General_Accounting_Vouchers/chung_tu_ghi_so.png",
+      "sha256": "122ce200707bee7a301d39758fe953bebd9bb9857226af8235a1333a0f6b403f",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "General_Accounting_Vouchers",
+      "source_group": null,
+      "split": "Test"
+    },
+    {
+      "sample_id": "GT000007",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Inventory_Vouchers/phieu_nhap_kho_TU.png",
+      "sha256": "08250b01ba69c8a6ffb2e3b6048014f741d4df935bd8346a1b3bbfa2891ea778",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Inventory_Vouchers",
+      "source_group": "Thien_Ung_Templates",
+      "split": "Test"
+    },
+    {
+      "sample_id": "GT000008",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Payroll_Vouchers/bang_thanh_toan_thuong_TU.png",
+      "sha256": "b629187d0d9756ac80d30bfe44ee70bf511434102d998ecaba3c572fcdeee122",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Payroll_Vouchers",
+      "source_group": "Thien_Ung_Templates",
+      "split": "Test"
+    },
+    {
+      "sample_id": "GT000009",
+      "image_path": "Accounting_Documents/03_Invoices/Adjusted_Invoices/Hoa_don_dieu_chinh_tang.png",
+      "sha256": "ae7c58aad4131fef5a9cace9297f2610e52fdc08e5f4f84c57b2c3d034927841",
+      "category": "03_Invoices",
+      "subcategory": "Adjusted_Invoices",
+      "source_group": "Thien_Ung_Templates",
+      "split": "Test"
+    },
+    {
+      "sample_id": "GT000010",
+      "image_path": "Accounting_Documents/03_Invoices/Asset_Invoices/hoa_don_ban_TS.jpg",
+      "sha256": "5964c03621451f4f2e9d6f921548dfef8cf3e23d75eff1866ee3578244a03821",
+      "category": "03_Invoices",
+      "subcategory": "Asset_Invoices",
+      "source_group": "MISA_Asset_Invoice_Example",
+      "split": "Test"
+    },
+    {
+      "sample_id": "GT000011",
+      "image_path": "Accounting_Documents/03_Invoices/Export_Invoices/hoa_don_xuat_khau.jpg",
+      "sha256": "5edeb1827c03ca53d0369311c4fdce4c8b8798e2a3888d3518ad639c655020a2",
+      "category": "03_Invoices",
+      "subcategory": "Export_Invoices",
+      "source_group": "Casio_Commercial_Invoice_Example",
+      "split": "Test"
+    },
+    {
+      "sample_id": "GT000012",
+      "image_path": "Accounting_Documents/03_Invoices/Replacement_Invoices/hoa_don_thay_the.png",
+      "sha256": "e4c9406ef0be03b61d6f6db997a45bcf356440893e0b5618008b699c15e90fcf",
+      "category": "03_Invoices",
+      "subcategory": "Replacement_Invoices",
+      "source_group": "MISA_Replacement_Invoice_Example",
+      "split": "Test"
+    },
+    {
+      "sample_id": "GT000013",
+      "image_path": "Accounting_Documents/03_Invoices/Sales_Invoices/hoa_don_ban_hang_TU.png",
+      "sha256": "b0df91a51d46e18f08244cf6c83a2e338763a0074c3a931bf8554971c921bcd7",
+      "category": "03_Invoices",
+      "subcategory": "Sales_Invoices",
+      "source_group": "Thien_Ung_Templates",
+      "split": "Test"
+    },
+    {
+      "sample_id": "GT000014",
+      "image_path": "Accounting_Documents/03_Invoices/Service_Invoices/hoa_don_dich_vu_tu_van_dn.jpg",
+      "sha256": "db4585f94a1657f5f0ca04ca4d93b52c21b8dd2717679270c894ce5573d19e33",
+      "category": "03_Invoices",
+      "subcategory": "Service_Invoices",
+      "source_group": "Viet_Hung_Service_Invoice",
+      "split": "Test"
+    },
+    {
+      "sample_id": "GT000015",
+      "image_path": "Accounting_Documents/03_Invoices/Utility_Invoices/hoa_don_dich_vu_mobi.png",
+      "sha256": "c79428bda90472a38021fedbd4518bf176dfc8d59a9c72f08bb3d85d1d1397d4",
+      "category": "03_Invoices",
+      "subcategory": "Utility_Invoices",
+      "source_group": "Mobifone_Invoice_Example",
+      "split": "Test"
+    },
+    {
+      "sample_id": "GT000016",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Bank_Vouchers/uy_nhiem_chi_tcb.png",
+      "sha256": "e0bad0ed35a21173ee9d9a896e51e3d5caeeb5b66b897c82ab8f43272dad1846",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Bank_Vouchers",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000017",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Bank_Vouchers/uy_nhiem_chi_VCB.png",
+      "sha256": "2b9e9d13e11bec68f0918e621144390ddde7e161de8df46b923a66db7ab2980c",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Bank_Vouchers",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000018",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Cash_Vouchers/Bien_lai_thu_tien_bvCR.png",
+      "sha256": "b905d85c941b19203393aecbe1d3a30cd28a426cdfc193fc26248e2413ef5876",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Cash_Vouchers",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000019",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Cash_Vouchers/phieu_thu_DVTU.png",
+      "sha256": "2cac2c7661dbd7ea03b002eee5a09528fd5c1f5b37634db64d6d3e5bce2b1827",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Cash_Vouchers",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000020",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Fixed_Asset_Vouchers/Bien_ban_danh_gia_lai_TSCD.png",
+      "sha256": "8831ab65078ada150aa5c8422eb5d04fd8b2fc2a7f532880c8e54505ab24664c",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Fixed_Asset_Vouchers",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000021",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Fixed_Asset_Vouchers/Bien_ban_thanh_ly_TSCD.png",
+      "sha256": "99ee4e34e97d8c39ebbf9c29202ff8388fe065928af8f625e36f6205c7b1a91f",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Fixed_Asset_Vouchers",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000022",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/General_Accounting_Vouchers/bang_phan_bo_chi_phi.png",
+      "sha256": "ecdb52ceb29f8e4a6b1b07d1a41bf13fd2d81612f64120606a39ff45bbb084f2",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "General_Accounting_Vouchers",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000023",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/General_Accounting_Vouchers/phieu_ke-toan.png",
+      "sha256": "507294de21da9539f36e4062a15e6308295817657a6daf59bafea5e2e267023f",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "General_Accounting_Vouchers",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000024",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Inventory_Vouchers/dieu_chuyen_kho_noi_bo.png",
+      "sha256": "e8cb31228e63247e3f95933c219a95d6785bcc8fafeb5a4cdf84496ddc13e826",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Inventory_Vouchers",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000025",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Inventory_Vouchers/phieu_xuat_kho_TU.png",
+      "sha256": "c9dd41a1d28bd41517863d4e9c2c6344a978368d8bac957d11def4c32701a73b",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Inventory_Vouchers",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000026",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Payroll_Vouchers/Bang_cham_cong.png",
+      "sha256": "3615fb22c4868d00dabbd9e6a50acaa779bbb1c6a037a9800b4807f8d7928c33",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Payroll_Vouchers",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000027",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Payroll_Vouchers/bang_thanh_toan_luong_TU.png",
+      "sha256": "385c84b0d02497255f8195edf673b99493c77453eb0893fe2cc99146f1907cd7",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Payroll_Vouchers",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000028",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Sales_Purchase_Vouchers/don_dat_hang.png",
+      "sha256": "b053b5c3ad0a255ce3afb16b1ba623619e6df8f1c6301faf91f313d84b2b460f",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Sales_Purchase_Vouchers",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000029",
+      "image_path": "Accounting_Documents/02_Accounting_Vouchers/Sales_Purchase_Vouchers/phieu_giao_hang.png",
+      "sha256": "6ad72840ed744a1229dd639266d7cb355be6197bf66c74374f6639c8912f9efd",
+      "category": "02_Accounting_Vouchers",
+      "subcategory": "Sales_Purchase_Vouchers",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000030",
+      "image_path": "Accounting_Documents/03_Invoices/Cancellation_Records/bien_ban_huy.png",
+      "sha256": "4ca09f8a242dcd8908fcea197cf32f1eebe093dd1fde74f4b64c063ae0db75a3",
+      "category": "03_Invoices",
+      "subcategory": "Cancellation_Records",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000031",
+      "image_path": "Accounting_Documents/03_Invoices/Export_Invoices/hoa-don-thuong-mai.png",
+      "sha256": "664f7736d4e1bd008ed4f7082dcb09191198c4bb6db6015bdbcc908c9aefc892",
+      "category": "03_Invoices",
+      "subcategory": "Export_Invoices",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000032",
+      "image_path": "Accounting_Documents/03_Invoices/Payment_Receipts/bien_lai_thu_tien.jpg",
+      "sha256": "0b3876c405ef29dd304ecfd081d9d87c08b2a06f8bea106bef901aa5858b65c6",
+      "category": "03_Invoices",
+      "subcategory": "Payment_Receipts",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000033",
+      "image_path": "Accounting_Documents/03_Invoices/Payment_Receipts/bien_nhan_dat_coc.jpg",
+      "sha256": "7966e0aca933a4e9a417bcdb023708f3d49d4d26b0b0686b0f1bd8c8c18e1f11",
+      "category": "03_Invoices",
+      "subcategory": "Payment_Receipts",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000034",
+      "image_path": "Accounting_Documents/03_Invoices/Payment_Receipts/bien_nhan_thanh_toan.png",
+      "sha256": "1668eaeaf8d74c8c306953b6d95c5b9b70440d62092ebbdabb5f28de301525a1",
+      "category": "03_Invoices",
+      "subcategory": "Payment_Receipts",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000035",
+      "image_path": "Accounting_Documents/03_Invoices/Purchase_Invoices/hoa_don_mua_vao.png",
+      "sha256": "c7355ead107e552085fd1646f7d1a38ba7dfa037689f71c3b6a2ae540c1ca3b0",
+      "category": "03_Invoices",
+      "subcategory": "Purchase_Invoices",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000036",
+      "image_path": "Accounting_Documents/03_Invoices/Replacement_Invoices/hoa_don_thay_the_MISA.jpg",
+      "sha256": "daf131fbca1d28d2c7ac81a641cb33e9cb073fed7b4203b892a920ae67c141fb",
+      "category": "03_Invoices",
+      "subcategory": "Replacement_Invoices",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000037",
+      "image_path": "Accounting_Documents/03_Invoices/Sales_Invoices/hoa_don_ban_hang.jpg",
+      "sha256": "c21c3dcd4377f44687f00be332b4d9ef5a7ec4a1c250f102e1552723aad75e8e",
+      "category": "03_Invoices",
+      "subcategory": "Sales_Invoices",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000038",
+      "image_path": "Accounting_Documents/03_Invoices/Service_Invoices/hoa_don_dich_vu_cho_thue_vp.jpg",
+      "sha256": "568681cfe28257814c53041eb12e88933fda886cdf650d70f2811b0c2ee31839",
+      "category": "03_Invoices",
+      "subcategory": "Service_Invoices",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000039",
+      "image_path": "Accounting_Documents/03_Invoices/Utility_Invoices/hoa_don_dich_vu_vt.png",
+      "sha256": "3b28f922d5e0b3986bf5967a391bfa541a7219fd49532ddce74b687817555b0e",
+      "category": "03_Invoices",
+      "subcategory": "Utility_Invoices",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000040",
+      "image_path": "Accounting_Documents/03_Invoices/Utility_Invoices/hoa_don_dien_2012.jpg",
+      "sha256": "5de57d5a47caddd5b800a3ca6d39dfd2511fa4f4c5b6a100146986b6cb133831",
+      "category": "03_Invoices",
+      "subcategory": "Utility_Invoices",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000041",
+      "image_path": "Accounting_Documents/03_Invoices/Utility_Invoices/hoa_don_dien_2022.jpg",
+      "sha256": "4b925f9b85703f9df0388459e9ec1bf8d6413d4292bfa053fc826b08b133571a",
+      "category": "03_Invoices",
+      "subcategory": "Utility_Invoices",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000042",
+      "image_path": "Accounting_Documents/03_Invoices/Utility_Invoices/hoa_don_nuoc.jpg",
+      "sha256": "691714bd69917c82e22bf5591763502c3f8330dc26c75053d656ee979c3e632a",
+      "category": "03_Invoices",
+      "subcategory": "Utility_Invoices",
+      "source_group": null,
+      "split": "Unassigned"
+    },
+    {
+      "sample_id": "GT000043",
+      "image_path": "Accounting_Documents/03_Invoices/Utility_Invoices/hoa_don_nuoc_2.png",
+      "sha256": "52950a8ad4f16c92dbbc5ccb11d2a1e2171324348c725e14f8ada7ea00044889",
+      "category": "03_Invoices",
+      "subcategory": "Utility_Invoices",
+      "source_group": null,
+      "split": "Unassigned"
+    }
+  ]
+}

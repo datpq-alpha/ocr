@@ -1,0 +1,56 @@
+A
+B
+c
+D
+E
+G
+J
+TECHCOMBANK
+ỦY NHIÊM CHI
+Liên 1
+2
+CHUYỂN KHOẢN, CHUYỂN TIỀN, THƯ, ĐIỆN
+Lập ngày: 26/04/2013
+PHẦN DO NH GHI
+3
+Tên đơn vị trả tiền
+CÔNG TY CP ĐÀO TẠO NGHỀ THỰC TẾ KIMI
+TÀI KHOẢN GHI NỢ
+4
+Số tài khoản
+19025683352016
+19025683352016
+5
+Tại Ngân hàng
+Techcombank chi nhánh Bắc Hải
+Tinh, TP: TP.HCM
+6
+Tên đơn vị nhận tiền
+Tài khoản thu của Bảo Hiểm Xã Hội Quận 1000
+TÀI KHOẢN GHI CÓ
+7
+Số tài khoản
+1700202902135
+1700202902135
+8
+Tại Ngân hàng
+Agribank
+Chi nhánh: CMTS
+Tỉnh: TP HCM
+9
+Số tiền bằng chữ
+Hai mươi mốt triệu hai trăm sáu mươi mốt nghìn đồng chẫn,
+Số tiền bằng số
+10
+VND
+21,261,000
+11
+Nội dung thanh toán
+Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam
+12
+13
+ĐƠN VỊ TRẢ TIỀN
+14
+Kế toán
+Chủ tài khoản
+Ghi sổ ngày

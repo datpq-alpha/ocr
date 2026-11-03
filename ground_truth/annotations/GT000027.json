@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000027",
+  "evaluation_image": "Accounting_Documents/02_Accounting_Vouchers/Payroll_Vouchers/bang_thanh_toan_luong_TU.png",
+  "evaluation_sha256": "385c84b0d02497255f8195edf673b99493c77453eb0893fe2cc99146f1907cd7",
+  "reference_text_file": "ground_truth/texts/GT000027.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

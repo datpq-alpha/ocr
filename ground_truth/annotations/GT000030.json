@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000030",
+  "evaluation_image": "Accounting_Documents/03_Invoices/Cancellation_Records/bien_ban_huy.png",
+  "evaluation_sha256": "4ca09f8a242dcd8908fcea197cf32f1eebe093dd1fde74f4b64c063ae0db75a3",
+  "reference_text_file": "ground_truth/texts/GT000030.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

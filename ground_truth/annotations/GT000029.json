@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000029",
+  "evaluation_image": "Accounting_Documents/02_Accounting_Vouchers/Sales_Purchase_Vouchers/phieu_giao_hang.png",
+  "evaluation_sha256": "6ad72840ed744a1229dd639266d7cb355be6197bf66c74374f6639c8912f9efd",
+  "reference_text_file": "ground_truth/texts/GT000029.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

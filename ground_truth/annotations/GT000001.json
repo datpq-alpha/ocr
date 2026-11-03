@@ -1,0 +1,18 @@
+{
+  "annotation_version": "1.0",
+  "sample_id": "GT000001",
+  "source_image": "Accounting_Documents/02_Accounting_Vouchers/Sales_Purchase_Vouchers/bien_ban_giao_nhan.png",
+  "source_sha256": "ef1b52ba757397e26b2eca44d52e9c051e2a174af7ade27c959f1960bf2a3ddc",
+  "evaluation_image": "Accounting_Documents/02_Accounting_Vouchers/Sales_Purchase_Vouchers/bien_ban_giao_nhan.png",
+  "evaluation_sha256": "ef1b52ba757397e26b2eca44d52e9c051e2a174af7ade27c959f1960bf2a3ddc",
+  "reference_text_file": "ground_truth/texts/GT000001.txt",
+  "split": "Test",
+  "source_group": "CS_Bearing_Hoang_Thanh_Delivery_Record",
+  "scope": "FullImage",
+  "status": "Verified",
+  "annotator": "Codex (đối chiếu trực quan với ảnh)",
+  "reviewer": "Dat",
+  "regions": [],
+  "fields": {},
+  "notes": "Đã xem và xác nhận."
+}

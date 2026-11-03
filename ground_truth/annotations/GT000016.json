@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000016",
+  "evaluation_image": "Accounting_Documents/02_Accounting_Vouchers/Bank_Vouchers/uy_nhiem_chi_tcb.png",
+  "evaluation_sha256": "e0bad0ed35a21173ee9d9a896e51e3d5caeeb5b66b897c82ab8f43272dad1846",
+  "reference_text_file": "ground_truth/texts/GT000016.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

@@ -1,0 +1,29 @@
+Đơn vị:
+Công ty tnhh mgf
+Số Serial: KK/2014
+Địa chi:
+Số 9, Nam Hòa, Phước Long A, Quận 9, Tp.HCM
+Số hóa đơn: 001234
+Mã số thuế: 0312441200
+PHIẾU GIAO HÀNG
+Liên 1
+Họ tên người mua hàng:
+Công ty TNHH Chuyên Cần
+Địa chỉ:
+MST:
+Hình thức thanh toán:
+Tiền mặt:
+D
+Chuyễn khoản:
+d
+stt	MÃ HÀNG	TÊN MẶT HÀNG	ĐVT	SÓ LƯỢNG	ĐƠN GIÁ	CHIẾT KHÁU	THÀNH TIỀN
+1 2	HNAO001 HNAO002	Cà phê hạt X06 Cà phê hạt x07	Kg Kg	100,00 200,00	13,000 14,000		1.300.000 2.800.000
+Tổng cộng số tiền chưa có thuế: 4.100.000							
+Thuế suất 10.00 Tiền thuế vat: 410.000							
+Tổng cộng số tiền đã có VAT: 4.510.000							
+Gii Ghi chú: Quý khách vui lòng liên hệ phòng kế toán nhận hóa đơn tài chính thuy nha
+Ngày 06 tháng 06 năm 2014
+Người nhận hàng
+Đã nhận đủ tiền
+Người phụ trách
+Người lập phiếu

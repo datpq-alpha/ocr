@@ -1,0 +1,12 @@
+{
+  "sample_id": "GT000009",
+  "evaluation_image": "Accounting_Documents/03_Invoices/Adjusted_Invoices/Hoa_don_dieu_chinh_tang.png",
+  "evaluation_sha256": "ae7c58aad4131fef5a9cace9297f2610e52fdc08e5f4f84c57b2c3d034927841",
+  "reference_text_file": "ground_truth/texts/GT000009.txt",
+  "scope": "FullImage",
+  "status": "Draft",
+  "annotator": null,
+  "reviewer": null,
+  "drafted_from": "outputs/vietocr",
+  "notes": "OCR draft. Compare every line with the image before marking Verified."
+}

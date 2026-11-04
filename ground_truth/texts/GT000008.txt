@@ -14,7 +14,7 @@ A	B	c	1	2	D	E
 2	Vũ Đức Long	NVBH	Loại B	2.000.000		
 3	Trần Thị Hoà	NVBH	Loại B	2.000.000		
 	CỘNG	x		7.000.000	x	x
-Tổng số tiền (viết bằng chữ) đồng chẫn./.
+Tổng số tiền (viết bằng chữ) Bảy triệu đồng chẵn./.
 Ngày 31 tháng 03 năm 2026
 Người lập biểu
 Kế toán trưởng
@@ -23,11 +23,11 @@ Giám đốc Công ty
 (Ký, họ tên)
 (Ký, họ tên)
 CÔNG TY
-TNHM
-GIONING
-Nguyên Bộ Bang
-THIẾN NG
-Đoàn Thị Hing
-12
+TNHH
+DỊCH VỤ KẾ TOÁN
+Nguyễn Thị Thúy
+THIÊN ƯNG
+Đoàn Thị Hồng Dư
+
 Viên Đốc
-Nguyễn Thị Thành Luyền
+Nguyễn Thị Thanh Huyền

@@ -46,11 +46,11 @@ L
 1
 CÔNG TY KẾ TOÁN VIỆT HƯNG
 2
-Số 2 Ngô 84 đường Trần Quang Diệu, phường Ô Chợ Dừa, quận Đống Đa, thành phố Hà Nội Tri Nhiệu
+Số 2 Ngô 84 đường Trần Quang Diệu, phường Ô Chợ Dừa, quận Đống Đa, thành phố Hà Nội
 5
 4
-BẢNG PHÂN BỎ CHI PHÍ TRẢ TRƯỚC DÀI HẠN - TK 242
-s
+BẢNG PHÂN BỐ CHI PHÍ TRẢ TRƯỚC DÀI HẠN - TK 242
+5
 Tháng 12 năm 20xx
 6
 Số kỳ
@@ -72,7 +72,7 @@ phân bố
 kỳ này
 Lũy kế
 lại cuỗi kỳ
-bỗ
+bổ
 (tháng)
 8
 1
@@ -202,7 +202,7 @@ CCDC20
 19
 20
 II
-Bọ phận Kinh doanh
+Bộ phận Kinh doanh
 119.153.638
 94.556.262
 5.106.778
@@ -210,7 +210,7 @@ Bọ phận Kinh doanh
 19.490.598
 21
 1
-Máy tính xách tay Dell th
+Máy tính xách tay Dell
 CCDCO1
 1/16/2022
 2/1/2022
@@ -222,7 +222,7 @@ CCDCO1
 870.806
 22
 2
-Dản máy tính
+Dàn máy tính
 CCDCO2
 2/27/2022
 3/1/2022
@@ -270,7 +270,7 @@ CCDCO5
 2.340.915
 26
 6
-Dản máy tính
+Dàn máy tính
 CCDCO6
 5/7/2022
 6/1/2022
@@ -303,7 +303,7 @@ CCDC15
 3.125.001
 284.090
 3.409.091
-o
+0
 29
 9
 Máy lanh Midea MSAFA

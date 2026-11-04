@@ -1,16 +1,16 @@
-D
+
 Đơn đặt hàng (Nhiều thuế suất nhiều tỷ lệ ck)
 x
-Nghi Thu Thuy Tháu - Thi kiến Độ D Đi Di Tháng ( 2 Thị Việt Người Và Lày Nàu một định ( 2 Thy Cánh Thị Thy Chính
-Thêm hình nền 10 Đóng
+
+Thêm hình nền  Đóng
 Công ty CP Misa
-Tần Tầng 4, Tòa nhà N03-T1, Khu Ngoại giao đoàn, Xucn Từ Liêm, Hà Nội Thu Ninh
+Tầng 4, Tòa nhà N03-T1, Khu Ngoại giao đoàn, Xuân Tảo, Bắc Từ Liêm, Hà Nội
 ĐƠN ĐẶT HÀNG
 Tên khách hàng:
 CTY TNHH SẢN XUẤT THƯƠNG MẠI CÔNG NGHIỆP 00/07/2019
 AVAL
 Số ĐH00001
-Địa chi:
+Địa chỉ:
 Loại tiền vnd
 Mã số thuế:
 Diễn giải:
@@ -21,7 +21,7 @@ Mã hàng	Tên hàng	Đơn vị tính	Số lượng	Đơn giá	Thành tiền	T�
 Cộng tiền hàng: 13.950.000								
 Tiền thuế GTGT:								
 Tổng tiền thanh toán: 13.950.000								
-Số tiền viết bằng chữ: Mười ba triệu chín trăm năm mươi nghìn đồng chẫn								
+Số tiền viết bằng chữ: Mười ba triệu chín trăm năm mươi nghìn đồng chẵn								
 Ngày giao hàng:
 Địa điểm giao hàng:
 Điều khoản thanh toán:
@@ -29,7 +29,7 @@ Người lập
 (Ký, họ tên)
 (Ký, họ tên)
 (Ký, họ tên, đóng dấu)
-Khi Trang 1 của tổng 1 Trang
-H
+Trang 1 của tổng 1 Trang
+
 100%
-t
+

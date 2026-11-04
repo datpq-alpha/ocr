@@ -1,37 +1,37 @@
 ỦY NHIỆM CHI - PAYMENTORDER
 Vietcombank
-Ngày (Da2) 04/08/2011
-ĐỀ NGHỊ CHI NỢ TÀI KHOẢN (PIECE DEBIT ACCOWU)
-SÓ TIỀN (With amown)
-PHÍ NH(BANK CHONG C)
-SÓ TK (WC No.):
-BẰNG SÓ (IN FIGUTE)
+Ngày (Date) 04/08/2011
+ĐỀ NGHỊ CHI NỢ TÀI KHOẢN (PLEASE DEBIT ACCOUNT)
+SÓ TIỀN (With amount)
+PHÍ NH(BANK CHARGE)
+SỐ TK (A/C No.):
+BẰNG SỐ (IN FIGURE)
 985.850
 Phí trong
-Inclucing
-TÊN TK (A/C Nam) Công ty TNHH ABC
-BẰNG CHỮ (IN WONG)
+Including
+TÊN TK (A/C Name) Công ty TNHH ABC
+BẰNG CHỮ (IN WORD)
 Phí ngoài
-Tảm văm chủ mươi sảu ngàn hai năm tảm mươi ba đồng chắn.
+Tám trăm chín mươi sáu ngàn hai năm tám mươi ba đồng chẵn.
 Excluding
-Địa Chỉ (Addrez) 56 Đường 13C, P. Bình Trị Đông B, Q.Bình Tên,
+Địa Chỉ (Address) 56 Đường 13C, P. Bình Trị Đông B, Q.Bình Tân,
 Tp.HCM
-TẠI NH WWN Bank)
-NỘI DUNG (DSTAILSOFPANER)
-& GHI CÓ TÀI KHOẢN (S Creadit accows )
-Phí chuyên sên t. phí điển, Phí Tinh Thu Nhiều Phí Tinh Thu Nhiều Phí Tinh Thu Nhiều Phí Tinh Thu Nhiều Phí Tinh Thu Nhiều Phí Ti
-I
-SỔ TK (4CCN)
-TÊN TK (A/C Nama) Ngân hàng Nhan Cô gia Đông Sải Điện Đông Sải Điện Đông Sải Đang Nhàng Nhàng Nhàng Nhàng Nhàng Nhàng Nhàng Nhàng
-KẾ TOÀN TRƯƠNG KỲ
-CHŨ TẢI KHOAN KỲ & ĐỒNG DÂU
+TẠI NH (With Bank)
+NỘI DUNG (Details of Payment)
+& GHI CÓ TÀI KHOẢN (& Creadit account)
+Phí chuyển tiền + phí điện, Phí TT, vv
+
+SỔ TK (A/C No.)
+TÊN TK (A/C Name) Ngân hàng NN&PT Nông thôn - CN Đông Sài Gòn
+KẾ TOÀN TRƯỞNG KÝ
+CHỦ TÀI KHOẢN KÝ & ĐÓNG DẤU
 Gòn
-Chiefaccoward
-Aco.Holder & Stmp
-ĐỊA CHỈ (ADDNE)) 938 Nguyễn Thịnh Mỹ Lợi, Quận 2,
-IP HCM
-TẠI NH WWH Bank)
-DÀNH CHO NGÂN HÀNG (FOR BANK TAT NHINH
+Chief accountant
+Acc.Holder & Stamp
+ĐỊA CHỈ (ADDRESS)) 938 Nguyễn Thị Định, P.Thạnh Mỹ Lợi, Quận 2,
+TP HCM
+TẠI NH (With) Bank)
+DÀNH CHO NGÂN HÀNG (FOR BANK's Use only) MÃ VAT:
 Thanh toán viên
 Kiêm soát
 Giám đốc

@@ -1,24 +1,24 @@
 TỔNG CÔNG TY
 HÓA ĐƠN DỊCH VỤ VIỄN THÔNG (GTGT)
-Ký hiệu (Seria No): 1K22DGC
+Ký hiệu (Seria No): 1K25DGC
 VIỄN THÔNG MOBIFONE
 TELECOMUNICATION SERVICE (VAT) SỐ (NO): 845830
 mobifone
 Ngày 06 tháng 03 năm 2025
-mobifort
-Mobifort
+mobifone
+Mobifone
 Đơn vị bán hàng (Saie Compary)
-CÔNG TY DỊCH VỤ MOBIFONE KHU VỰC5
-Địa chỉ (Address): Khu Phú Hải, Phường Anh Dũng, Quận Dương Kinh, Thành Piốt Nam
-Mã số thuế forcoder)
-Số điện thoại (Tei)
+CÔNG TY DỊCH VỤ MOBIFONE KHU VỰC 5
+Địa chỉ (Address): Khu Phú Hải, Phường Anh Dũng, Quận Dương Kinh, Thành phố Hải Phòng, Việt Nam
+Mã số thuế (taxcode): 0100686209-084
+Số điện thoại (Tel):
 Tên khách hàng (Customer name): Mai Xuân Tuyền
-Điện Địa chỉ (Address): Thôn Trả Đông Xã Quang Phục, Huyện Tiên Là Phòng Việt Nam Thu Trinh
+Điện Địa chỉ (Address): Thôn Trà Đông Xã Quang Phục, Huyện Tiên Lãng, Thành phố Hải Phòng Việt Nam
 Số thuê bao (Sub No): 0704136765
 Mã khách hàng (Customer code) - 00413401919
-bifort
-Mã số thuế (Tan code):
-Cước từ ngày (Chargingfrom): 02/2025
+mobifone
+Mã số thuế (Tax code):
+Cước từ ngày (Charging from): 01/02/2025
 đến ngày (to): 28/02/2025
 Đơn vị tính: VND
 STT
@@ -29,18 +29,18 @@ TIỀN THUẾ
 CỘNG
 (NO)
 (KIND OF SERVICES)
-JAMOUNI)
-[VAI)
-(VAI AMOUNI)
-[101AL)
+(AMOUNT)
+(VAT)
+(VAT AMOUNT)
+(TOTAL)
 A
 B
 1
 2
-3-1+2
-4-143
+3=1+2
+4=1+3
 1
-Cước dịch vụ viễn thông trả sau (Dịch vh l)
+Cước dịch vụ viễn thông trả sau (Dịch vụ chịu thuế)
 145.182
 10%
 14.518
@@ -50,21 +50,22 @@ CỘNG (TOTAL)
 14.518
 159.700
 TỔNG TIỀN THANH TOÁN (GRAND TOTAL):
-SỐ TIÊN VIẾT BẢNG CHỮ (SUM IN WORDS): MỘT TRĂM NĂM MƯƠI CHÍNH NGHINH
+SỐ TIÊN VIẾT BẢNG CHỮ (SUM IN WORDS): Một trăm năm mươi chín nghìn bảy trăm đồng
 Người mua hàng (Customer)
 Người bán hàng (Goods sold by)
 mobi
 Ký, ghi rõ họ tên (Byer's signature)
 mobi
 Ký, ghi rõ họ tên (Saiesmans signatre)
-Được ký hởi: Công TY DỊCH VỤ MOBIF ONE KHU VỰC THUY
+Được ký hởi: Công TY DỊCH VỤ MOBIFONE KHU VỰC 5
 mol
 Ngày ký:
 06/03/2025
-nobifone
-ifone
-abifort
+mobifone
+mobifone
+mobifone
 Mã nhận hóa đơn:
-YDVSVY
+YDVsVy
+Tra cứu tại: http://tracuuhoadonvienthong.mobifone.vn
 (Cần kiểm ra đổi chiếu kin lập, giao nhận hóa đên)
 Trang 1/1

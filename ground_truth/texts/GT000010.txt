@@ -5,34 +5,34 @@ Số:
 00000001
 Mã CQT: 21702ACC93329B44558254E6.66A
 Đơn vị bán tải sản Nhà nước: Công TY CP NGỌC VIỆT
-Địa chỉ: 1905 Đường Láng, phường Láng Thương, quân Đống Đa, Đ9719936569 1991 Hiện Người
+Địa chỉ: 1905 Đường Láng, phường Láng Thương, quân Đống Đa, Điện thoại: 09719936569
 thành phố Hà Nội, Việt Nam
 MST/MSĐVCQHVNS: 6868686868-915
 Số tài khoản: 56789001
 Tại: Ngân hàng Thương Mại Cổ Phần Á Châu
-Bán theo Quyết định số: HANCOQĐI2 Chiến
+Bán theo Quyết định số: HANCOQĐ12
 ngày 10 tháng 12 năm 2024
 của: Công ty CP
 Ngọc Việt
-Hình thức bán: Thanh lý thu
-Người mua tài sản Nhà nước: Nguyễn Thị Vân Anh Thuy
+Hình thức bán: Thanh lý
+Người mua tài sản Nhà nước: Nguyễn Thị Vân Anh
 Đơn vị: CÔNG TY CỔ PHẦN MISA
 Số tài khoản: 174985 - ACB
 MST/MSĐVCQHVNS: 0101243150
 Hình thức thanh toán: TM/CK
-Địa điểm vận chuyển hàng đến (?): Sảnh văn phòng công ty CP MISAN A
-Thời gian vận chuyển (?): Từ ngày 12 năm 2024
+Địa điểm vận chuyển hàng đến (*): Sảnh văn phòng công ty CP MISA
+Thời gian vận chuyển (*): Từ ngày 12 tháng 12 năm 2024
 đến ngày 10 tháng 12 năm 2024
-I
+
 stt	Tên tài sản	Đơn vị tính	Số lượng	Đơn giá	Thành tiền
 1	Xe ô tô Innova 7 chỗ	Chiếc	1	600.000	600.000
 Cộng tiền bán tải sản: 600.000					
 Số tiền viết bằng chữ: Sáu trăm nghìn đồng chiến					
 Người mua hàng
 Thủ trưởng đơn vị
-(Chữ kỷ số (nếu có))
+(Chữ ký số (nếu có))
 (Chữ ký điện tử, Chữ ký số)
-Signature Valid 1
+Signature Valid
 Ký bởi: Cong ty CP Hoang Long
 (68686868689015)
 Ký ngày: 10/12/2024

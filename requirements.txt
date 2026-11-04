@@ -1,5 +1,6 @@
 --extra-index-url https://download.pytorch.org/whl/cpu
 numpy==1.26.4
+setuptools==80.9.0
 paddlepaddle==3.2.0
 paddleocr==3.7.0
 paddlex==3.7.2

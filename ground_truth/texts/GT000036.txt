@@ -1,19 +1,20 @@
 Lập hóa đơn thay thế
 Đã thanh toán
-Là hóa đơn quyết toán O
+Là hóa đơn quyết toán
 HÓA ĐƠN GIÁ TRỊ GIA TĂNG
 Ngày 8 tháng 5 năm 2025
 Đơn vị bán hàng:
 CÔNG TY TNHH NGỌC VIỆT
 Ký hiệu:
 1K25TNS
-v
+
 Mã số thuế:
+0
 1
 0
 1
 2
-0
+4
 3
 1
 5
@@ -22,43 +23,43 @@ Mã số thuế:
 9
 7
 Số:
-Chưa cấp sốc
-O
+<Chưa cấp số>
+
 Địa chỉ:
 Số 1194 đường Láng, phường Láng Thượng, quận Đống Đa, thành phố Hà Nội, Việt Nam
 MST người mua:
 0101243150
-0 lấy thông tín
-Đồ KT tình trạng hoạt động của KH
+lấy thông tin
+KT tình trạng hoạt động của KH
 MSĐVCQHVNS:
-v
-Mã đơn vệ 0
-KHOO001
-Y
+
+Mã đơn vị:
+KH00001
+
 Tên đơn vị:
 Công ty CP MISA
-Y
+
 Địa chỉ:
 Tầng 9, tòa nhà Technosoft, phố Duy Tân, Phường Dịch Vọng Hậu, Quận Cầu Giấy, Thành phố H
 Người mua hàng:
 Nguyễn Vân Anh
-Y
+
 Email:
-vananhnguyenthiagmail.com
+vananhnguyenthi@gmail.com
 Số điện thoại:
 0974993686
 Căn cước công dân:
 Số hộ chiếu:
 Hình thức TT
 TM/CK
-Y
+
 TK ngân hàng
 5978123
 Tên ngần hàng:
 TMCP Á Châu
 Thay thế cho hóa đơn Mẫu số 1, kỷ hiệu K25TNS, số 00000001, ngày 25 tháng 04 năm 2025
 Hàng hóa/Dịch vụ
-"Chiện cột " Tính chất HHDV"
+Hiện cột "Tính chất HHDV"
 Chiết khấu: Không có chiết khẩu
 stt
 Tên hàng hóa/Dịch vụ
@@ -71,21 +72,21 @@ Chiếc
 25,0000
 500.000
 12.500.000
-0
-E
+
+
 Thêm dòng
 Thêm ghi chú
 Tổng tiền hàng:
 12.500.000
-Thuế gigt:
+Thuế gtgt:
 10%
-Y
+
 Tiến thuế gtgt
 1.250.000
 Tổng tiển thanh toán:
 13.750.000
-C3 Gửi hóa đơn nháp
-0 Xem trước
+Gửi hóa đơn nháp
+Xem trước
 Hùy bỏ
 Lưu
 Lưu và Phát hành

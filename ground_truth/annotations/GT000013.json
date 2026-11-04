@@ -4,9 +4,9 @@
   "evaluation_sha256": "b0df91a51d46e18f08244cf6c83a2e338763a0074c3a931bf8554971c921bcd7",
   "reference_text_file": "ground_truth/texts/GT000013.txt",
   "scope": "FullImage",
-  "status": "Draft",
+  "status": "Verified",
   "annotator": null,
-  "reviewer": null,
+  "reviewer": "Dat",
   "drafted_from": "outputs/vietocr",
-  "notes": "OCR draft. Compare every line with the image before marking Verified."
+  "notes": "Đã xem và xác nhận."
 }

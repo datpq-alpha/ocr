@@ -1,6 +1,6 @@
-BẢNG KÊ HOÁ ĐƠN, CHỨNG TỪ HÀNG HOÁ, DỊCH VỤ VÀ THUY
+BẢNG KÊ HOÁ ĐƠN, CHỨNG TỪ HÀNG HOÁ, DỊCH VỤ MUA VÀO
 Kỳ tính thuế: Quý 1 năm 2026
-Hoá đơn, chứng từ, biên nha
+Hoá đơn, chứng từ, biên
 Tổng số
 Số thuế
 lai nộp thuế
@@ -65,16 +65,16 @@ Công ty TNHH TM và SX Ngọc Phú
 1.000.000
 80.000
 80.000
-điều chinh
+điều chỉnh
 giảm
 Tổng
 160.000.000 14.800.000 14.800.000
 2. Hàng hoá, dịch vụ dùng chung cho SXKD chịu thuế và không chịu thuế đủ điều kiện khấu trừ thuế:
-Kể Toán Thiên Ung
+Kể Toán Thiên Ưng
 Tổng
 50
-o
-o
+0
+0
 Tổng giá trị HHDV mua vào phục vụ SXKD được khấu trừ thuế GTGT:
 Chỉ tiêu [23]
 160.000.000

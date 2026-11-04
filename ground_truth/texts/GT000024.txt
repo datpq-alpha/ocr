@@ -1,8 +1,8 @@
 Mẫu số 03/XKNB
 Tên người xuất hàng: Công Ty Kế Toán Thiên Ưng
-Theo lệnh điều động số 12/LDD-KTTU của Công ty Kế Toán Thiên Ứng về việc vận tháng
+Theo lệnh điều động số 12/LDD-KTTU của Công ty Kế Toán Thiên Ứng về việc vận
 chuyển hàng hóa
-Địa chi kho xuất hàng: Nhà lô B11, số 9A, ngõ 181 đường Xuân Thủy, Phường Cầu Giấy,
+Địa chỉ kho xuất hàng: Nhà lô B11, số 9A, ngõ 181 đường Xuân Thủy, Phường Cầu Giấy,
 Thành phố Hà Nội,
 Tên người vận chuyển: Tạ Văn Thanh
 Phương tiện vận chuyển: ô tô bán tải số 30L63686
@@ -12,7 +12,7 @@ Ngày 23 tháng 02 năm 2026
 Ký hiệu: 6C26NTU
 Số: 25
 Tên người nhận hàng: Nguyễn Thị Mai
-Địa điểm nhận hàng: Số nhà 1, ngách 327/6 phố Vũ Tông Phan, Phường Khương Đình, Quận Nhiều
+Địa điểm nhận hàng: Số nhà 1, ngách 327/6 phố Vũ Tông Phan, Phường Khương Đình, Quận
 Thanh Xuân, Thành phố Hà Nội
 stt	Tên nhãn hiệu, quy cách, phẩm chất vật tư (sản phẩm, hàng hóa)	Mã số	Đơn vị tính	Số lượng		Đơn giá	Thành tiền
 				Thực xuất	Thực nhập		

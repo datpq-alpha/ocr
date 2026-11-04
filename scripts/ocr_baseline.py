@@ -186,6 +186,10 @@ class OCR:
         os.environ.setdefault("PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK", "True")
         os.environ.setdefault("PADDLE_PDX_MODEL_SOURCE", "BOS")
         os.environ.setdefault("MPLCONFIGDIR", str(root / ".cache" / "matplotlib"))
+        # On Windows, load PyTorch first to avoid shared-runtime DLL conflicts
+        # when VietOCR and the Paddle detector run in the same process.
+        if args.engine == "vietocr":
+            import torch
         from paddleocr import TextDetection, TextRecognition
         self.args = args
         self.model_files = {}
@@ -223,7 +227,6 @@ class OCR:
             self.charset_check = check_charset(config["PostProcess"]["character_dict"], args.language,
                                                args.recognizer, strict=args.strict_charset)
         else:
-            import torch
             import yaml
             from vietocr.tool.predictor import Predictor
             torch.set_num_threads(args.threads)

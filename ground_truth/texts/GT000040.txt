@@ -1,34 +1,34 @@
 evnnpc
 HOÁ ĐƠN GTGT (TIỀN ĐIỆN)
-Mẫu số 01G KI2 001
-XÔNG CONG THE THU CHINH
-(Liôn 2: Giao khách hàng)
-Kỹ hiệu RC/121
+Mẫu số 01GTK2/001
+TỔNG CÔNG TY ĐIỆN LỰC MIỀN BẮC
+(Liên 2: Giao khách hàng)
+Ký hiệu RC/12T
 Kỳ3
 Từ ngày 13/09/2012 Đến ngày
 20/09/2012
-S0 0370933
+Số 0370973
 Công ty Điện lực Bắc Ninh
-Địa chỉ: Số 3 đường Lô Văn Thịnh, P.Suối Hoa, TP Bắc Ninh
+Địa chỉ: Số 3 đường Lê Văn Thịnh, P.Suối Hoa, TP Bắc Ninh
 Điền thoại:
 0241.2214.215
 MST 0100100417-024
 ĐT sửa chữa: 0241.2214.215
-4
-Tên khách hăng:
+
+Tên khách hàng:
 Công ty CP HaMin
-Địa chỉ lô c6-2 KCN Quế Vô - Bắc Ninh
+Địa chỉ lô c6-2 KCN Quế Võ - Bắc Ninh
 Điện thoại:
 MST
 2300274735
-Số công to 55011228
-Số nội
+Số công tơ 85011228
+Số hộ:
 0
 Bộ cs
-Chi số mời
-Chi số cũ
+Chỉ số mới
+Chỉ số cũ
 HS nhân
-Điện năng Tr
+Điện năng TT
 Đon gia
 Thành tiên
 BT
@@ -36,7 +36,7 @@ BT
 19.422
 400
 20.800
-MÀ KH
+Mã KH
 5.152
 5.136
 PA22030392316
@@ -47,12 +47,12 @@ B
 10.288
 400
 9.200
-Mà Thoàn
+Mã T.toán
 20.800
 PA22030392316
 1.278
 26.582400
-MÀNN 2212
+Mã NN 2212
 6.400
 2.306
 14.758400
@@ -60,33 +60,33 @@ Mã giá
 9.200
 814
 7.488.800
-100%3XBT
+100%SXBT
 Ngày 24 tháng 9năm 2012
-Mà Dâm
-Bep
-03DKO0004
-ĐIỆN LIỆT
-Cấp Đả 1
-QUEGION
-IZ
+Mà trạm
+Bên bán điện
+03DK00004
+ĐIỆN LỰC
+Cấp ĐA 1
+QUẾ VÕ
+
 SỐ GCS:
-CÓNS TY DIỆN LỰC
-03D343QV1-0019
-BLING
-PGCS
-NG
+CÔNG TY ĐIỆN LỰC
+03D345QV1-0019
+BẮC NINH
+P.GCS
+Nguyễn Kim Hải
 36.400
-Công
+Cộng
 48.829.600
-MÀ 8 01
-Thuế sua gigt 10%
-THUO GIGI
+Mã tổ: 01
+Thuế suất gtgt: 10%
+THUẾ GTGT
 4.882 960
-D HD
-Tổng cộng tiên thanh toan
+ID HD
+Tổng cộng tiền thanh toán
 53.712560
 1113937032
-Số tiền viết bắng chữ: Năm mươi ba triệu bly trimm mười hai nghìn nươi đồng chiến
-Webutoi
-hap //pcbacninh pp..com.vi/
+Số tiền viết bằng chữ: Năm mươi ba triệu bảy trăm mười hai nghìn năm trăm sáu mươi đồng.
+Website:
+http://pcbacninh.npc.com.vn/
 Chi Thu Công ty Cố phía Thông mình Ma 1 10 1447 1910 1941 2010

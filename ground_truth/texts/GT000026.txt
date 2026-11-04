@@ -1,5 +1,5 @@
 Mã Nv	Họ Và Tên									
-NV1	Nguyễn Văn 1		Vị tíí 1	C1,C2						
+NV1	Nguyễn Văn 1		Vị trí 1	C1,C2						
 NV1	Nguyễn Văn 1			c3.				8.0	8.0	
 NV1	Nguyễn Văn 1			TC		4.0	3.0	4.0	4.0	
 NV2	Nguyễn Văn 2		Vị trí 2	C1,C2.	8.0	8.0	8.0			
@@ -7,20 +7,20 @@ NV2	Nguyễn Văn 2			C3.				8.0	8.0
 NV2	Nguyễn Văn 2			TC	4.0		7.0	4.0	4.0	
 NV3	Nguyễn Văn 3		Vị trí 3	C1,C2	8.0	8.0	8.0	8.0	8.0	
 NV3	Nguyễn Văn 3			c3.						
-NV3	Nguyễn Văn 3			CONTERSION	4.0	4.0				
-NV4	Nguyễn Văn 4 INTERCONTERINATION		Vị trí 4	C1.C2	8.0	8.0				
+NV3	Nguyễn Văn 3			TC	4.0	4.0				
+NV4	Nguyễn Văn 4 		Vị trí 4	C1.C2	8.0	8.0				
 NV4	Nguyễn Văn 4			c3.				8.0		
 NV4	Nguyễn Văn 4			TC	4.0	4.0		4.0	4.0	
 NV5	Nguyễn Văn 5		Vị trí 5	C1.C2	8.0		8.0	8.0	8.0	
 NV5	Nguyễn Văn 5			c3.						
 NV5	Nguyễn Văn 5			TC		4.0	7.0	3.0		
-NVE	Nguyễn Văn 6		Vị trí ô	C1.C2	8.0	8.0	8.0	8.0	8.0	
+NVE	Nguyễn Văn 6		Vị trí 6	C1.C2	8.0	8.0	8.0	8.0	8.0	
 NVE	Nguyễn Văn 6			c3.						
-NVE	Nguyễn Văn 6 INTERCONTERINATION			TC	4.0	4.0		3.0		
+NVE	Nguyễn Văn 6 		TC	4.0	4.0		3.0		
 NV7	Nguyễn Văn 7		Vị trí 7	C1,C2	8.0	8.0	8.0	8.0	8.0	
 NV7	Nguyễn Văn 7			c3						
 NV7	Nguyễn Văn 7				4.0	4.0	7.0	3.0		
-NVS	Nguyễn Văn 8 INTERCONTERINATION		Vị trí 8	C1,C2	8.0	8.0	8.0	8.0	8.0	
+NVS	Nguyễn Văn 8    	Vị trí 8	C1,C2	8.0	8.0	8.0	8.0	8.0	
 NVS	Nguyễn Văn 8			c3.						
 NVS	Nguyễn Văn 8			TC	4.0	4.0	7.0	3.0		
 BẢNG CHẤM CÔNG

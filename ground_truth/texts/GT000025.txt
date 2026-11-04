@@ -9,11 +9,11 @@ Số: PNKO03
 Nợ: 632
 Có: 156
 Họ và tên người nhận hàng: Nguyễn Thị Thúy
-Địa chỉ (bộ phận): Công ty TNHH Thương mại Toàn Phát Nhưng Thuy Thu Thu Thu nhiều Thuy Thu nhiều Thuy nhiện Thuy nhiệu Thu nhiều 
+Địa chỉ (bộ phận): Công ty TNHH Thương mại Toàn Phát 
 Lý do xuất kho: Xuất bán
 Xuất tại kho (ngăn lô): Hàng hoá
-Địa điểm: Lô B11, số 9a, ngõ 181 Xuân Thủy, phường Cầu Giấy, Hà Nội Trinh
-STT	Tên, nhãn hiệu, quy cách, nha phẩm chất vật tư, dụng cụ, sản phẩm, hàng hóa			Mã số	Đơn vị tính				Số lượng							Đơn giá	Thành tiền
+Địa điểm: Lô B11, số 9a, ngõ 181 Xuân Thủy, phường Cầu Giấy, Hà Nội
+STT	Tên, nhãn hiệu, quy cách, phẩm chất vật tư, dụng cụ, sản phẩm, hàng hóa			Mã số	Đơn vị tính				Số lượng							Đơn giá	Thành tiền
 									Yêu cầu				Thực xuất				
 A	B			C	D				1				2			3	4
 1	Máy điều hoà samsung 12000BTU			ĐH-SS12	Bộ				02				02			15.000.000	30.000.000
@@ -26,15 +26,15 @@ Người nhận hàng Thủ kho
 Kế toán trưởng
 Giám đốc
 (Ký, họ tên)
-(Ký, họ tên) (Ký, họ tên)
+(Ký, họ tên)
+(Ký, họ tên)
 (Ký, họ tên)
 (Ký, họ tên, đóng dấu)
 Wrmp
 CÔNG TY
-TNHI
-DỊCH VỤ KẾ
-Và Hiể Dưng
-THIẾN THG
-M
+TNHH
+DỊCH VỤ KẾ TOÁN
+THIÊN ƯNG
+
 GIÁM ĐỐC
 Nguyễn Thị Thanh Huyền

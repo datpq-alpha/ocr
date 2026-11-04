@@ -6,14 +6,31 @@ Mặc định `--layout ruled`: tìm đường kẻ, tách vùng chữ vượt r
 
 Checkpoint Paddle mặc định `PP-OCRv6_small_rec` thiếu nhiều ký tự dấu tiếng Việt. Preset `ppocrv6_vi` dùng [checkpoint cộng đồng đã huấn luyện tiếng Việt](https://huggingface.co/tieubaoca/pp-ocrv6-medium-rec-vietnamese), thay bộ nhận dạng bằng `PP-OCRv6_medium_rec`; giữ nguyên detector/crop. Dictionary đi kèm có đủ bộ ký tự tiếng Việt runner kiểm tra. Đây là checkpoint khác, cần chấm lại CER/WER để so sánh chất lượng.
 
+## Trạng thái — 04/11/2026
+
+43/43 nhãn đã được duyệt để chấm baseline. Các file `ground_truth/texts/` và `ground_truth/annotations/` là nhãn local hiện hành; không tạo lại bằng lệnh `draft` sau khi đã hiệu chỉnh thủ công.
+
+Hai lượt OCR đã chạy lại đủ 43 ảnh bằng Python 3.12.5 và được chấm tại `outputs/paddleocr/scores_py312.json`, `outputs/vietocr/scores_py312.json`. Kết quả được ghi trong [baseline_report.md](baseline_report.md). Các lượt Python 3.11 trước đó được giữ riêng trong thư mục backup ở `outputs/`.
+
+Notebook Colab T4 đã có cho [Qwen3-VL-4B](notebooks/qwen3_vl_4b_colab.ipynb), [Ministral 3 3B Instruct](notebooks/ministral3_3b_colab.ipynb) và [PaddleOCR-VL-1.6](notebooks/paddleocr_vl_1_6_colab.ipynb). Mỗi notebook dùng cùng manifest/43 ảnh từ commit GitHub cố định, kiểm tra hash ảnh, lưu tiến độ và xuất ZIP tương thích lệnh `score` local. Cấu hình và lệnh chấm nằm trong [notebooks/README.md](notebooks/README.md).
+
+Các bước còn lại:
+
+1. Hoàn tất các lượt Colab và tải ZIP; kiểm tra số ảnh thành công, lỗi và trạng thái chạm giới hạn token trong `run.json`.
+2. Giải nén vào repository và chấm bằng ground truth local đã duyệt. Nếu sửa truth, chấm lại với tên báo cáo mới.
+3. Bổ sung kết quả vào báo cáo; ghi riêng checkpoint, lượng tử hóa, backend và phần cứng CPU/GPU/API.
+
+Chạy từng notebook trong session riêng vì phiên bản Transformers khác nhau. Các notebook VLM không sử dụng `.venv` OCR local. Việc kiểm thử local gồm processor/config và hợp đồng xuất/chấm; kết quả inference T4 chỉ được xác nhận sau khi hoàn tất lượt chạy trên Colab.
+
 ## 1. Môi trường PowerShell
 
 ```powershell
+py -3.12 -m venv .venv
 . .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 ```
 
-`.venv` dùng Python 3.11. Nếu không kích hoạt được, thay `python` bằng `.\.venv\Scripts\python.exe`. Model tải ở lần đầu; ảnh xử lý local.
+`.venv` dùng Python 3.12.5; phiên bản được ghi trong `.python-version`. Khi tạo môi trường, `py -3.12 --version` phải trả về `Python 3.12.5`. Nếu không kích hoạt được, thay `python` bằng `.\.venv\Scripts\python.exe`. Model tải ở lần đầu; ảnh xử lý local.
 
 ## 2. Chạy OCR
 

@@ -5,6 +5,7 @@ D
 E
 G
 J
+1
 TECHCOMBANK
 ỦY NHIÊM CHI
 Liên 1
@@ -23,7 +24,7 @@ Số tài khoản
 5
 Tại Ngân hàng
 Techcombank chi nhánh Bắc Hải
-Tinh, TP: TP.HCM
+Tỉnh, TP: TP.HCM
 6
 Tên đơn vị nhận tiền
 Tài khoản thu của Bảo Hiểm Xã Hội Quận 1000
@@ -35,11 +36,11 @@ Số tài khoản
 8
 Tại Ngân hàng
 Agribank
-Chi nhánh: CMTS
+Chi nhánh: CMT8
 Tỉnh: TP HCM
 9
 Số tiền bằng chữ
-Hai mươi mốt triệu hai trăm sáu mươi mốt nghìn đồng chẫn,
+Hai mươi mốt triệu hai trăm sáu mươi mốt nghìn đồng chẫn./.
 Số tiền bằng số
 10
 VND
@@ -50,6 +51,8 @@ Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam
 12
 13
 ĐƠN VỊ TRẢ TIỀN
+NGÂN HÀNG A
+NGÂN HÀNG B
 14
 Kế toán
 Chủ tài khoản

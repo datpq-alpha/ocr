@@ -1,0 +1,22 @@
+Đơn vị:
+- Mẫu số C52 - HD
+Mã QH:
+BIÊN BẢN ĐÁNH GIÁ LẠI TSCĐ
+Ngày... tháng ... năm.....
+Số: 1121
+Căn cứ Quyết định số: MISA ngày 07 tháng 08 năm 2024 của Thủ trưởng đơn viị về việc đánh giá lại TSCĐ
+GÔ.B... in.
+Ông/B.à:..
+......ứ.c. .
+Đã thực hiện đánh giá lrại giá trị các TSCĐ sau đây:
+STT	Tên, ký mã hiệu, qui ccách (cấp hạng) TSCĐ	Số hiệu TSCĐ	Số thể TSCĐ	Giá trị đang ghi sốổ			Giá trị theo đánh giáu lại	Chênh lệch giữa giá đánh giá lại và giá trị còn lạiại	
+				Nguyên giũ	Giú trị hao mòn	Giá trị còn lại		Tăng	Giảm
+A	B	C	D	1	2	3	4	7	8
+1	Tài sản của TDNGHIA	TSO000001		100.000.000.000.00		100.000.000.000.00	110.000.000.000.00	10.000.000.00 0.000	
+2	Máy vi tỉnh đề bànn	TSO000002		45.000.00		45.000.000	40.000.000		5.000.0000
+	Cộng			100.000.045.000.00		100.000.045.000.00	110.000.040.000.00	10.000.000.0 0.0.00	5.000.0000.
+Ghi chú: Cộct 4 GGiá trị theo đánh giá lại ” nếu đánh giá lại cải hao mòn thì cộct 4 phải tách ra thành 3 cột tương tự cột 1, 2, 3.
+Uỷ viên
+Chủ tịch Hội đồng
+(Kýị, họ tên)
+(Ký, họ tên)

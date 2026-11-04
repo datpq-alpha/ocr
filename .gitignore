@@ -11,7 +11,9 @@ venv/
 !.env.example
 /tmp/
 /.cache/
-/outputs/
+/outputs/*
+!/outputs/paddleocr/
+!/outputs/vietocr/
 /datasets/external/
 /MC_OCR_2021/
 /data/MC_OCR_2021/

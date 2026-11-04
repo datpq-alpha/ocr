@@ -1,0 +1,86 @@
+BÁNG KÊ HOÁ ĐƠN, CHỨN G TỪ HÀNG HO Á, DỊC CH VỤ VIƯA VÀO
+Kỳ tính thuế: Quý 1 năm 2026
+Hoá đơn, chứng từn, biên
+Tổng sốg
+Số thuế
+lai nộp thuế
+Mã số thuế
+Giá trị
+Thuế.
+GTGT đủ
+STT
+Ngày,
+Tên người bán
+HH-DV
+GTGT đầu
+ĐK khấu
+Ghi chú
+Số lhoá đơn
+người bán
+tháng, năm
+mua vào
+trừ
+vào
+lập hóa đơn
+I111I
+121
+I31
+141
+I51
+161
+1I7"II
+I81
+I9I
+1. Hàng loá, dịch vụ dùng miêng cho sSXKD chịnu thuế GTGT
+01
+00000012
+05/01/2026
+Công ty TNHH TM Hoàng Dương
+0106254326
+100.000.000
+10.000.000
+10.000.000
+02
+00000125
+18/202/2026
+Công ty CP Bảo Tín Minh Châu
+0105224568
+50.000.00
+4.000.000
+4.000.000
+03
+00000045
+20/02/2026
+Công ty TNHH TM và SX Ngọc Phú
+0103562485
+11.000.0000
+880.000
+880.000
+Hóa đơnn
+04
+00000032
+25/03/2026
+Công ty TNHH TM và SX Ngọc Phú
+0103562485
+"-1.000.0000
+-80.0000
+-80.0000
+điều chinh
+giam
+Tổng
+160.000.014.800.0.800.000
+2. Hàng hoá, dịch vụ dùng chung cho sSXKD chunu thuế và không chiu thuế điủ điều kiện khấu trừ thuế:
+Kế Toán TThuên ưng
+Tổng
+0n
+0
+0
+Tổng giá trị HHDV mua vảo phục vụ SXKD được khẩu trừ thuế GTGT:
+Chỉ tiêu 1231
+160.000.000
+Tổng số thuế GTGT của HHDV mua vào
+Chi tiêu 1241
+114.800.0000
+Tổng số thuế GTGT của HHDV mua vào đủ điều kiện được khẩu trừ:
+Chi tiêu 1251
+14.800.0000

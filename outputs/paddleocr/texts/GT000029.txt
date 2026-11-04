@@ -1,0 +1,29 @@
+Đơn vị:
+Công trự TNHH MGGF
+Số Serial: KK5/2014
+Địa chi:
+Số 9, Nam Hoòa, Phưóc Long A, Quận 9, Tp.HCM
+Số hồôa đơn: 001234
+Ma số thuế: 031244120
+PHIẾU GIAO HÀNG
+Liên 1
+Họ tiên người mua hàng:
+Công ty TNHH Chuyên Cần
+Địa chỉ:
+MMST:
+Hình thức thanh toin:
+Tiển mặt:
+
+Chuyễn khoản:
+
+STT	MÃ HÀNG	TÊN MẬT HÀNG	ĐVT	SỐ LƯỢNG	ĐƠN GIÁ	CHIẾT KHÁU	THÀNH TIỀN
+1 2	HN A0001 HN A0002	Cà phể hạt x006 Cà phê hạt xo07	Kg Kg	100,00 200,00	13,000 14,000		1.300.00 2.800.000
+Tổng cộng số tiền chưa cô thuế: 4.100.00							
+Thuế suất 10.00 Tiền thuế VAT: 410.000							
+Tổng côộng số tiền đ cô VATT:T: 4.510.000							
+Ghi chủ: Quỷ khách vui lòng loiên hệ phòng kế to ăn nhận hó a đơn tải chinh
+Ngày 06 thảng 06 năm 2014
+Ngưởi nhận hàng
+Đã nhận đù tiền
+Người phụ trich
+Ngườởi lập phiếu

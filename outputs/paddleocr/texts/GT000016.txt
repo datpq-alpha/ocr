@@ -1,0 +1,56 @@
+A
+B
+C
+D
+E
+G
+JU
+TTE CH COM BANK
+UY NHIỂMI CHỊI
+Liênn1
+2
+CHUYỂN KHOẢN, CHUYỂN TIỀN, THƯ, ĐIỆN
+Lập ngày: 26/04/201:
+PHÂN DO NH GHI
+3
+Tên đơn vị trảà tiển
+CÔNG TY CP ĐÀO TẠO NGHỀ THỰC TẾ KIMII
+TÀI KHOẢN GHI NỢ
+4
+Số tài khoản
+19025683352016
+1902 H5 Ó8H3352016
+5
+Tại Ngân hàng
+Tecchcombanhk chi nhánh Bắc Hoải
+Tỉnh. TP: TP.HCM
+6
+Tên đơn vị nhận tiền
+TTài kh m hu uủ a iải Hiêểêm Kià Hi Qum 
+TÀI KHOẢN GHI CÓ
+7
+Số tài khoản
+17002029202135
+1700202902135
+8
+Tại Ngân hàng
+Agrbanhk
+Chị nhảnh: CMTT8
+Tỉnh: TP HCMI
+9
+Số tiền bằng chữ
+HTai muươu muất trưiệu huaui trunm sisnmu muươui muất mngihưinm ồmg h/.
+Số tiền bằng số
+10
+V
+21.261,.000
+11
+Nội dung thanh toán
+Ngân hàmng Nômng nghiệp và Phát triển Nông thôm Việt Naum
+12
+13
+ĐƠN VỊ TRẢ TIỀN
+14
+Kế toán.R
+Chủ tài khoản
+Ghi số ngày

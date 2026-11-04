@@ -1,0 +1,40 @@
+13:47, 05/07/2022
+Mã cơ quan thuế: 00445E83DC35DD4EE5B2F7D6135CB7D474
+HÓA ĐƠN GIÁ TRI GIANG TH
+Ký hiệu (Serial No): 1C22TVH
+VIỆT HƯNG
+(VATINVOICE)
+Số (No.): 10
+Ngày (date) 27 tháng (month) 05 năm (year) 2022
+Đơn vị bán hàng (Seller): CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ CÔNG NGHỆ VIỆT HƯNG
+Mã số thuế (Tax code): 0106145319
+Địa Chỉ (Addres): Số 2, ngách 8422 đường Trần Quang Diệu, Phường Ô Chợ Dừa, Quận Đống Đa, Thành phố Hà Nội Thi Nhiệp
+Việt Nam
+Họ tên người mua hàng (Buyer's fullname):
+Tên đơn vị (Company's name): CÔNG TY TNHH XÂY DỰNG VÀ THU NGH
+Địa chỉ (Address): Tổ cho trinh
+1981800 Thành phố Bắc Kạn, Vạn Thinh Thung Nạm
+Mã số thuế (Tax code): 4 CONG NGUY
+Hình thức thanh toán (Payment method): Tiền mặt/Chuyển khoản - Số tài khoản (A/C No):
+STT (No.)	Tên hàng hóa, dịch vụ (Description)	Đơn vị tính (Unit)	Số lượng (Quantity)	Đơn giá (Unit price)	Thành tiền (Amount)
+(1)	(2)	(3)	(4)	(5)	(6) - (4) x (5)
+	Dịch vụ tư vấn quản lý doanh nghiệp VI	Gói ET	1 H	18.500.000 ƯNG	18.500.000 H
+Cộng tiền hàng (Total amount)					18.500.000
+Thuế suất GTGT (VAT Rate): 8% Tiền thuế GTGT (VAT amount):					1.480.000
+Tổng cộng tiền thanh toán (Total payment)					19.980.000
+Số tiền viết bằng chữ (In words): - Mười chín triệu chín trăm tám mươi nghìn đồng nhưng					
+Người mua hàng (Buyer)
+Người bán hàng (Seller)
+(Ký, ghi rõ họ tên)
+(Ký, ghi rõ họ tên)
+(Sign & Fullname)
+(Sign & Fullname)
+Signature valid
+Được ký bởi: CÔNG TY CÓ PPAN ĐÀU
+TƯ VÀ CÔNG NGHỆ VIỆT HƯNG
+Ngày ký: 27//50/2022
+(Cần kiểm tra đối chiếu khi lập, giao, nhận hóa đơn)
+Tra cứu hóa đơn điện tử tại trang web: http://tracuu.vin-hoadon.com Mã số tra cứu: IWVO07BNRM28
+Được đơn vị cung cấp dịch vụ hóa đơn điện tử: công ty cổ phần thương mại Visnam, MST: 0401486901 2019 19 1991
+Đơn vị triển khai bản hàng: Công Ty Có Phản Đầu Tư Và Phát Triển Chữ KÝ Số VIN, MST: 0402024593 Thành viên của Visnam Cop
+1/1
